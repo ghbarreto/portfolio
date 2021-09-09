@@ -1,0 +1,25 @@
+@import 'utilities/utils.scss';
+
+.center-text {
+  display: flex;
+  .center-text-title {
+    color: $yellow;
+    text-align: left;
+    font-size: 130px;
+    margin-left: 50px;
+    letter-spacing: 5px;
+    width: 500px;
+  }
+  .center-text-name {
+    color: $highlightRed;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 20px;
+    margin-top: 40px;
+  }
+  .center-text-sub {
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: 4px;
+  }
+}
