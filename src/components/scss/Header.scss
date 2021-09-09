@@ -9,17 +9,24 @@
   }
   .nav-bar {
     margin-bottom: 30px;
+    .nav-menu-myname{
+      margin-top: 30px;
+      color: white;
+      margin-left: 140px;
+      font-size: 35px;
+    }
     .nav-menu-logo {
       position: absolute;
       margin-left: 10px;
       .logo {
-        width: 70px;
+        width: 120px;
         &:hover {
-          width: 75px;
+          width: 130px;
           cursor: pointer;
         }
       }
     }
+    
     .nav-menu-buttons {
       display: flex;
       justify-content: flex-end;

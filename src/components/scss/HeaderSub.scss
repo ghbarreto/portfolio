@@ -1,25 +1,52 @@
 @import 'utilities/utils.scss';
 
-.center-text {
+.center-component {
   display: flex;
-  .center-text-title {
-    color: $yellow;
-    text-align: left;
-    font-size: 130px;
-    margin-left: 50px;
-    letter-spacing: 5px;
-    width: 500px;
-  }
-  .center-text-name {
-    color: $highlightRed;
-    text-align: center;
-    font-size: 50px;
-    letter-spacing: 20px;
-    margin-top: 40px;
-  }
-  .center-text-sub {
-    text-align: center;
-    margin-top: 30px;
-    letter-spacing: 4px;
+  justify-content: center;
+  .center-text {
+    display: center;
+    width: 50%;
+    .center-text-tag {
+      display: flex;
+      justify-content: start;
+      font-size: 20px;
+      color: grey;
+      margin-left: 2%;
+      margin-bottom: -4%;
+    }
+    .center-text-title {
+      color: $yellow;
+      text-align: center;
+      font-size: 40px;
+      margin-left: 50px;
+      letter-spacing: 5px;
+    }
+    .center-text-name {
+      color: $highlightRed;
+      text-align: center;
+      font-size: 50px;
+      letter-spacing: 20px;
+      margin-top: 40px;
+      
+    }
+    .center-text-sub {
+      // text-align: center;
+      // margin-top: 30px;
+      // letter-spacing: 4px;
+      color: $highlightRed;
+      text-align: center;
+      font-size: 50px;
+      letter-spacing: 20px;
+      margin-top: 40px;
+      &:nth-child(5){
+        color: green
+      }
+    }
+    .center-text-tag-end {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 20px;
+      color: grey;
+    }
   }
 }
