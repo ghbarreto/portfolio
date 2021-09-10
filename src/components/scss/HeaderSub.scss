@@ -1,51 +1,57 @@
 @import 'utilities/utils.scss';
 
-.center-component {
+.center {
   display: flex;
   justify-content: center;
   .center-text {
-    display: center;
-    width: 50%;
+    top: 35%;
+    position: absolute;
+    width: 900px;
     .center-text-tag {
-      display: flex;
-      justify-content: start;
-      font-size: 20px;
+      font-size: 25px;
+      font-weight: $font-semi;
       color: grey;
+      padding: 3px;
       margin-left: 2%;
-      margin-bottom: -4%;
+      margin-bottom: -7%;
     }
     .center-text-title {
-      color: $yellow;
+      color: $highlight;
       text-align: center;
       font-size: 40px;
+      font-weight: $font-semi;
       margin-left: 50px;
       letter-spacing: 5px;
     }
     .center-text-name {
-      color: $highlightRed;
+      display: flex;
+      justify-content: center;
+      color: $white;
+      font-weight: $font-heavy;
       text-align: center;
-      font-size: 50px;
-      letter-spacing: 20px;
-      margin-top: 40px;
-      
+      font-size: 90px;
+      padding: 5px;
+      margin-top: 20px;
+    }
+    .color-change {
+      color: $yellow;
     }
     .center-text-sub {
-      // text-align: center;
-      // margin-top: 30px;
-      // letter-spacing: 4px;
-      color: $highlightRed;
+      color: $highlight;
       text-align: center;
       font-size: 50px;
-      letter-spacing: 20px;
-      margin-top: 40px;
-      &:nth-child(5){
-        color: green
+      letter-spacing: 5px;
+      font-weight: $font-semi;
+      &:nth-child(5) {
+        color: green;
       }
     }
     .center-text-tag-end {
+      margin-top: -20px;
+      font-size: 25px;
+      font-weight: $font-semi;
       display: flex;
       justify-content: flex-end;
-      font-size: 20px;
       color: grey;
     }
   }

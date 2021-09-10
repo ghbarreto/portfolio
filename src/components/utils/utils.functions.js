@@ -1,30 +1,41 @@
 export const logo = '/assets/images/logo.png';
 export const tags = {
-  h1: "<h1>",
-  closingH1: "</h1>",
-  openingTag: "<",
-  closingTag: "/>",
-  openBracket: "{",
-  closingBracket:"}"
-}
+  openingTag: '<',
+  closingOpening: '>',
+  closingTag: '/>',
+  openBracket: '{',
+  closingBracket: '}',
+  closingTagName: '</',
+};
 
 export const buttonValues = [
   {
-    name: 'About',
-    to: '/about',
+    name: 'Contact',
+    to: '/Contact',
     openingTag: tags.openBracket,
-    closingTag: tags.closingBracket
+    closingTag: tags.closingBracket,
   },
   {
     name: 'Works',
     to: '/Works',
     openingTag: tags.openBracket,
-    closingTag: tags.closingBracket
+    closingTag: tags.closingBracket,
   },
   {
-    name: 'Contact',
-    to: '/Contact',
+    name: 'About',
+    to: '/about',
     openingTag: tags.openBracket,
-    closingTag: tags.closingBracket
+    closingTag: tags.closingBracket,
+  },
+];
+
+export const socialMedia = [
+  {
+    name: 'Github',
+    src: '/Contact',
+  },
+  {
+    name: 'Linkedin',
+    src: '/Contact',
   },
 ];

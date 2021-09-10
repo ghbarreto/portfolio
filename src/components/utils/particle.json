@@ -8,13 +8,13 @@
       }
     },
     "color": {
-      "value": "#FB475E"
+      "value": "#737373"
     },
     "shape": {
       "type": "circle",
       "stroke": {
         "width": 0.2,
-        "color": "#F5E48C",
+        "color": "#737373",
         "opacity": 0.5
       }
     },
@@ -28,7 +28,7 @@
         },
     "line_linked": {
       "distance": 150,
-      "color": "#FB475E",
+      "color": "#737373",
       "opacity": 1
     },
     "move": {

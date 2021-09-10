@@ -9,6 +9,11 @@ body {
   background-color: $background-color;
 }
 
+.landing-page {
+  width: 99vw;
+  height: 100vw;
+}
+
 canvas {
   position: absolute;
   z-index: -1;

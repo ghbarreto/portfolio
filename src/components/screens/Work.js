@@ -3,20 +3,20 @@ import { connect } from 'react-redux';
 import useOnScreen from '../utils/useOnScreen';
 import { CheckNavigation } from '../utils/CheckNavigation';
 
-const About = () => {
+const Work = () => {
   const ref = useRef();
   const isVisible = useOnScreen(ref);
 
   const returnVisibleContent = () => {
     if (isVisible) {
-      return <CheckNavigation location="About" />;
+      return <CheckNavigation location="Works" />;
     }
   };
 
   return (
     <div ref={ref} style={{ color: 'white' }}>
       {returnVisibleContent()}
-      ABOUT
+      WORK
     </div>
   );
 };
@@ -27,4 +27,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(About);
+export default connect(mapStateToProps)(Work);
