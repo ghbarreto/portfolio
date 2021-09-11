@@ -2,12 +2,16 @@ import React from 'react';
 import './scss/Header.scss';
 import Particles from './utils/Particle';
 import { connect } from 'react-redux';
-import { buttonValues, logo, tags } from './utils/utils.functions';
-import Home from './screens/Home';
+import {
+  buttonValues,
+  logo,
+  tags,
+  socialMedia,
+  navigate,
+} from './utils/utils.functions';
 
 const Header = ({ details }) => {
   const location = details.details;
-  console.log(details.details);
   const renderButtons = () => {
     return Object.values(buttonValues).map(e => {
       const buttonDisplay = (
@@ -17,12 +21,6 @@ const Header = ({ details }) => {
           <span className="color-brackets">{e.closingTag}</span>
         </li>
       );
-      const obj_values = Object.keys(e.name);
-      for (let i in obj_values) {
-        if (obj_values[i] > 4) {
-          return renderContact(e.openingTag, e.name, e.closingTag);
-        }
-      }
       return (
         <>
           {location
@@ -47,16 +45,6 @@ const Header = ({ details }) => {
     );
   };
 
-  const renderContact = (opening, name, closing) => {
-    return (
-      <li className="nav-menu-items">
-        <span className="color-brackets color-brackets-6">{opening}</span>
-        <span className="color-name-6">{name}</span>
-        <span className="color-brackets color-brackets-6">{closing}</span>
-      </li>
-    );
-  };
-
   const renderName = () => {
     return (
       <div className="nav-menu-myname">
@@ -64,6 +52,37 @@ const Header = ({ details }) => {
         Barrett
       </div>
     );
+  };
+
+  const renderSocialMedia = () => {
+    return Object.values(socialMedia).map(e => {
+      return (
+        <li>
+          <a href={e.src}>{e.name}</a>
+        </li>
+      );
+    });
+  };
+
+  const displayDot = () => {
+    return navigate.map(e => {
+      return (
+        <>
+          <li>
+            <span className={`dot ${changeDotColor(e)}`}></span>
+          </li>
+        </>
+      );
+    });
+  };
+
+  const changeDotColor = loc => {
+    if (location) {
+      if (loc === location.location) {
+        return 'light-up-dot';
+      }
+    }
+    return null;
   };
 
   return (
@@ -75,6 +94,14 @@ const Header = ({ details }) => {
         </div>
         {renderName()}
         <ul className="nav-menu-buttons">{renderButtons()}</ul>
+      </div>
+      <div className="left-right-fixed">
+        <ul className="left-right-social-media" style={{ color: 'white' }}>
+          {renderSocialMedia()}
+        </ul>
+        <ul className="left-right-navigation" style={{ color: 'white' }}>
+          <span className="left-right-navigation-block ">{displayDot()}</span>
+        </ul>
       </div>
     </div>
   );

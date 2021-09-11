@@ -85,3 +85,42 @@ li {
     }
   }
 }
+.left-right-fixed {
+  position: fixed;
+  top: 40%;
+  width: 100%;
+  .left-right-social-media {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding: 4px;
+    margin-top: 5px;
+    li {
+      margin: 5px;
+    }
+  }
+  .left-right-navigation {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -70px;
+    .left-right-navigation-block {
+      display: flex;
+      flex-direction: column;
+      li {
+        margin: 5px;
+        padding: 5px;
+        .dot {
+          height: 15px;
+          width: 15px;
+          border: 3px solid $lightblue;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 15px;
+        }
+        .light-up-dot {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

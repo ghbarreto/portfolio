@@ -1,4 +1,5 @@
 export const logo = '/assets/images/logo.png';
+export const navigate = ['Home', 'About', 'Works', 'Reach'];
 export const tags = {
   openingTag: '<',
   closingOpening: '>',
@@ -10,8 +11,8 @@ export const tags = {
 
 export const buttonValues = [
   {
-    name: 'Contact',
-    to: '/Contact',
+    name: 'Reach',
+    to: '/Reach',
     openingTag: tags.openBracket,
     closingTag: tags.closingBracket,
   },
@@ -32,10 +33,10 @@ export const buttonValues = [
 export const socialMedia = [
   {
     name: 'Github',
-    src: '/Contact',
+    src: 'http://www.facebook.com',
   },
   {
     name: 'Linkedin',
-    src: '/Contact',
+    src: 'facebook.com',
   },
 ];
