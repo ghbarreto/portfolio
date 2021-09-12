@@ -1,0 +1,32 @@
+@import 'utilities/utils.scss';
+
+.about-section-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas:
+    'x a a'
+    'x b c';
+  .about-section-container-text {
+    font-size: $desktop-font-size;
+    grid-area: a;
+  }
+  .information-about-section {
+    grid-area: b;
+  }
+  .section-tags {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .experience-job {
+    margin-bottom: 50px;
+    font-size: $desktop-experience-size;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .image-about-section {
+    margin-top: 30px;
+    grid-area: c;
+  }
+}

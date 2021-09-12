@@ -1,6 +1,7 @@
 import React from 'react';
 import './scss/Header.scss';
 import Particles from './utils/Particle';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
   buttonValues,
@@ -8,6 +9,7 @@ import {
   tags,
   socialMedia,
   navigate,
+  informations,
 } from './utils/utils.functions';
 
 const Header = ({ details }) => {
@@ -48,17 +50,30 @@ const Header = ({ details }) => {
   const renderName = () => {
     return (
       <div className="nav-menu-myname">
-        <span className="nav-menu-tags">{tags.closingTagName}</span>Gabriel
-        Barrett
+        <span className="nav-menu-tags">{tags.closingTagName}</span>
+        {informations.name}
       </div>
     );
   };
 
+  const redirectOnClick = path => {
+    console.log(path);
+    return <a href={path}>redirect</a>;
+  };
+
   const renderSocialMedia = () => {
     return Object.values(socialMedia).map(e => {
+      console.log(e.img);
       return (
         <li>
-          <a href={e.src}>{e.name}</a>
+          <a href={e.src}>
+            <img
+              className="fixed-image-sizing"
+              src={e.img}
+              alt={`${e.name} icon`}
+              onClick={() => redirectOnClick(e.src)}
+            />
+          </a>
         </li>
       );
     });
@@ -86,24 +101,28 @@ const Header = ({ details }) => {
   };
 
   return (
-    <div className="fixed-nav-bar">
+    <>
       <Particles />
-      <div className="nav-bar">
-        <div className="nav-menu-logo">
-          <img className="logo" src={logo} alt="logo" />
+      <div className="fixed-nav-bar">
+        <div className="nav-bar">
+          <div className="nav-menu-logo">
+            <img className="logo" src={logo} alt="logo" />
+          </div>
+          {renderName()}
+          <ul className="nav-menu-buttons">{renderButtons()}</ul>
         </div>
-        {renderName()}
-        <ul className="nav-menu-buttons">{renderButtons()}</ul>
       </div>
       <div className="left-right-fixed">
         <ul className="left-right-social-media" style={{ color: 'white' }}>
           {renderSocialMedia()}
         </ul>
+      </div>
+      <div className="right-fixed-navigation">
         <ul className="left-right-navigation" style={{ color: 'white' }}>
           <span className="left-right-navigation-block ">{displayDot()}</span>
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 

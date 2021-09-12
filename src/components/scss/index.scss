@@ -11,10 +11,45 @@ body {
 
 .landing-page {
   width: 99vw;
-  height: 100vw;
+  height: 120vh;
 }
 
 canvas {
-  position: absolute;
+  position: fixed;
   z-index: -1;
+}
+
+.highlight-blue {
+  color: $lightblue !important;
+  font-weight: $font-semi;
+}
+
+.word-color {
+  color: $white;
+}
+
+.section-tags {
+  font-size: $desktop-section-size;
+  color: $highlight;
+  margin-top: 50px;
+}
+
+.about-tags {
+  font-size: $desktop-section-tags-size;
+  color: $highlight;
+  font-weight: $font-semi;
+  margin: 6px;
+}
+
+.main-jobtitle-date {
+  margin-left: 8px;
+  font-size: $desktop-font-size;
+  color: $white;
+  font-weight: $font-semi;
+  letter-spacing: 2px;
+}
+
+.experience-job {
+  color: $white;
+  font-size: $desktop-experience-size;
 }

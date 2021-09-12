@@ -1,0 +1,15 @@
+@import 'utilities/utils.scss';
+
+.buttonStyle {
+  height: 50px;
+  width: 250px;
+  background-color: $lightblue;
+  border: none;
+  margin-top: 50px;
+  border-radius: 50px;
+  a {
+    font-size: $desktop-experience-size;
+    text-decoration: none;
+    color: $background-color;
+  }
+}
