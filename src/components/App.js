@@ -5,6 +5,7 @@ import Header from './Header';
 import HeaderSub from './HeaderSub';
 import Home from './screens/Home';
 import About from './screens/About';
+import AboutSub from './AboutSub';
 import Work from './screens/Work';
 
 const App = () => {
@@ -19,8 +20,11 @@ const App = () => {
         />
         <Home />
       </div>
-      <div className="landing-page">
+      <div className="section-pages">
         <About />
+      </div>
+      <div className="landing-page">
+        <AboutSub />
       </div>
 
       <div className="landing-page">

@@ -14,8 +14,6 @@ const HeaderSub = ({ title, name, sub, job_title }) => {
       )
     );
   };
-
-  colorName();
   return (
     <div className="center">
       <div className="center-text">

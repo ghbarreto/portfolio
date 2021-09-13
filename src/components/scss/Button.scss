@@ -7,9 +7,16 @@
   border: none;
   margin-top: 50px;
   border-radius: 50px;
+  &:hover {
+    background-color: $white;
+  }
   a {
+    color: $background-color;
     font-size: $desktop-experience-size;
     text-decoration: none;
-    color: $background-color;
+    font-weight: $font-semi;
+    &:hover {
+      color: $highlight;
+    }
   }
 }

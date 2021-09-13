@@ -1,0 +1,56 @@
+@import 'utilities/utils.scss';
+
+.about-sub-flex {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 10fr 10fr 1fr;
+  grid-template-areas:
+    'a b c d'
+    'e e g g';
+  .knowledge-section {
+    grid-area: b;
+    margin-left: 75px;
+  }
+  .skills-section {
+    grid-area: c;
+    margin-left: 75px;
+  }
+  .knowledge-section-fields {
+    margin-top: 30px;
+    grid-area: e;
+  }
+  .parent-skills {
+    display: flex;
+    flex-wrap: wrap;
+    .parent-skills-flex {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 5px;
+      .list-of-skills {
+        margin-top: 40px;
+        padding: 5px;
+        font-size: $desktop-section-tags-size;
+        margin-right: 20px;
+        flex-grow: 1; /* enabled (default: 0); can grow/expand beyond 50% of the parent's width */
+        font-weight: $font-semi;
+        width: 30px;
+        border-radius: 50px;
+        text-align: center;
+        flex-basis: 20%; /* initial width set to 50% because none of the items will be less than that, no matter how many of them */
+
+        &:nth-child(1n) {
+          background-color: $yellow;
+        }
+        &:nth-child(2n) {
+          background-color: $highlight;
+        }
+        &:nth-child(3n) {
+          background-color: $white;
+        }
+        &:nth-child(5n) {
+          background-color: $lightblue;
+        }
+      }
+    }
+  }
+}

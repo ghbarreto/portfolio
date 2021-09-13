@@ -15,6 +15,43 @@ export const jobExperience = {
   },
 };
 
+export const skills = [
+  'React',
+  'R. Native',
+  'Python',
+  'Typescript',
+  'Azure',
+  'Node.js',
+  'HTML/CSS',
+  'Less',
+  'SaSS',
+  'MongoDB',
+  'SQL',
+  'Git',
+  'PHP',
+  'RESTful',
+  'NextJS',
+];
+
+export const knowledgeField = {
+  full_stack: {
+    title: 'Full Stack Development',
+    qualifications: 'I am trained in React, React.js bla bla bla bla bla',
+  },
+  database: {
+    title: 'Database',
+    qualifications: 'I am trained in React, React.js bla bla bla bla bla',
+  },
+  mobile_app: {
+    title: 'Mobile App Developer',
+    qualifications: 'I am trained in React, React.js bla bla bla bla bla',
+  },
+  front_end: {
+    title: 'Frond End Design',
+    qualifications: 'I am trained in React, React.js bla bla bla bla bla',
+  },
+};
+
 export const viewResume = {
   resume: 'www.facebook.com',
   value: 'View Resume',
