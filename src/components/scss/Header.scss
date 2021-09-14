@@ -4,6 +4,15 @@ li {
   display: inline;
   text-decoration: none;
 }
+
+.background-nav-bar-color{
+  background-color: $background-color;
+  height: 150px;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
 .fixed-image-sizing {
   width: 50px;
   margin-left: 12px;
@@ -57,16 +66,12 @@ li {
       float: right;
       &:hover {
         color: $yellow !important;
-        margin-top: -50px;
+        margin-top: -119px;
         background-color: $blue;
         height: 170px;
         font-weight: $font-heavy;
         .color-brackets {
-          margin-bottom: 55%;
           color: $yellow;
-        }
-        .color-name {
-          margin-bottom: 55%;
         }
       }
     }

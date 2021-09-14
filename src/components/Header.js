@@ -103,6 +103,7 @@ const Header = ({ details }) => {
   return (
     <>
       <Particles />
+      <div className="background-nav-bar-color"></div>
       <div className="fixed-nav-bar">
         <div className="nav-bar">
           <div className="nav-menu-logo">
