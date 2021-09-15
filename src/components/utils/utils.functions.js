@@ -4,12 +4,12 @@ export const aboutBanner = '/assets/images/about-banner.png';
 
 export const jobExperience = {
   kyte: {
-    title: 'Full Stack Developer Jr.',
+    title: 'Full Stack Developer Jr. @Kyte',
     date: 'June 2021 - Jan 2022',
     experience: 'Worked with react and a few other languages',
   },
-  emil: {
-    title: 'Web Developer',
+  lugaro: {
+    title: 'Web Developer @Lugaro',
     date: 'June 2020, Jan 2021',
     experience: 'Worked with wordpress and a few other languages',
   },
@@ -18,6 +18,9 @@ export const jobExperience = {
 export const skills = [
   'React',
   'R. Native',
+  'Redux',
+  'Firebase',
+  'VueJS',
   'Python',
   'Typescript',
   'Azure',
@@ -29,6 +32,7 @@ export const skills = [
   'SQL',
   'Git',
   'PHP',
+  'Express',
   'RESTful',
   'NextJS',
 ];

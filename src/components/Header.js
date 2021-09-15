@@ -18,9 +18,11 @@ const Header = ({ details }) => {
     return Object.values(buttonValues).map(e => {
       const buttonDisplay = (
         <li className="nav-menu-items">
+          <span className="nav-menu-left-width"></span>
           <span className="color-brackets">{e.openingTag}</span>
           <span className="color-name">{e.name}</span>
           <span className="color-brackets">{e.closingTag}</span>
+          <span className="nav-menu-left-right"></span>
         </li>
       );
       return (

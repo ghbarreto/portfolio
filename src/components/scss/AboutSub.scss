@@ -40,15 +40,19 @@
 
         &:nth-child(1n) {
           background-color: $yellow;
+          width: 100%;
         }
         &:nth-child(2n) {
           background-color: $highlight;
+          width: 100%;
         }
         &:nth-child(3n) {
           background-color: $white;
+          width: 100%;
         }
         &:nth-child(5n) {
           background-color: $lightblue;
+          width: 100%;
         }
       }
     }

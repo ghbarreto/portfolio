@@ -4,17 +4,17 @@
       "value": 40,
       "density": {
         "enable": true,
-        "value_area": 400
+        "value_area": 800
       }
     },
     "color": {
-      "value": "#737373"
+      "value": "#ffe881"
     },
     "shape": {
-      "type": "circle",
+      "type": "triangle",
       "stroke": {
         "width": 0.2,
-        "color": "#737373",
+        "color": "#202020",
         "opacity": 0.5
       }
     },
@@ -28,7 +28,7 @@
         },
     "line_linked": {
       "distance": 150,
-      "color": "#737373",
+      "color": "#202020",
       "opacity": 1
     },
     "move": {
