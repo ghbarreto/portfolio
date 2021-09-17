@@ -1,6 +1,6 @@
-import { projectTitle, projects, tags } from './utils/utils.functions';
+import { projectTitle, projects, tags } from '../../utils/utils.functions';
 import _ from 'lodash';
-import './scss/WorkSub.scss';
+import '../../scss/WorkSub.scss';
 
 const WorkSub = () => {
   const displayProjects = () => {

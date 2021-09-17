@@ -1,6 +1,6 @@
 import React from 'react';
-import { tags } from './utils/utils.functions';
-import './scss/HeaderSub.scss';
+import { tags } from '../../utils/utils.functions';
+import '../../scss/HeaderSub.scss';
 
 const HeaderSub = ({ title, name, sub, job_title }) => {
   const openingTag = `${tags.openingTag} h1 ${tags.closingOpening}`;

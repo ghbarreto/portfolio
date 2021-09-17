@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import useOnScreen from '../utils/useOnScreen';
 import { CheckNavigation } from '../utils/CheckNavigation';
 
-import WorkSub from '../WorkSub';
+import WorkSub from '../screens/sub/WorkSub';
 
 const Work = () => {
   const ref = useRef();

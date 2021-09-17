@@ -1,15 +1,15 @@
 import React from 'react';
 import './scss/index.scss';
 
-import Header from './Header';
-import HeaderSub from './HeaderSub';
+import Header from './screens/Header';
+import HeaderSub from './screens/sub/HeaderSub';
 import Home from './screens/Home';
 import About from './screens/About';
-import AboutSub from './AboutSub';
+import AboutSub from './screens/sub/AboutSub';
 import Work from './screens/Work';
 import Reach from './screens/Reach';
 
-import DisplayArrow from './DisplayArrow'
+import DisplayArrow from './utils/DisplayArrow'
 
 const App = () => {
   return (

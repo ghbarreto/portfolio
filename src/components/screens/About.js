@@ -8,7 +8,7 @@ import {
   viewResume,
 } from '../utils/utils.functions';
 import useOnScreen from '../utils/useOnScreen';
-import Button from '../Button';
+import Button from '../utils/Button';
 import { CheckNavigation } from '../utils/CheckNavigation';
 import '../scss/About.scss';
 

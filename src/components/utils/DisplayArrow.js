@@ -1,4 +1,4 @@
-import './scss/DisplayArrow.scss';
+import '../scss/DisplayArrow.scss';
 import { connect } from 'react-redux';
 
 const DisplayArrow = ({ details }) => {

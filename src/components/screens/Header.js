@@ -1,6 +1,6 @@
 import React from 'react';
-import './scss/Header.scss';
-import Particles from './utils/Particle';
+import '../scss/Header.scss';
+import Particles from '../utils/Particle';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
@@ -10,7 +10,7 @@ import {
   socialMedia,
   navigate,
   informations,
-} from './utils/utils.functions';
+} from '../utils/utils.functions';
 
 const Header = ({ details }) => {
   const location = details.details;

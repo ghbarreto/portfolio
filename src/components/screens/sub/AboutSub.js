@@ -1,7 +1,7 @@
 import React from 'react';
-import './scss/AboutSub.scss';
+import '../../scss/AboutSub.scss';
 
-import { knowledgeField, tags, skills } from './utils/utils.functions';
+import { knowledgeField, tags, skills } from '../../utils/utils.functions';
 
 const AboutSub = () => {
   const displayKnowledgeSection = () => {
