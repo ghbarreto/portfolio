@@ -5,6 +5,32 @@ export const projectTitle = ['Open Source Projects', 'Colaboration Projects'];
 export const projects = [
   {
     name: 'FFXIV-Info',
+    description:
+      'An app developed by me to help people know various features about the game FFXIV',
+    githubLink: 'https://github.com/',
+    live: 'https://github.com',
+    date: 'Jan, 2022',
+  },
+  {
+    name: 'FFXIV-Info',
+    description:
+      'An app developed by me to help people know various features about the game FFXIV',
+    githubLink: 'https://github.com/',
+    live: 'https://github.com',
+    date: 'Jan, 2022',
+  },
+  {
+    name: 'FFXIV-Info',
+    description:
+      'An app developed by me to help people know various features about the game FFXIV',
+    githubLink: 'https://github.com/',
+    live: 'https://github.com',
+    date: 'Jan, 2022',
+  },
+  {
+    name: 'FFXIV-Info',
+    description:
+      'An app developed by me to help people know various features about the game FFXIV',
     githubLink: 'https://github.com/',
     live: 'https://github.com',
     date: 'Jan, 2022',
@@ -12,12 +38,15 @@ export const projects = [
 
   {
     name: 'covid-api',
+    description:
+      'An app developed by me to help people track covid growth in countries',
     githubLink: 'https://github.com/',
     live: 'https://github.com',
     date: 'Jan, 2021',
   },
   {
     name: 'my-portfolio',
+    description: 'My old portfolio',
     githubLink: 'https://github.com/',
     live: 'https://github.com',
     date: 'March, 2020',

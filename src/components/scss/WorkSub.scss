@@ -15,6 +15,105 @@
   }
 }
 
+.display-on-hover {
+  display: none;
+}
+
+.project-list-margins {
+  margin-top: 40px;
+  .project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
+    width: 90%;
+    margin: 0 auto;
+    .projects-list-item {
+      border-radius: 30px;
+      margin: 30px;
+      margin-top: 40px;
+      width: 20%;
+      flex: 1 0 25%;
+      height: 250px;
+      &:hover {
+        .projects-list-item-name {
+          display: none;
+        }
+        .display-on-hover {
+          display: flex;
+          justify-content: space-around;
+          margin: 30px;
+          margin-top: 30%;
+        }
+        .projects-list-item-date {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.yellow {
+  background-color: $yellow;
+  .bracket-color {
+    color: $highlight;
+  }
+}
+
+.blue {
+  background-color: $lightblue;
+  .bracket-color {
+    color: $yellow;
+  }
+}
+
+.pink {
+  background-color: $highlight;
+  .bracket-color {
+    color: $white;
+  }
+}
+
+.button-project {
+  background-color: $background-color;
+  border: 0;
+  width: 150px;
+  border-radius: 30px;
+  font-size: $desktop-font-size;
+  text-decoration: none;
+  color: $white;
+  text-align: center;
+  &:hover {
+    color: $highlight;
+  }
+}
+
+.projects-list-item-name {
+  font-size: $desktop-font-size;
+  margin-left: 30px;
+  margin-top: 30px;
+  font-weight: $font-semi;
+  color: $background-color;
+  .bracket-format {
+    margin-right: 30px;
+    font-size: $desktop-font-size;
+    font-weight: $font-heavy;
+  }
+  .projects-list-item-description {
+    font-weight: $font-thin;
+    font-size: $desktop-section-tags-size;
+    width: 90%;
+  }
+}
+
+.projects-list-item-date {
+  display: flex;
+  justify-content: flex-end;
+  $font-weight: $font-thin;
+  font-size: $desktop-section-tags-size;
+  margin-right: 30px;
+  margin-top: 20px;
+}
 .closing-opening-tags {
   color: $highlight;
   margin-right: 10px;
