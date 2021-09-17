@@ -2,6 +2,27 @@ export const logo = '/assets/images/logo.png';
 export const navigate = ['Home', 'About', 'Works', 'Reach'];
 export const aboutBanner = '/assets/images/about-banner.png';
 export const projectTitle = ['Open Source Projects', 'Colaboration Projects'];
+const kyteLogo = '/assets/images/kyte.png'
+export const timelineHorizontal = [
+  {
+    title: 'Full-stack Developer',
+    company: 'Kyte',
+    date: '2020-2021',
+    image: kyteLogo,
+    description:
+      'Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet',
+  },
+  {
+    title: 'Full-stack Developer',
+    company: 'Kyte',
+    date: '2020-2021',
+    image: kyteLogo,
+    description:
+      'Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet',
+  },
+ 
+];
+
 export const projects = [
   {
     name: 'FFXIV-Info',

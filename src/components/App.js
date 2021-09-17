@@ -8,6 +8,7 @@ import About from './screens/About';
 import AboutSub from './screens/sub/AboutSub';
 import Work from './screens/Work';
 import Reach from './screens/Reach';
+import WorkTimeline from './screens/sub/WorkTimeline'
 
 import DisplayArrow from './utils/DisplayArrow'
 
@@ -32,6 +33,9 @@ const App = () => {
       </div>
       <div className="landing-page">
         <Work />
+      </div>
+      <div className="landing-page">
+        <WorkTimeline />
       </div>
       <div className="landing-page">
         <Reach />

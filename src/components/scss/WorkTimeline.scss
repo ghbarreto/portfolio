@@ -1,0 +1,39 @@
+.horizontal-arrow{
+  height: 3px;
+  width: 80%;
+  border: 2px solid white;
+}
+
+.horizontal-project-list {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 100px;
+  margin-left: 10%;
+  position: absolute;
+  .container-horizontal {
+    display: flex;
+    .horizontal-project-list-image {
+      float: left;
+      width: 50px;
+      margin-top: 10px;
+      margin-right: 10px;
+      border-radius: 50px;
+    }
+    .horizontal-project-list-title {
+      width: 80%;
+    }
+    .horizontal-project-list-items {
+      width: 50%;
+      li {
+        display: inline-block;
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+    .horizontal-project-list-description {
+      margin-top: 30px;
+      width: 50%;
+    }
+  }
+}

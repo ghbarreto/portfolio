@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../../scss/AboutSub.scss';
-
+import useOnScreen from '../../utils/useOnScreen';
+import { CheckNavigation } from '../../utils/CheckNavigation';
 import { knowledgeField, tags, skills } from '../../utils/utils.functions';
 
 const AboutSub = () => {
+  const ref = useRef();
+  const isVisible = useOnScreen(ref);
+  const NAVIGATE = <CheckNavigation location="About" />;
+
   const displayKnowledgeSection = () => {
     return Object.values(knowledgeField).map(e => {
       return (
@@ -41,6 +46,7 @@ const AboutSub = () => {
         <div className="parent-skills">
           <div className="parent-skills-flex">{displaySkillsSection()}</div>
         </div>
+        <div ref={ref}>{isVisible && NAVIGATE}</div>
       </div>
     </div>
   );
