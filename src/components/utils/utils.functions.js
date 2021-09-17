@@ -1,7 +1,28 @@
 export const logo = '/assets/images/logo.png';
 export const navigate = ['Home', 'About', 'Works', 'Reach'];
 export const aboutBanner = '/assets/images/about-banner.png';
+export const projectTitle = ['Open Source Projects', 'Colaboration Projects'];
+export const projects = [
+  {
+    name: 'FFXIV-Info',
+    githubLink: 'https://github.com/',
+    live: 'https://github.com',
+    date: 'Jan, 2022',
+  },
 
+  {
+    name: 'covid-api',
+    githubLink: 'https://github.com/',
+    live: 'https://github.com',
+    date: 'Jan, 2021',
+  },
+  {
+    name: 'my-portfolio',
+    githubLink: 'https://github.com/',
+    live: 'https://github.com',
+    date: 'March, 2020',
+  },
+];
 export const jobExperience = {
   kyte: {
     title: 'Full Stack Developer Jr. @Kyte',
@@ -14,7 +35,6 @@ export const jobExperience = {
     experience: 'Worked with wordpress and a few other languages',
   },
 };
-
 export const skills = [
   'React',
   'R. Native',
@@ -36,7 +56,6 @@ export const skills = [
   'RESTful',
   'NextJS',
 ];
-
 export const knowledgeField = {
   full_stack: {
     title: 'Full Stack Development',
@@ -55,12 +74,10 @@ export const knowledgeField = {
     qualifications: 'I am trained in React, React.js bla bla bla bla bla',
   },
 };
-
 export const viewResume = {
   resume: 'www.facebook.com',
   value: 'View Resume',
 };
-
 export const informations = {
   name: 'Gabriel Barrett',
   jobTitle: 'Full-stack Developer',
@@ -78,7 +95,6 @@ export const tags = {
   closingTagName: '</',
   slash: '/',
 };
-
 export const buttonValues = [
   {
     name: 'Reach',
@@ -99,7 +115,6 @@ export const buttonValues = [
     closingTag: tags.closingBracket,
   },
 ];
-
 export const socialMedia = [
   {
     name: 'Github',

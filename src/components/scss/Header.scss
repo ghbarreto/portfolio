@@ -67,6 +67,7 @@ li {
       &:hover {
         color: $yellow !important;
         margin-top: -119px;
+        cursor: pointer;
         background-color: $blue;
         height: 170px;
         font-weight: $font-heavy;

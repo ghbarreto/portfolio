@@ -1,0 +1,21 @@
+@import 'utilities/utils.scss';
+
+.projects-title-main {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 'a b c d';
+  grid-template-columns: 1fr 10fr 10fr 1fr;
+  .projects-title {
+    grid-area: b;
+    text-transform: uppercase;
+    margin-left: 75px;
+    color: $white;
+    font-weight: $font-semi;
+    font-size: $desktop-section-tags-size;
+  }
+}
+
+.closing-opening-tags {
+  color: $highlight;
+  margin-right: 10px;
+}

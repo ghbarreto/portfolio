@@ -25,10 +25,10 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(30px);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(15px);
   }
 }
 
@@ -59,18 +59,19 @@
     width: 35px;
     height: 35px;
     border: solid $blue;
-    border-width: 5px 0px 0px 5px;
+    border-width: 0px 5px 5px 0px;
     padding: 3px;
   }
   .arrow-up {
-    transform: rotate(43deg);
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
   }
 }
 
 .bounceUp {
-  -moz-animation: bounce 3s infinite;
-  -webkit-animation: bounce 3s infinite;
-  animation: bounce 3s infinite;
+  -moz-animation: bounceUp 3s infinite;
+  -webkit-animation: bounceUp 3s infinite;
+  animation: bounceUp 3s infinite;
 }
 
 .bounce {

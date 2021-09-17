@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import useOnScreen from '../utils/useOnScreen';
 import { CheckNavigation } from '../utils/CheckNavigation';
 
+import WorkSub from '../WorkSub';
+
 const Work = () => {
   const ref = useRef();
   const isVisible = useOnScreen(ref);
@@ -14,10 +16,12 @@ const Work = () => {
   };
 
   return (
-    <div ref={ref} style={{ color: 'white' }}>
-      {returnVisibleContent()}
-      WORK
-    </div>
+    <>
+      <div ref={ref} style={{ color: 'white' }}>
+        {returnVisibleContent()}
+      </div>
+      <WorkSub />
+    </>
   );
 };
 
