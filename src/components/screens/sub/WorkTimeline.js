@@ -5,6 +5,7 @@ import {
   timelineHorizontal,
   projectTitle,
   tags,
+  kyteLogo,
 } from '../../utils/utils.functions';
 
 const WorkTimeline = () => {
@@ -17,30 +18,31 @@ const WorkTimeline = () => {
     );
   };
   const displayHorizontalProjects = () => {
-    return _.map(timelineHorizontal, e => {
-      const header = `${e.title} ${e.company} ${e.date}`;
+    return _.map(timelineHorizontal, (e, count) => {
+      let c = count + 1;
+      const arrows = c % 2 ? 'down' : 'up';
+      console.log(c);
       return (
-        <>
-          <div className="horizontal-dot"></div>
-          <div className="horizontal-border"></div>
-          <div className="float-horizontals">
-            <div className="container-horizontal">
-              <div className="horizontal-project-list-container-image">
-                <img
-                  className="horizontal-project-list-image"
-                  src={e.image}
-                  alt="logo"
-                />
-              </div>
-              <ul className="horizontal-project-list-items">
-                <li className="horizontal-project-list-title">{header}</li>
-                <li className="horizontal-project-list-description">
-                  {e.description}
-                </li>
-              </ul>
+        <div className={`horizontal-container-${c}`}>
+          <div className="background-border"></div>
+          <div className="container-items">
+            <img className="container-items-image" src={e.image} alt="logo" />
+            <div className="container-items-title format-titles">
+              {e.title}{' '}
+              <span className="back-slashes">
+                {tags.slash}
+                {tags.slash}
+              </span>{' '}
+              {e.date}
+            </div>
+            <div className="container-items-description description-format">
+              {e.description}
             </div>
           </div>
-        </>
+          <div className="border"></div>
+          <div className={`arrow ${arrows}`}></div>
+          <div className="fill-arrow"></div>
+        </div>
       );
     });
   };
@@ -51,8 +53,7 @@ const WorkTimeline = () => {
         <span className="projects-title">{displayProjectTitle()}</span>
       </div>
       <div className="horizontal-project-list">
-        <div className="horizontal-line"></div>
-        {displayHorizontalProjects()}
+        <div className="horizontal-line">{displayHorizontalProjects()}</div>
       </div>
     </>
   );

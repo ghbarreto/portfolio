@@ -2,25 +2,34 @@ export const logo = '/assets/images/logo.png';
 export const navigate = ['Home', 'About', 'Works', 'Reach'];
 export const aboutBanner = '/assets/images/about-banner.png';
 export const projectTitle = ['Open Source Projects', 'Colaboration Projects'];
-const kyteLogo = '/assets/images/kyte.png'
+export const kyteLogo = '/assets/images/kyte.png';
+export const emilLogo = '/assets/images/emil.jpeg';
+export const lugaroLogo = '/assets/images/lugaro.jpeg';
+
 export const timelineHorizontal = [
   {
-    title: 'Full-stack Developer',
-    company: 'Kyte',
-    date: '2020-2021',
-    image: kyteLogo,
+    title: 'Web Developer',
+    company: 'Emil Clothing',
+    date: '2018',
+    image: emilLogo,
+    description: 'Worked with wordpress to deliver',
+  },
+  {
+    title: 'Web Developer',
+    company: 'Lugaro Jewellers',
+    date: '2019',
+    image: lugaroLogo,
     description:
       'Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet',
   },
   {
     title: 'Full-stack Developer',
     company: 'Kyte',
-    date: '2020-2021',
+    date: '2021',
     image: kyteLogo,
     description:
       'Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet',
   },
- 
 ];
 
 export const projects = [
