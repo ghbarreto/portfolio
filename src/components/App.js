@@ -8,9 +8,9 @@ import About from './screens/About';
 import AboutSub from './screens/sub/AboutSub';
 import Work from './screens/Work';
 import Reach from './screens/Reach';
-import WorkTimeline from './screens/sub/WorkTimeline'
+import WorkTimeline from './screens/sub/WorkTimeline';
 
-import DisplayArrow from './utils/DisplayArrow'
+import DisplayArrow from './utils/DisplayArrow';
 
 const App = () => {
   return (
@@ -31,7 +31,7 @@ const App = () => {
       <div className="landing-page">
         <AboutSub />
       </div>
-      <div className="landing-page">
+      <div className="projects-landing-page">
         <Work />
       </div>
       <div className="landing-page">

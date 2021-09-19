@@ -119,3 +119,33 @@
   margin-right: 10px;
 }
 
+@media only screen and (max-width: $medium-big-screen) {
+  .project-list-margins {
+    .project-list {
+      .projects-list-item {
+        flex: 1 0 30%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $medium-screen+150) {
+  .projects-title-main {
+    grid-template-areas: 'a b c d';
+    grid-template-columns: 1fr 10fr 2fr 1fr;
+    .projects-title {
+      text-transform: uppercase;
+      margin-left: 75px;
+    }
+  }
+  .project-list-margins {
+    .project-list {
+      width: 60%;
+      margin-bottom: 10px;
+      overflow: hidden;
+      .projects-list-item {
+        flex: 1 0 50%;
+      }
+    }
+  }
+}

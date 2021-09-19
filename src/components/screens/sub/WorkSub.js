@@ -15,6 +15,7 @@ const WorkSub = () => {
             <div className="projects-list-item-description">
               {e.description}
             </div>
+            <div className="projects-list-item-date">{e.date}</div>
           </div>
           <div className="display-on-hover">
             <a className="button-project" href={e.githubLink}>
@@ -24,7 +25,6 @@ const WorkSub = () => {
               Live
             </a>
           </div>
-          <div className="projects-list-item-date">{e.date}</div>
           <div className="onHoverDisplay"></div>
         </div>
       );

@@ -1,5 +1,14 @@
 @import 'utilities/utils.scss';
 
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
 .format-titles {
   font-size: $desktop-font-size;
   font-weight: $font-semi;
@@ -24,190 +33,185 @@
   height: 5px;
   background-color: $white;
   border: 1px solid $white;
-  .horizontal-container-1 {
-    content: '';
-    height: 30px;
-    margin-top: -13px;
-    margin-left: 60px;
+  .container-items-image {
+    height: 100px;
+    border-radius: 50px;
+    width: 100px;
+    .container-items-title {
+      position: absolute;
+      top: 8px;
+      left: 110px;
+    }
+  }
+  .container-items {
+    position: absolute;
+    bottom: -235px;
+    width: 50%;
+    margin-left: -33px;
+    .container-items-image {
+      height: 100px;
+      border-radius: 50px;
+      width: 100px;
+    }
+    .container-items-title {
+      position: absolute;
+      top: 8px;
+      left: 110px;
+    }
+    .container-items-description {
+      position: absolute;
+      width: 100%;
+      top: 50px;
+      left: 120px;
+    }
+  }
+  .background-border {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+  }
+  .border {
+    height: 100px;
+    width: 0px;
+    transform: translateX(12px);
+    position: relative;
+  }
+}
+.arrow {
+  display: inline-block;
+  border-width: 0px 10px 10px 0px;
+  padding: 5px;
+  position: relative;
+  margin-left: 6px;
+}
+
+.horizontal-container-1 {
+  height: 30px;
+  margin-top: -13px;
+  margin-left: 60px;
+  background-color: $lightblue;
+  width: 30px;
+  border-radius: 50px;
+  .container-items {
+    top: -235px;
+    width: 50%;
+    margin-left: -33px;
+    .container-items-title {
+      color: $lightblue;
+    }
+  }
+  .border {
+    border: 4px solid $lightblue;
+    transform: translateX(12px);
+    top: -120px;
+  }
+  .background-border {
+    top: -240px;
+    left: 21px;
     background-color: $lightblue;
-    width: 30px;
-    border-radius: 50px;
-    .container-items {
-      position: absolute;
-      top: -235px;
-      width: 50%;
-      margin-left: -33px;
-      .container-items-image {
-        height: 100px;
-        border-radius: 50px;
-        width: 100px;
-      }
-      .container-items-title {
-        position: absolute;
-        color: $lightblue;
-        top: 8px;
-        left: 110px;
-      }
-      .container-items-description {
-        position: absolute;
-        width: 100%;
-        top: 50px;
-        left: 120px;
-      }
-    }
-    .border {
-      border: 4px solid $lightblue;
-      height: 100px;
-      width: 0px;
-      transform: translateX(12px);
-      position: relative;
-      top: -120px;
-    }
-    .background-border {
-      position: absolute;
-      top: -240px;
-      left: 21px;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background-color: $lightblue;
-    }
-    .arrow {
-      border: solid $lightblue;
-      border-width: 0px 10px 10px 0px;
-      display: inline-block;
-      padding: 5px;
-      position: relative;
-      top: -140px;
-      margin-left: 6px;
+  }
+  .arrow {
+    border: solid $lightblue;
+    border-width: 0px 10px 10px 0px;
+    top: -140px;
+  }
+}
+
+.horizontal-container-2 {
+  height: 30px;
+  margin-top: -30px;
+  margin-left: 30%;
+  background-color: $highlight;
+  width: 30px;
+  border-radius: 50px;
+  .container-items {
+    .container-items-title {
+      color: $highlight;
+      left: 110px;
     }
   }
-
-  .horizontal-container-2 {
-    content: '';
-    height: 30px;
-    margin-top: -30px;
-    margin-left: 30%;
+  .border {
+    border: 4px solid $highlight;
+    transform: translateX(12px);
+    top: 40px;
+  }
+  .background-border {
+    top: 130px;
+    transform: translateX(-37px);
     background-color: $highlight;
-    width: 30px;
-    border-radius: 50px;
-    .container-items {
-      position: absolute;
-      bottom: -235px;
-      width: 50%;
-      margin-left: -33px;
-      .container-items-image {
-        height: 100px;
-        border-radius: 50px;
-        width: 100px;
-      }
-      .container-items-title {
-        position: absolute;
-        color: $highlight;
-        top: 8px;
-        left: 110px;
-      }
-      .container-items-description {
-        position: absolute;
-        width: 100%;
-        top: 50px;
-        left: 120px;
-      }
-    }
-    .border {
-      border: 4px solid $highlight;
-      height: 100px;
-      width: 0px;
-      transform: translateX(12px);
-      position: relative;
-      top: 40px;
-    }
-    .background-border {
-      position: absolute;
-      top: 130px;
-      transform: translateX(-37px);
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background-color: $highlight;
-    }
-    .arrow {
-      border: solid $highlight;
-      border-width: 0px 10px 10px 0px;
-      display: inline-block;
-      padding: 5px;
-      position: relative;
-      top: -70px;
-      margin-left: 6px;
+  }
+  .arrow {
+    border: solid $highlight;
+    border-width: 0px 10px 10px 0px;
+    display: inline-block;
+    top: -70px;
+  }
+}
+
+.horizontal-container-3 {
+  content: '';
+  height: 30px;
+  margin-top: -30px;
+  margin-left: 70%;
+  background-color: $yellow;
+  width: 30px;
+  border-radius: 50px;
+  .container-items {
+    top: -235px;
+    width: 50%;
+    margin-left: -33px;
+    .container-items-title {
+      color: $yellow;
     }
   }
-
-  .horizontal-container-3 {
-    content: '';
-    height: 30px;
-    margin-top: -30px;
-    margin-left: 60%;
+  .border {
+    border: 4px solid $yellow;
+    transform: translateX(12px);
+    top: -120px;
+  }
+  .background-border {
+    top: -240px;
+    transform: translateX(-38px);
     background-color: $yellow;
-    width: 30px;
-    border-radius: 50px;
-    .container-items {
-      position: absolute;
-      top: -235px;
-      width: 50%;
-      margin-left: -33px;
-      .container-items-image {
-        height: 100px;
-        border-radius: 50px;
-        width: 100px;
-      }
-      .container-items-title {
-        position: absolute;
-        color: $yellow;
-        top: 8px;
-        left: 110px;
-      }
-      .container-items-description {
-        position: absolute;
-        width: 100%;
-        top: 50px;
-        left: 120px;
-      }
-    }
-    .border {
-      border: 4px solid $yellow;
-      height: 100px;
-      width: 0px;
-      transform: translateX(12px);
-      position: relative;
-      top: -120px;
-    }
-    .background-border {
-      position: absolute;
-      top: -240px;
-      transform: translateX(-37px);
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background-color: $yellow;
-    }
-    .arrow {
-      border: solid $yellow;
-      border-width: 0px 10px 10px 0px;
-      display: inline-block;
-      padding: 5px;
-      position: relative;
-      top: -140px;
-      margin-left: 6px;
-    }
+  }
+  .arrow {
+    border: solid $yellow;
+    border-width: 0px 10px 10px 0px;
+    top: -140px;
+    margin-left: 6px;
   }
 }
 
-.up {
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
+@media only screen and (max-width: $big-screen) {
+  .container-items-title {
+    width: 100%;
+    font-size: $medium-section-size;
+  }
+  .container-items-description {
+    font-size: $medium-font-size;
+    width: 80% !important;
+  }
 }
 
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+@media only screen and (max-width: $medium-big-screen) {
+  .container-items-title {
+    margin-top: -20px;
+    width: 70%;
+  }
+  .container-items-description {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: $medium-screen) {
+  .horizontal-line {
+    width: 80%;
+  }
+  .container-items-title {
+    width: 80%;
+  }
+  .container-items-description {
+    width: 100%;
+  }
 }
