@@ -16,6 +16,8 @@ body {
 .projects-landing-page {
   height: 120vh;
   overflow: auto;
+  max-height: 70%;
+  margin-top: 30px;
 }
 
 .section-pages {
@@ -24,7 +26,7 @@ body {
 
 canvas {
   position: fixed;
-  z-index: -1;
+  z-index: -2;
 }
 
 .highlight-blue {
@@ -82,9 +84,11 @@ canvas {
 
 @media only screen and (max-width: $medium-screen+150) {
   .landing-page {
-    width: 90vh;
+    height: 200vh;
+    width: 100vh;
+    margin-left: 50%;
   }
   .projects-landing-page {
-    width: 90vh;
+    width: 100vh;
   }
 }

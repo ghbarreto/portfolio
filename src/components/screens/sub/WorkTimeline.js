@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../scss/WorkTimeline.scss';
+import MobileWorkTimeline from './MobileWorkTimeline';
 import _ from 'lodash';
 import {
   timelineHorizontal,
   projectTitle,
   tags,
-  kyteLogo,
 } from '../../utils/utils.functions';
 
 const WorkTimeline = () => {
@@ -19,11 +19,10 @@ const WorkTimeline = () => {
   };
   const displayHorizontalProjects = () => {
     return _.map(timelineHorizontal, (e, count) => {
-      let c = count + 1;
-      const arrows = c % 2 ? 'down' : 'up';
-      console.log(c);
+      count++;
+      const arrows = count % 2 ? 'down' : 'up';
       return (
-        <div className={`horizontal-container-${c}`}>
+        <div className={`horizontal-container-${count}`}>
           <div className="background-border"></div>
           <div className="container-items">
             <img className="container-items-image" src={e.image} alt="logo" />
@@ -55,6 +54,7 @@ const WorkTimeline = () => {
       <div className="horizontal-project-list">
         <div className="horizontal-line">{displayHorizontalProjects()}</div>
       </div>
+      <MobileWorkTimeline />
     </>
   );
 };

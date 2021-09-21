@@ -50,7 +50,7 @@ const WorkSub = () => {
       <div className="projects-title-main">
         <span className="projects-title">{displayProjectTitle()}</span>
       </div>
-      <div className="project-list-margins">
+      <div className="project-list-margins projects-landing-page">
         <div className="project-list">{displayProjects()}</div>
       </div>
     </>

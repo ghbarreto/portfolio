@@ -9,14 +9,13 @@ import AboutSub from './screens/sub/AboutSub';
 import Work from './screens/Work';
 import Reach from './screens/Reach';
 import WorkTimeline from './screens/sub/WorkTimeline';
-
 import DisplayArrow from './utils/DisplayArrow';
 
 const App = () => {
   return (
     <>
+      <Header />
       <div className="landing-page">
-        <Header />
         <DisplayArrow />
         <HeaderSub
           title={'Hello!'}
@@ -25,13 +24,13 @@ const App = () => {
         />
         <Home />
       </div>
-      <div className="section-pages">
+      <div className="landing-pages">
         <About />
       </div>
       <div className="landing-page">
         <AboutSub />
       </div>
-      <div className="projects-landing-page">
+      <div className="landing-page">
         <Work />
       </div>
       <div className="landing-page">
