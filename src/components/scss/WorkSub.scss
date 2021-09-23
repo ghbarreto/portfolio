@@ -149,3 +149,18 @@
     }
   }
 }
+@media only screen and (min-width: $small-screen),
+  (max-width: $small-screen-cutoff) {
+  .projects-title-main {
+    display: block;
+  }
+  .project-list-margins {
+    .project-list {
+      display: block;
+      width: 100%;
+      .projects-list-item {
+        display: none;
+      }
+    }
+  }
+}

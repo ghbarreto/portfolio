@@ -31,3 +31,12 @@
     grid-area: c;
   }
 }
+@media only screen and (min-width: $small-screen),
+  (max-width: $small-screen-cutoff) {
+  .about-section-container {
+    display: block;
+    .image-about-section img {
+      max-width: 100%;
+    }
+  }
+}

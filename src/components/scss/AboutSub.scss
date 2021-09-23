@@ -58,3 +58,10 @@
     }
   }
 }
+
+@media only screen and (min-width: $small-screen),
+  (max-width: $small-screen-cutoff) {
+  .about-sub-flex {
+    display: block;
+  }
+}

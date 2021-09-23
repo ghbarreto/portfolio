@@ -26,7 +26,10 @@ body {
 
 canvas {
   position: fixed;
+  width: 100vw !important;
+  height: 100vh !important;
   z-index: -2;
+  display: none;
 }
 
 .highlight-blue {
@@ -86,9 +89,32 @@ canvas {
   .landing-page {
     height: 200vh;
     width: 100vh;
-    margin-left: 50%;
   }
   .projects-landing-page {
     width: 100vh;
+  }
+}
+
+@media only screen and (min-width: $small-screen),
+  (max-width: $small-screen-cutoff) {
+  .landing-page {
+    height: 200vh;
+    width: 100vw;
+  }
+  .projects-landing-page {
+    width: 100vh;
+  }
+  .left-right-fixed {
+    display: none;
+  }
+  .right-fixed-navigation {
+    display: none;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
   }
 }

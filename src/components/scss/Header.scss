@@ -131,3 +131,10 @@ li {
     }
   }
 }
+
+@media only screen and (min-width: $small-screen),
+  (max-width: $small-screen-cutoff) {
+  .fixed-nav-bar {
+    display: none;
+  }
+}

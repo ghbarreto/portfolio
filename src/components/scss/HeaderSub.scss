@@ -4,9 +4,9 @@
   display: flex;
   justify-content: center;
   .center-text {
-    top: 35%;
-    position: absolute;
-    width: 900px;
+    margin-top: 50%;
+    position: relative;
+    width: 90vw;
     .center-text-tag {
       font-size: 25px;
       font-weight: $font-semi;

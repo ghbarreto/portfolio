@@ -24,7 +24,7 @@ const App = () => {
         />
         <Home />
       </div>
-      <div className="landing-pages">
+      <div className="landing-page">
         <About />
       </div>
       <div className="landing-page">
