@@ -29,7 +29,6 @@ canvas {
   width: 100vw !important;
   height: 100vh !important;
   z-index: -2;
-  display: none;
 }
 
 .highlight-blue {
@@ -95,8 +94,7 @@ canvas {
   }
 }
 
-@media only screen and (min-width: $small-screen),
-  (max-width: $small-screen-cutoff) {
+@media only screen and (max-width: $small-screen-cutoff){
   .landing-page {
     height: 200vh;
     width: 100vw;
@@ -113,8 +111,6 @@ canvas {
   html,
   body {
     overflow-x: hidden;
-  }
-  body {
     position: relative;
   }
 }
