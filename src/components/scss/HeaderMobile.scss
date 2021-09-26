@@ -1,0 +1,139 @@
+@import 'utilities/utils.scss';
+
+@media only screen and (max-width: $small-screen-cutoff) {
+  .navigation {
+    top: 10px;
+    left: 30px;
+    margin-left: 30px;
+    position: fixed;
+    margin: 0 auto;
+    display: flex;
+    color: $white;
+    div {
+      .navigation-mobile-name {
+        display: inline-block;
+        color: $white;
+        font-weight: $font-semi;
+        position: relative;
+        bottom: 20px;
+        margin-left: 5px;
+      }
+      .mobile-tag-color {
+        color: $highlight;
+      }
+    }
+    img {
+      height: 50px;
+      width: 50px;
+    }
+    nav {
+      .burger-nav {
+        .hamburger-nav {
+          margin-top: 10px;
+          height: 3px;
+          width: 30px;
+          position: absolute;
+        }
+        .nav1 {
+          border: 3px solid $lightblue;
+          right: -40%;
+          top: -3px;
+        }
+        .nav2 {
+          border: 3px solid $highlight;
+          right: -40%;
+          top: 7px;
+        }
+        .nav3 {
+          border: 3px solid $lightblue;
+          right: -40%;
+          top: 18px;
+        }
+      }
+    }
+  }
+  .side-menu {
+    display: flex;
+    // grid-template-rows: repeat(10fr, 3);
+    height: 500px;
+    width: 80%;
+    left: 20%;
+    background-color: $background-color;
+    z-index: 2;
+    position: absolute;
+    border: 6px solid rgba(0, 0, 0, 0.603);
+    div {
+      img {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        right: 30%;
+      }
+      .burger-nav {
+        .hamburger-nav {
+          margin-top: 10px;
+          height: 3px;
+          width: 30px;
+          position: absolute;
+        }
+        .nav1 {
+          border: 3px solid $lightblue;
+          right: 10%;
+        }
+        .nav2 {
+          border: 3px solid $highlight;
+          right: 10%;
+          top: 10px;
+        }
+        .nav3 {
+          border: 3px solid $lightblue;
+          right: 10%;
+          top: 20px;
+        }
+      }
+    }
+    .x-icon {
+      color: $lightblue;
+      font-size: 20px;
+      position: absolute;
+      left: 8%;
+      top: 2%;
+    }
+    .side-menu-header {
+      width: 100%;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+    }
+    .side-menu-links {
+      position: relative;
+      right: 30%;
+      color: $white;
+      font-size: 26px;
+      top: 20%;
+      margin-top: 30px;
+      .side-menu-items {
+        .side-menu-margins {
+          position: relative;
+          left: 25%;
+          text-align: center;
+          border-radius: 50px;
+          margin-top: 40px;
+          &:hover {
+            left: 35%;
+            background-color: $lightblue;
+            width: 80%;
+            color: $yellow;
+            font-weight: $font-heavy;
+            .color-brackets {
+              color: $yellow !important;
+            }
+          }
+        }
+        .color-brackets {
+          color: $highlight;
+        }
+      }
+    }
+  }
+}

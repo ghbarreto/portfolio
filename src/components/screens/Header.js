@@ -11,6 +11,7 @@ import {
   navigate,
   informations,
 } from '../utils/utils.functions';
+import HeaderMobile from './sub/HeaderMobile';
 
 const Header = ({ details }) => {
   const location = details.details;
@@ -105,6 +106,9 @@ const Header = ({ details }) => {
   return (
     <>
       <Particles />
+      <div className="mobile-header">
+        <HeaderMobile />
+      </div>
       <div className="background-nav-bar-color"></div>
       <div className="fixed-nav-bar">
         <div className="nav-bar">

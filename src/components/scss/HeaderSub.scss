@@ -1,5 +1,8 @@
 @import 'utilities/utils.scss';
 
+.mobile-header {
+  display: none;
+}
 .center {
   display: flex;
   justify-content: center;
@@ -31,6 +34,9 @@
       font-size: 90px;
       padding: 3px;
       margin-top: 20px;
+      &:nth-child(5) {
+        color: $yellow;
+      }
     }
     .color-change {
       color: $yellow;
@@ -58,25 +64,56 @@
 }
 
 @media only screen and (max-width: $small-screen-cutoff) {
+  .mobile-header {
+    display: block;
+  }
   .center {
+    position: absolute;
+    margin-top: 30%;
     .center-text {
-      .center-text-title{
+      .center-text-title {
         font-size: $mobile-section-size;
         margin: 0 auto;
+        margin-bottom: 20px;
       }
       .center-text-tag {
         margin-bottom: -50px;
-        margin-left: 6px;
+        margin-left: 30px;
         font-size: $mobile-tag-size;
       }
-      .center-text-name {
-        font-size: $mobile-section-size;
+      .center-text-mobile-header {
+        color: $white;
+        font-weight: $font-heavy;
+        font-size: 70px;
+        margin-top: 10px;
+        margin-bottom: -20px;
+        text-align: center;
       }
-      .center-text-sub{
+      .center-text-mobile-name {
+        color: $white;
+        font-weight: $font-heavy;
+        font-size: 70px;
+        text-align: center;
+        margin-top: -10px;
+        &:nth-child(1) {
+          color: $yellow;
+        }
+      }
+      .center-text-mobile {
+        display: inline;
+        &:nth-child(1) {
+          color: $yellow;
+        }
+      }
+      .center-text-name {
+        display: none;
+      }
+      .center-text-sub {
         margin-top: 10px;
         font-size: $mobile-section-size;
+        font-weight: $font-heavy;
         margin: 0 auto;
-
+        margin-top: 30px;
       }
       .center-text-tag-end {
         margin-top: 2px;

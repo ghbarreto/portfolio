@@ -21,6 +21,8 @@ const App = () => {
           title={'Hello!'}
           name={"I'm Gabriel"}
           sub={'Web Developer'}
+          header={"I'm"}
+          name2={'Gabriel'}
         />
         <Home />
       </div>

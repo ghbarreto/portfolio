@@ -174,6 +174,27 @@ export const buttonValues = [
     closingTag: tags.closingBracket,
   },
 ];
+
+export const buttonValuesMobile = [
+  {
+    name: 'About',
+    to: '/about',
+    openingTag: tags.openBracket,
+    closingTag: tags.closingBracket,
+  },
+  {
+    name: 'Works',
+    to: '/Works',
+    openingTag: tags.openBracket,
+    closingTag: tags.closingBracket,
+  },
+  {
+    name: 'Reach',
+    to: '/Reach',
+    openingTag: tags.openBracket,
+    closingTag: tags.closingBracket,
+  },
+];
 export const socialMedia = [
   {
     name: 'Github',
