@@ -1,7 +1,9 @@
 @import 'utilities/utils.scss';
 
-// commit for tonight
+@media only screen and (max-width: $small-screen-cutoff) {
+
 .vertical-project-list {
+  display: block;
   margin-top: 10%;
   .vertical-line {
     margin-top: 10%;
@@ -39,4 +41,5 @@
       }
     }
   }
+}
 }
