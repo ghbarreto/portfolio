@@ -1,54 +1,52 @@
 @import 'utilities/utils.scss';
 
 @media only screen and (max-width: $small-screen-cutoff) {
-  .navigation {
-    top: 10px;
-    left: 30px;
-    margin-left: 30px;
-    position: fixed;
-    margin: 0 auto;
-    display: flex;
-    color: $white;
-    div {
-      .navigation-mobile-name {
-        display: inline-block;
-        color: $white;
-        font-weight: $font-semi;
-        position: relative;
-        bottom: 20px;
-        margin-left: 5px;
+  .mobile-header-fixed {
+    max-width: $small-screen-cutoff;
+    margin-left: 3%;
+    margin-top: 2%;
+    .navigation {
+      margin: 0 auto;
+      color: $white;
+      div {
+        .navigation-mobile-name {
+          display: inline-block;
+          color: $white;
+          font-weight: $font-semi;
+          position: relative;
+          bottom: 20px;
+          margin-left: 5px;
+        }
+        .mobile-tag-color {
+          color: $highlight;
+        }
       }
-      .mobile-tag-color {
-        color: $highlight;
+      img {
+        height: 50px;
+        width: 50px;
       }
-    }
-    img {
-      height: 50px;
-      width: 50px;
-    }
-    nav {
-      .burger-nav {
-        .hamburger-nav {
-          margin-top: 10px;
-          height: 3px;
-          width: 30px;
-          position: absolute;
-        }
-        .nav1 {
-          border: 3px solid $lightblue;
-          right: -40%;
-          top: -3px;
-        }
-        .nav2 {
-          border: 3px solid $highlight;
-          right: -40%;
-          top: 7px;
-        }
-        .nav3 {
-          border: 3px solid $lightblue;
-          right: -40%;
-          top: 18px;
-        }
+      .hamburger-nav {
+        margin-right: 3%;
+        margin-top: 4%;
+        height: 2px;
+        width: 25px;
+        position: absolute;
+      }
+      .nav1 {
+        border: 3px solid $lightblue;
+        top: -3px;
+        left: 90%;
+      }
+      .nav2 {
+        border: 3px solid $highlight;
+        top: 7px;
+        left: 90%;
+      }
+      .nav3 {
+        border: 3px solid $lightblue;
+        top: 18px;
+        left: 90%;
+
       }
     }
   }
