@@ -26,19 +26,21 @@ const App = () => {
         />
         <Home />
       </div>
-      <div className="landing-page">
+      <div className="landing-page landing-page-section">
         <About />
       </div>
-      <div className="landing-page">
+      <div className="landing-page landing-page-section-sub">
         <AboutSub />
       </div>
-      <div className="landing-page">
+
+      <div className="landing-page landing-page-section">
         <Work />
       </div>
-      <div className="landing-page">
+      <div className="landing-page landing-page-section-sub">
         <WorkTimeline />
       </div>
-      <div className="landing-page">
+
+      <div className="landing-page landing-page-section">
         <Reach />
       </div>
     </>

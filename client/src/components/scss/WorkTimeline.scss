@@ -5,6 +5,10 @@
   -webkit-transform: rotate(-135deg);
 }
 
+.vertical-project-list {
+  display: none;
+}
+
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -22,6 +26,7 @@
 .description-format {
   font-size: $desktop-experience-size;
   color: $white;
+  width: 80% !important;
 }
 
 .horizontal-line {

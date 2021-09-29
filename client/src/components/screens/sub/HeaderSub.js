@@ -19,9 +19,11 @@ const HeaderSub = ({ title, name, sub, job_title, header, name2 }) => {
           <div className="center-text-container">
             <div className="center-text-tag">{openingTag}</div>
             <div className="center-text-name">{colorName(name, 'name')}</div>
-            <div className="center-text-mobile-header">{header}</div>
-            <div className="center-text-mobile-name">
-              {colorName(name2, 'mobile')}
+            <div className="center-text-full-mobile-header">
+              <div className="center-text-mobile-header">{header}</div>
+              <div className="center-text-mobile-name">
+                {colorName(name2, 'mobile')}
+              </div>
             </div>
             <div className="center-text-tag-job">{job_title}</div>
           </div>

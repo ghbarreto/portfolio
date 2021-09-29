@@ -10,8 +10,8 @@ import '../../scss/HeaderMobile.scss';
 const HeaderMobile = () => {
   const [triggerNav, setTriggerNav] = useState(false);
 
-  const handleModal = bool => {
-    return setTriggerNav(bool);
+  const handleModal = () => {
+    return triggerNav === true ? setTriggerNav(false) : setTriggerNav(true);
   };
 
   const displaySideMenuLinks = () => {
@@ -31,43 +31,41 @@ const HeaderMobile = () => {
   };
   return (
     <>
-      <div className="navigation">
-        <div>
-          <img src={logo} alt="logo" />
-          <div className="navigation-mobile-name">
-            <span className="mobile-tag-color">{tags.closingTagName}</span>
-            {informations.name}
+      <div className="mobile-header-full">
+        <div className="mobile-header-fixed">
+          <div className="navigation">
+            <div>
+              <img src={logo} alt="logo" />
+              <div className="navigation-mobile-name">
+                <span className="mobile-tag-color">{tags.closingTagName}</span>
+                {informations.name}
+              </div>
+            </div>
+            <nav>
+              <ul className="burger-nav" onClick={() => handleModal()}>
+                <li className="hamburger-nav nav1"></li>
+                <li className="hamburger-nav nav2"></li>
+                <li className="hamburger-nav nav3"></li>
+              </ul>
+            </nav>
           </div>
+
+          <nav
+            className="side-menu"
+            style={{ display: triggerNav ? 'block' : 'none' }}
+          >
+            <div className="side-menu-header">
+              <div className="x-icon">
+                <i className="fas fa-times" onClick={() => handleModal()}></i>
+              </div>
+              <img src={logo} alt="logo" />
+            </div>
+            <div className="side-menu-links">
+              <ul>{displaySideMenuLinks()}</ul>
+            </div>
+          </nav>
         </div>
-        <nav>
-          <ul className="burger-nav" onClick={() => handleModal(true)}>
-            <li className="hamburger-nav nav1"></li>
-            <li className="hamburger-nav nav2"></li>
-            <li className="hamburger-nav nav3"></li>
-          </ul>
-        </nav>
       </div>
-
-      <nav
-        className="side-menu"
-        style={{ display: triggerNav ? 'block' : 'none' }}
-      >
-        <div className="side-menu-header">
-          <div className="x-icon">
-            <i className="fas fa-times" onClick={() => handleModal()}></i>
-          </div>
-          <img src={logo} alt="logo" />
-          <ul className="burger-nav" onClick={() => handleModal()}>
-            <li className="hamburger-nav nav1"></li>
-            <li className="hamburger-nav nav2"></li>
-            <li className="hamburger-nav nav3"></li>
-          </ul>
-        </div>
-
-        <div className="side-menu-links">
-          <ul>{displaySideMenuLinks()}</ul>
-        </div>
-      </nav>
     </>
   );
 };
