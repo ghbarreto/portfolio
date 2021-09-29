@@ -10,8 +10,8 @@ import '../../scss/HeaderMobile.scss';
 const HeaderMobile = () => {
   const [triggerNav, setTriggerNav] = useState(false);
 
-  const handleModal = bool => {
-    return setTriggerNav(bool);
+  const handleModal = () => {
+    return triggerNav === true ? setTriggerNav(false) : setTriggerNav(true);
   };
 
   const displaySideMenuLinks = () => {
@@ -42,7 +42,7 @@ const HeaderMobile = () => {
               </div>
             </div>
             <nav>
-              <ul className="burger-nav" onClick={() => handleModal(true)}>
+              <ul className="burger-nav" onClick={() => handleModal()}>
                 <li className="hamburger-nav nav1"></li>
                 <li className="hamburger-nav nav2"></li>
                 <li className="hamburger-nav nav3"></li>
@@ -59,13 +59,7 @@ const HeaderMobile = () => {
                 <i className="fas fa-times" onClick={() => handleModal()}></i>
               </div>
               <img src={logo} alt="logo" />
-              <ul className="burger-nav" onClick={() => handleModal()}>
-                <li className="hamburger-nav nav1"></li>
-                <li className="hamburger-nav nav2"></li>
-                <li className="hamburger-nav nav3"></li>
-              </ul>
             </div>
-
             <div className="side-menu-links">
               <ul>{displaySideMenuLinks()}</ul>
             </div>

@@ -3,8 +3,9 @@
 @media only screen and (max-width: $small-screen-cutoff) {
   .mobile-header-fixed {
     max-width: $small-screen-cutoff;
-    margin-left: 3%;
-    margin-top: 2%;
+    margin-left: 5%;
+    position: fixed;
+    width: 95%;
     .navigation {
       margin: 0 auto;
       color: $white;
@@ -25,12 +26,18 @@
         height: 50px;
         width: 50px;
       }
+      
       .hamburger-nav {
+        z-index: 3;
         margin-right: 3%;
         margin-top: 4%;
         height: 2px;
         width: 25px;
         position: absolute;
+        &:hover{
+          background-color: red;
+        }
+       
       }
       .nav1 {
         border: 3px solid $lightblue;
@@ -55,7 +62,9 @@
     // grid-template-rows: repeat(10fr, 3);
     height: 500px;
     width: 80%;
-    left: 20%;
+    top: 0;
+    right: 0;
+    bottom: 0;
     background-color: $background-color;
     z-index: 2;
     position: absolute;
@@ -68,26 +77,26 @@
         right: 30%;
       }
       .burger-nav {
-        .hamburger-nav {
-          margin-top: 10px;
-          height: 3px;
-          width: 30px;
-          position: absolute;
-        }
-        .nav1 {
-          border: 3px solid $lightblue;
-          right: 10%;
-        }
-        .nav2 {
-          border: 3px solid $highlight;
-          right: 10%;
-          top: 10px;
-        }
-        .nav3 {
-          border: 3px solid $lightblue;
-          right: 10%;
-          top: 20px;
-        }
+        // .hamburger-nav {
+        //   margin-top: 10px;
+        //   height: 3px;
+        //   width: 30px;
+        //   position: absolute;
+        // }
+        // .nav1 {
+        //   border: 3px solid $lightblue;
+        //   right: 10%;
+        // }
+        // .nav2 {
+        //   border: 3px solid $highlight;
+        //   right: 10%;
+        //   top: 10px;
+        // }
+        // .nav3 {
+        //   border: 3px solid $lightblue;
+        //   right: 10%;
+        //   top: 20px;
+        // }
       }
     }
     .x-icon {
