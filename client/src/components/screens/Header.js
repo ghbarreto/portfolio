@@ -59,14 +59,8 @@ const Header = ({ details }) => {
     );
   };
 
-  const redirectOnClick = path => {
-    console.log(path);
-    return <a href={path}>redirect</a>;
-  };
-
   const renderSocialMedia = () => {
     return Object.values(socialMedia).map(e => {
-      console.log(e.img);
       return (
         <li>
           <a href={e.src}>
@@ -74,7 +68,6 @@ const Header = ({ details }) => {
               className="fixed-image-sizing"
               src={e.img}
               alt={`${e.name} icon`}
-              onClick={() => redirectOnClick(e.src)}
             />
           </a>
         </li>

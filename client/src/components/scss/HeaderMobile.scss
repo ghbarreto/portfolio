@@ -6,105 +6,88 @@
     margin-left: 5%;
     position: fixed;
     width: 95%;
+    top: 5%;
     .navigation {
       margin: 0 auto;
+      display: flex;
       color: $white;
-      div {
-        .navigation-mobile-name {
-          display: inline-block;
-          color: $white;
-          font-weight: $font-semi;
-          position: relative;
-          bottom: 20px;
-          margin-left: 5px;
-        }
-        .mobile-tag-color {
-          color: $highlight;
-        }
+      .navigation-mobile-name {
+        display: inline-block;
+        color: $white;
+        margin-left: 2%;
+        font-size: 30px;
+        margin-top: 3%;
+      }
+      .mobile-tag-color {
+        color: $highlight;
       }
       img {
-        height: 50px;
-        width: 50px;
+        height: 80px;
+        width: 80px;
       }
-      
+      .burger-nav{
+        
+        &:hover{
+          cursor: pointer;
+          font-size: 3px;
+        }
+      }
       .hamburger-nav {
         z-index: 3;
-        margin-right: 3%;
-        margin-top: 4%;
-        height: 2px;
-        width: 25px;
         position: absolute;
-        &:hover{
-          background-color: red;
-        }
-       
+        margin-top: 3%;
+        height: 2px;
+        width: 30px;
+        border-radius: 2px;
+        
       }
       .nav1 {
         border: 3px solid $lightblue;
-        top: -3px;
+        top: -2px;
         left: 90%;
       }
       .nav2 {
         border: 3px solid $highlight;
-        top: 7px;
+        top: 6.9px;
         left: 90%;
       }
       .nav3 {
         border: 3px solid $lightblue;
-        top: 18px;
+        top: 16px;
         left: 90%;
-
       }
     }
   }
   .side-menu {
     display: flex;
-    // grid-template-rows: repeat(10fr, 3);
     height: 500px;
-    width: 80%;
-    top: 0;
+    width: 79%;
+    top: -30%;
     right: 0;
     bottom: 0;
     background-color: $background-color;
     z-index: 2;
     position: absolute;
-    border: 6px solid rgba(0, 0, 0, 0.603);
+    border: 8px solid rgba(0, 0, 0, 0.568);
     div {
       img {
-        height: 50px;
-        width: 50px;
+        height: 80px;
+        width: 80px;
         position: absolute;
         right: 30%;
-      }
-      .burger-nav {
-        // .hamburger-nav {
-        //   margin-top: 10px;
-        //   height: 3px;
-        //   width: 30px;
-        //   position: absolute;
-        // }
-        // .nav1 {
-        //   border: 3px solid $lightblue;
-        //   right: 10%;
-        // }
-        // .nav2 {
-        //   border: 3px solid $highlight;
-        //   right: 10%;
-        //   top: 10px;
-        // }
-        // .nav3 {
-        //   border: 3px solid $lightblue;
-        //   right: 10%;
-        //   top: 20px;
-        // }
+        top: 2%;
       }
     }
     .x-icon {
       color: $lightblue;
-      font-size: 20px;
+      font-size: 30px;
       position: absolute;
       left: 8%;
-      top: 2%;
+      top: 4%;
+      &:hover{
+        cursor: pointer;
+        opacity: 0.5;
+      }
     }
     .side-menu-header {
       width: 100%;
@@ -131,6 +114,7 @@
             background-color: $lightblue;
             width: 80%;
             color: $yellow;
+            cursor: pointer;
             font-weight: $font-heavy;
             .color-brackets {
               color: $yellow !important;
@@ -141,6 +125,12 @@
           color: $highlight;
         }
       }
+    }
+    .social-media-links{
+      position: absolute;
+      top: 80%;
+      width: 90%;
+      text-align: center;
     }
   }
 }

@@ -6,6 +6,7 @@ import {
   buttonValuesMobile,
 } from '../../utils/utils.functions';
 import '../../scss/HeaderMobile.scss';
+import SocialMediaButtons from '../../utils/SocialMediaButtons';
 
 const HeaderMobile = () => {
   const [triggerNav, setTriggerNav] = useState(false);
@@ -36,16 +37,19 @@ const HeaderMobile = () => {
           <div className="navigation">
             <div>
               <img src={logo} alt="logo" />
-              <div className="navigation-mobile-name">
-                <span className="mobile-tag-color">{tags.closingTagName}</span>
-                {informations.name}
-              </div>
+            </div>
+
+            <div className="navigation-mobile-name">
+              <span className="mobile-tag-color">{tags.closingTagName}</span>
+              {informations.name}
             </div>
             <nav>
-              <ul className="burger-nav" onClick={() => handleModal()}>
-                <li className="hamburger-nav nav1"></li>
-                <li className="hamburger-nav nav2"></li>
-                <li className="hamburger-nav nav3"></li>
+              <ul className="burger-nav">
+                <div onClick={() => handleModal()}>
+                  <li className="hamburger-nav nav1"></li>
+                  <li className="hamburger-nav nav2"></li>
+                  <li className="hamburger-nav nav3"></li>
+                </div>
               </ul>
             </nav>
           </div>
@@ -63,11 +67,22 @@ const HeaderMobile = () => {
             <div className="side-menu-links">
               <ul>{displaySideMenuLinks()}</ul>
             </div>
+            <span className="social-media-links">
+              <SocialMediaButtons styles={styles.imageSizing} />
+            </span>
           </nav>
         </div>
       </div>
     </>
   );
+};
+
+const styles = {
+  imageSizing: {
+    height: '35px',
+    width: '35px',
+    margin: '35px'
+  },
 };
 
 export default HeaderMobile;
