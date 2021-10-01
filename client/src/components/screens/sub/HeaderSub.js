@@ -1,6 +1,7 @@
 import React from 'react';
-import { tags } from '../../utils/utils.functions';
-import HeaderMobile from './HeaderMobile';
+import { tags, hireMeButton } from '../../utils/utils.functions';
+import SocialMediaButtons from '../../utils/SocialMediaButtons';
+import Button from '../../utils/Button';
 import '../../scss/HeaderSub.scss';
 
 const HeaderSub = ({ title, name, sub, job_title, header, name2 }) => {
@@ -10,6 +11,12 @@ const HeaderSub = ({ title, name, sub, job_title, header, name2 }) => {
     return Object.values(val).map(e => (
       <div className={`center-text-${val2}`}>{e}</div>
     ));
+  };
+
+  const displayHireButton = () => {
+    return Object.values(hireMeButton).map(e => {
+      return <Button value={e.title} styles={e.styles} src={e.src} />;
+    });
   };
   return (
     <>
@@ -29,10 +36,13 @@ const HeaderSub = ({ title, name, sub, job_title, header, name2 }) => {
           </div>
           <div className="center-text-tag-end">{closingTag}</div>
           <div className="center-text-sub">{sub}</div>
+          <div className="center-text-button margin-top-mobile">{displayHireButton()}</div>
+          <div className="center-text-social-media">{SocialMediaButtons()}</div>
         </div>
       </div>
     </>
   );
 };
+
 
 export default HeaderSub;

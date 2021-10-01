@@ -8,8 +8,9 @@
   display: flex;
   .center-text {
     align-items: center;
-    margin-top: 20%;
-    .center-text-full-mobile-header{
+    margin-top: 25%;
+    margin-bottom: 25%;
+    .center-text-full-mobile-header {
       display: none;
     }
     .center-text-tag {
@@ -27,6 +28,9 @@
       font-weight: $font-semi;
       margin-left: 50px;
       letter-spacing: 5px;
+    }
+    .center-text-social-media{
+      display: none;
     }
     .center-text-name {
       display: flex;
@@ -73,9 +77,17 @@
   }
   .center {
     .center-text {
-      .center-text-container{
-        .center-text-full-mobile-header{
+      .center-text-container {
+        .center-text-full-mobile-header {
           display: inline-block;
+        }
+      }
+      .center-text-social-media{
+        display: flex;
+        justify-content: center;
+        img{
+          height: 50px;
+          width: 50px;
         }
       }
       .center-text-title {
@@ -128,5 +140,34 @@
         font-size: $mobile-tag-size;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .center {
+    .center-text {
+      margin-top: 40%;
+    }
+    .center-text-tag{
+      margin-bottom: -25px !important;
+    }
+    .center-text-sub{
+      margin-top: 2px !important;
+    }
+    .margin-top-mobile{
+      margin-top: 20px !important;
+    }
+    .center-text-button{
+      margin-top: -20px;
+      justify-content: center;
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .main-style .arrow{
+      left: 50%;
+    }
+  }
+  .main-style .arrow{
+    margin: 0 auto;
   }
 }

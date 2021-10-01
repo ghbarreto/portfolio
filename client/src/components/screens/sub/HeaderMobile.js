@@ -67,22 +67,19 @@ const HeaderMobile = () => {
             <div className="side-menu-links">
               <ul>{displaySideMenuLinks()}</ul>
             </div>
+
             <span className="social-media-links">
-              <SocialMediaButtons styles={styles.imageSizing} />
+              <div className="side-menu-mobile-name">
+                <span className="side-menu-tag-color">{tags.closingTagName}</span>
+                {informations.name}
+              </div>
+              <SocialMediaButtons />
             </span>
           </nav>
         </div>
       </div>
     </>
   );
-};
-
-const styles = {
-  imageSizing: {
-    height: '35px',
-    width: '35px',
-    margin: '35px'
-  },
 };
 
 export default HeaderMobile;

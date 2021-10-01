@@ -3,9 +3,11 @@ import '../scss/Button.scss';
 
 const Button = ({ href, value }) => {
   return (
-    <button className="buttonStyle">
+    <div className="button-centeralize">
+    <button className="button-style">
       <a href={href}>{value}</a>
-    </button>
+      </button>
+      </div>
   );
 };
 

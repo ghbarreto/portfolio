@@ -1,0 +1,26 @@
+.social-media-img{
+  margin: 35px;
+}
+@media only screen and (max-width: 500px) {
+  .social-media-img{
+    height: 20px !important;
+    width: 20px !important;
+    margin: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .social-media-img{
+    height: 30px !important;
+    width: 30px !important;
+    margin: 15px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .social-media-img{
+    height: 23px !important;
+    width: 23px !important;
+    margin: 10px;
+  }
+}

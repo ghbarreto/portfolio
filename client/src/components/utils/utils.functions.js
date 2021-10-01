@@ -84,19 +84,19 @@ export const projects = [
 ];
 export const jobExperience = {
   kyte: {
-    title: 'Full Stack Developer Jr. @Kyte',
+    title: 'Full Stack',
     date: 'June 2021 - Jan 2022',
     experience: 'Worked with react and a few other languages',
   },
   lugaro: {
-    title: 'Web Developer @Lugaro',
+    title: 'Web Developer',
     date: 'June 2020, Jan 2021',
     experience: 'Worked with wordpress and a few other languages',
   },
 };
 export const skills = [
   'React',
-  'R. Native',
+  'NextJS',
   'Redux',
   'Firebase',
   'VueJS',
@@ -113,7 +113,7 @@ export const skills = [
   'PHP',
   'Express',
   'RESTful',
-  'NextJS',
+  'React Native',
 ];
 export const knowledgeField = {
   full_stack: {
@@ -210,5 +210,12 @@ export const socialMedia = [
     name: 'Twitter',
     src: 'twitter.com',
     img: '/assets/images/twitter.png',
+  },
+];
+
+export const hireMeButton = [
+  {
+    title: 'Hire Me',
+    src: 'src',
   },
 ];

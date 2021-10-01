@@ -62,5 +62,25 @@
 @media only screen and (max-width: $small-screen-cutoff) {
   .about-sub-flex {
     display: block;
+    .knowledge-section{
+      margin-left: 5px;
+    }
+    .knowledge-section-fields{
+      margin-top: 5px;
+      .experience-job{
+        width:95%;
+        margin-left: 5px;
+      }
+    }
+    .skills-section{
+      margin-left: 5px;
+    }
+  }
+}
+@media only screen and (max-width: $phone-screen-size) {
+  .list-of-skills{
+    flex-basis: 5% !important;
+    margin-right: 10px !important;
+    margin-top: 15px !important;
   }
 }

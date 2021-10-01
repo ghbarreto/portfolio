@@ -30,6 +30,15 @@
     margin-top: 30px;
     grid-area: c;
   }
+  .image-about-section-mobile {
+    display: none;
+  }
+  .button-mobile-about {
+    display: none !important;
+  }
+  .mobile-view {
+    display: none;
+  }
 }
 @media only screen and (max-width: $small-screen-cutoff) {
   .about-section-container {
@@ -37,5 +46,34 @@
     .image-about-section img {
       max-width: 100%;
     }
+  }
+  div.about-section-container-text.word-color.cellphone-font-size {
+    font-size: 40px;
+    margin-left: 10px;
+  }
+  .image-about-section-desktop {
+    display: none;
+  }
+  .experience-job {
+    margin-bottom: 10px !important;
+  }
+  .desktop-view {
+    display: none !important;
+  }
+  .mobile-view {
+    display: block !important;
+  }
+
+  .image-about-section-mobile img {
+    display: block !important;
+    margin-left: 20px;
+    height: 250px !important;
+    width: 300px !important;
+  }
+  .desktop-image {
+    display: none;
+  }
+  .button-desktop-about {
+    display: block;
   }
 }

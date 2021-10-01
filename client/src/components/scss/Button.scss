@@ -1,12 +1,13 @@
 @import 'utilities/utils.scss';
 
-.buttonStyle {
+.button-style {
   height: 50px;
   width: 250px;
   background-color: $lightblue;
   border: none;
   margin-top: 50px;
   border-radius: 50px;
+
   &:hover {
     background-color: $white;
   }
@@ -17,6 +18,28 @@
     font-weight: $font-semi;
     &:hover {
       color: $highlight;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-screen-cutoff) {
+  .button-centeralize {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+@media only screen and (max-width: $phone-screen-size) {
+  .button-centeralize {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .button-style {
+    margin-top: 15px;
+    width: 150px;
+    height: 30px;
+    a {
+      font-size: $mobile-font-size;
     }
   }
 }
