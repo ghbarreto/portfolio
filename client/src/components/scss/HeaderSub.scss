@@ -8,8 +8,7 @@
   display: flex;
   .center-text {
     align-items: center;
-    margin-top: 25%;
-    margin-bottom: 25%;
+    margin-top: 15%;
     .center-text-full-mobile-header {
       display: none;
     }
@@ -29,7 +28,7 @@
       margin-left: 50px;
       letter-spacing: 5px;
     }
-    .center-text-social-media{
+    .center-text-social-media {
       display: none;
     }
     .center-text-name {
@@ -69,6 +68,10 @@
       color: grey;
     }
   }
+  .button-centeralize {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: $small-screen-cutoff) {
@@ -82,10 +85,10 @@
           display: inline-block;
         }
       }
-      .center-text-social-media{
+      .center-text-social-media {
         display: flex;
         justify-content: center;
-        img{
+        img {
           height: 50px;
           width: 50px;
         }
@@ -148,26 +151,26 @@
     .center-text {
       margin-top: 40%;
     }
-    .center-text-tag{
+    .center-text-tag {
       margin-bottom: -25px !important;
     }
-    .center-text-sub{
+    .center-text-sub {
       margin-top: 2px !important;
     }
-    .margin-top-mobile{
+    .margin-top-mobile {
       margin-top: 20px !important;
     }
-    .center-text-button{
+    .center-text-button {
       margin-top: -20px;
       justify-content: center;
       display: flex;
       margin-bottom: 20px;
     }
-    .main-style .arrow{
+    .main-style .arrow {
       left: 50%;
     }
   }
-  .main-style .arrow{
+  .main-style .arrow {
     margin: 0 auto;
   }
 }
