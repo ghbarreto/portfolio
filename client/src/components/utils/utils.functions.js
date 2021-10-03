@@ -1,7 +1,7 @@
 export const logo = '/assets/images/logo.png';
 export const navigate = ['Home', 'About', 'Works', 'Reach'];
 export const aboutBanner = '/assets/images/about-banner.png';
-export const projectTitle = ['Open Source Projects', 'Colaboration Projects'];
+export const projectTitle = ['Open Source Projects', 'Job History'];
 export const kyteLogo = '/assets/images/kyte.png';
 export const emilLogo = '/assets/images/emil.jpeg';
 export const lugaroLogo = '/assets/images/lugaro.jpeg';
@@ -12,7 +12,8 @@ export const timelineHorizontal = [
     company: 'Emil Clothing',
     date: '2018',
     image: emilLogo,
-    description: 'Worked with wordpress to deliver',
+    description:
+      'Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet',
   },
   {
     title: 'Web Developer',
@@ -41,30 +42,6 @@ export const projects = [
     live: 'https://github.com',
     date: 'Jan, 2022',
   },
-  {
-    name: 'FFXIV-Info',
-    description:
-      'An app developed by me to help people know various features about the game FFXIV',
-    githubLink: 'https://github.com/',
-    live: 'https://github.com',
-    date: 'Jan, 2022',
-  },
-  {
-    name: 'FFXIV-Info',
-    description:
-      'An app developed by me to help people know various features about the game FFXIV',
-    githubLink: 'https://github.com/',
-    live: 'https://github.com',
-    date: 'Jan, 2022',
-  },
-  {
-    name: 'FFXIV-Info',
-    description:
-      'An app developed by me to help people know various features about the game FFXIV',
-    githubLink: 'https://github.com/',
-    live: 'https://github.com',
-    date: 'Jan, 2022',
-  },
 
   {
     name: 'covid-api',
@@ -84,7 +61,7 @@ export const projects = [
 ];
 export const jobExperience = {
   kyte: {
-    title: 'Full Stack',
+    title: 'Full Stack Dev',
     date: 'June 2021 - Jan 2022',
     experience: 'Worked with react and a few other languages',
   },
@@ -95,9 +72,7 @@ export const jobExperience = {
   },
 };
 export const skills = [
-  'React',
   'NextJS',
-  'Redux',
   'Firebase',
   'VueJS',
   'Python',
@@ -114,6 +89,8 @@ export const skills = [
   'Express',
   'RESTful',
   'React Native',
+  'React',
+  'Redux',
 ];
 export const knowledgeField = {
   full_stack: {
@@ -125,7 +102,7 @@ export const knowledgeField = {
     qualifications: 'I am trained in React, React.js bla bla bla bla bla',
   },
   mobile_app: {
-    title: 'Mobile App Developer',
+    title: 'Mobile App Dev',
     qualifications: 'I am trained in React, React.js bla bla bla bla bla',
   },
   front_end: {
