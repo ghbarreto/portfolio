@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { connect } from 'react-redux';
 import useOnScreen from '../utils/useOnScreen';
 import { CheckNavigation } from '../utils/CheckNavigation';
+import ReachSub from './sub/ReachSub';
 
 const Reach = () => {
   const ref = useRef();
@@ -14,10 +15,12 @@ const Reach = () => {
   };
 
   return (
-    <div ref={ref} style={{ color: 'white' }}>
-      {returnVisibleContent()}
-      REACH
-    </div>
+    <>
+      <div ref={ref} style={{ color: 'white' }}>
+        {returnVisibleContent()}
+      </div>
+      <ReachSub />
+    </>
   );
 };
 
