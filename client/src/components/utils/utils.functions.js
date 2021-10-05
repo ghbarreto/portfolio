@@ -88,13 +88,14 @@ export const skills = [
   'PHP',
   'Express',
   'RESTful',
-  'React Native',
   'React',
   'Redux',
+  'R.Native',
 ];
 export const reachMeParagraph = {
-  paragraph: 'If you are interested in hiring me for your project please use the form to get in touch or contact me in the channels below.'
-}
+  paragraph:
+    'If you are interested in hiring me for your project please use the form to get in touch or contact me in the channels below.',
+};
 export const knowledgeField = {
   full_stack: {
     title: 'Full Stack Development',
