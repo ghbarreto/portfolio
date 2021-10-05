@@ -28,6 +28,9 @@
       margin-left: 50px;
       letter-spacing: 5px;
     }
+    .center-text-button{
+      display: none;
+    }
     .center-text-social-media {
       display: none;
     }
@@ -110,6 +113,9 @@
         margin-top: 10px;
         margin-bottom: -20px;
         text-align: center;
+      }
+      .center-text-button{
+        display: block;
       }
       .center-text-mobile-name {
         color: $white;
