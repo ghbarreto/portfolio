@@ -1,11 +1,11 @@
 @import 'utilities/utils.scss';
 
+  
 @media only screen and (min-width: $medium-screen+1) {
   .vertical-project-list {
     display: none !important;
   }
 }
-
 .vertical-project-list {
   display: block;
   margin-top: 10%;
@@ -27,7 +27,6 @@
       .mobile-border {
         position: absolute;
         height: 4px;
-        z-index: -1;
       }
       .mobile-image-pos img {
         width: 90%;

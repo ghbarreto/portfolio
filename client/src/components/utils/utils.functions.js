@@ -200,3 +200,21 @@ export const hireMeButton = [
     src: 'src',
   },
 ];
+
+export const reachMeInfo = [
+  {
+    paragraph: 'If you are interested in hiring me for your project please use the form to get in touch or contact me in the channels below.',
+    email: {
+      icon: 'icon-here',
+      name: 'henriqve.dev@gmail.com'
+    },
+    phone: {
+      icon: 'phone-here',
+      number: '+55 11 9239842 290384029'
+    },
+    location: {
+      icon: 'location',
+      location: 'Vancouver, BC'
+    }
+  }
+]

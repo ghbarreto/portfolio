@@ -1,5 +1,9 @@
 @import 'utilities/utils.scss';
 
+.mobile-header-fixed{
+  z-index: 2;
+}
+
 @media only screen and (max-width: $small-screen-cutoff) {
   .mobile-header-fixed {
     max-width: $small-screen-cutoff;
@@ -68,7 +72,7 @@
     background-color: $background-color;
     z-index: 2;
     position: absolute;
-    border: 8px solid rgba(0, 0, 0, 0.568);
+    box-shadow: 4px 2px 6px 6px; 
     div {
       img {
         height: 80px;
