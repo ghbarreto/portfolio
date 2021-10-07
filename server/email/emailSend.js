@@ -9,7 +9,7 @@ module.exports = app => {
     const captcha = req.body.captcha;
     const message = req.body.message;
 
-    assert(captcha, 'please add a captcha');
+    assert(name, email, message);
 
     response(name, email, message);
     try {

@@ -1,4 +1,4 @@
-import { DETAILS, SEND_EMAIL } from '../actions/types';
+import { DETAILS, SEND_EMAIL, CHECKED_CAPTCHA } from '../actions/types';
 
 export default function portfolioReducer(state = [], action) {
   switch (action.type) {
@@ -6,6 +6,8 @@ export default function portfolioReducer(state = [], action) {
       return { state, details: action.payload };
     case SEND_EMAIL:
       return { state, email: action.payload };
+    case CHECKED_CAPTCHA:
+      return { state, captcha: action.payload };
     default:
       return state;
   }

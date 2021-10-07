@@ -7,5 +7,6 @@ app.use(express.json());
 
 require('./config/connection');
 require('./email/emailSend')(app);
+require('./recaptcha/recaptcha')(app);
 
 app.listen(PORT, () => console.log('Server is listening on port 5000'));
