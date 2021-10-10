@@ -21,11 +21,11 @@
     "opacity": {
       "value": 1,
       "random": true
-    }, 
+    },
     "size": {
       "value": 3,
       "random": false
-        },
+    },
     "line_linked": {
       "distance": 150,
       "color": "#202020",
