@@ -6,10 +6,9 @@ export const details = place => async dispatch => {
 };
 
 export const checkCaptcha = token => async dispatch => {
-  const res = await axios.post("/api/recaptcha", {token})
+  const res = await axios.post('/api/recaptcha', { token });
   dispatch({ type: CHECKED_CAPTCHA, payload: res.data });
 };
-
 
 export const submitEmail =
   (name, email, message, ...props) =>

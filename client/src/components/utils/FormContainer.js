@@ -30,7 +30,7 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
       return setCaptchaCheck(props.checked_captcha.captcha.success);
     }
   };
-  
+
   useEffect(() => {
     setCaptchaValidation();
   }, [flag]);
@@ -56,62 +56,65 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
     setIsFocused(true);
   };
   return (
-    <div className="form-container">
-      <div className="alert-message">{showAlert}</div>
-      <Formik
-        initialValues={{
-          name: '',
-          email: '',
-          message: '',
-        }}
-        onSubmit={values => {
-          onFocused();
-          submitForm(values);
-        }}
-      >
-        <Form>
-          <Field
-            className={`field ${setFocus}`}
-            name="name"
-            type="text"
-            placeholder={name}
-            onBlur={() => lostFocus()}
-            onFocus={() => onFocused()}
-          />
-          <Field
-            className={`field ${setFocus}`}
-            name="email"
-            type="email"
-            placeholder={email}
-            onBlur={() => lostFocus()}
-            onFocus={() => onFocused()}
-          />
-          <Field
-            as="textarea"
-            className={`field field-area field-message ${setFocus}`}
-            name="message"
-            type="text"
-            placeholder={message}
-            onBlur={() => lostFocus()}
-            onFocus={() => onFocused()}
-          />
-          <div className="display-captcha">
-            {captchaCheck ? (
-              <div>Authenticated</div>
-            ) : (
-              <ReCAPTCHA
-                theme="dark"
-                sitekey={CLIENT_KEY}
-                onChange={onChangeRecaptcha}
-              />
-            )}
-          </div>
-          <button className="button-field button" type="submit">
-            {button}
-          </button>
-        </Form>
-      </Formik>
-    </div>
+    <>
+      <div className="form-container">
+        <Formik
+          initialValues={{
+            name: '',
+            email: '',
+            message: '',
+          }}
+          onSubmit={values => {
+            onFocused();
+            submitForm(values);
+          }}
+        >
+          <Form>
+            <div className="alert-message">{showAlert}</div>
+
+            <Field
+              className={`field ${setFocus}`}
+              name="name"
+              type="text"
+              placeholder={name}
+              onBlur={() => lostFocus()}
+              onFocus={() => onFocused()}
+            />
+            <Field
+              className={`field ${setFocus}`}
+              name="email"
+              type="email"
+              placeholder={email}
+              onBlur={() => lostFocus()}
+              onFocus={() => onFocused()}
+            />
+            <Field
+              as="textarea"
+              className={`field field-area field-message ${setFocus}`}
+              name="message"
+              type="text"
+              placeholder={message}
+              onBlur={() => lostFocus()}
+              onFocus={() => onFocused()}
+            />
+            <div className="display-captcha">
+              {captchaCheck ? (
+                <div>Authenticated</div>
+              ) : (
+                <ReCAPTCHA
+                  theme="dark"
+                  sitekey={CLIENT_KEY}
+                  onChange={onChangeRecaptcha}
+                />
+              )}
+            </div>
+            <button className="button-field button" type="submit">
+              {button}
+            </button>
+          </Form>
+        </Formik>
+      </div>
+    </>
   );
 };
 

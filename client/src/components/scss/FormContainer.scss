@@ -1,71 +1,85 @@
 @import 'utilities/utils.scss';
 
-@media only screen and (max-width: $small-screen-cutoff) {
-  .display-captcha{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.display-captcha {
+  margin-top: 20px;
+}
+input[type='text'] {
+  padding: 10px 10px;
+  padding-top: -20px;
+  font-size: 19px;
+}
+.alert-message {
+  color: $white;
+  font-size: 20px;
+  font-weight: $font-semi;
+  background-color: $highlight;
+  width: 50%;
+  text-align: center;
+  border-radius: 50px;
+}
+input[type='email'] {
+  font-size: 19px;
+  padding: 10px 10px;
+}
+.form-container {
+  .field {
+    border: 0px;
+    border-radius: 20px;
+    width: 80%;
+    margin-top: 3%;
   }
-  input[type=text]{
-    padding: 10px 10px;
-    padding-top: -20px;
+  .lost-focus {
+    border: 2px solid $highlight;
+  }
+  .field-area {
+    height: 100px;
+    padding: 8px;
     font-size: 19px;
   }
-  .alert-message{
-    color: $white;
-    font-size: 20px;
-    font-weight: $font-semi;
-    background-color: $highlight;
-    width: 50%;
-    margin: 0 auto;
-    border-radius: 50px;
+  ::content {
+    color: blue;
   }
-  input[type=email]{
+  ::placeholder {
+    padding: 15px;
+    font-size: $medium-font-size;
+    color: grey;
+  }
+  .button {
+    width: 20%;
+    background-color: $lightblue;
+    border-radius: 50px;
+    color: $white;
+    font-weight: $font-semi;
+    height: 40px;
+    font-size: 19px;
+    border: 0px;
+    &:hover {
+      background-color: #059097;
+    }
+  }
+  .button-field {
+    margin-right: 10%;
+    margin-top: 3%;
+  }
+}
+
+@media only screen and (max-width: $small-screen-cutoff) {
+  .alert-message {
+    margin: 0 auto;
+  }
+
+  input[type='email'] {
     font-size: 19px;
     padding: 10px 10px;
   }
   .form-container {
     text-align: center;
-    margin-top: 15%;
-    .field{
-      border: 0px;
-      border-radius: 20px;
-      width: 80%;
-      margin-top: 3%;
+    .field {
+      width: 70%;
     }
-    .lost-focus{
-      border: 2px solid $highlight;
-    }
-    .field-area{
-      height: 100px;
-      padding: 8px;
-      font-size: 19px;
-    }
-    ::content{
-      color: blue;
-    }
-    ::placeholder{
-      padding: 15px;
-      font-size: $medium-font-size;
-      color: grey;
-    }
-    .button{
-      width: 20%;
-      background-color: $lightblue;
-      border-radius: 50px;
-      color: $white;
-      font-weight: $font-semi;
-      height: 40px;
-      font-size: 19px;
-      border: 0px;
-      &:hover{
-        background-color: #059097;
-      }
-    }
-    .button-field{
+    .button-field {
       float: right;
-      margin-right: 10%;
-      margin-top: 3%;
+      margin-right: 15%;
     }
   }
 }

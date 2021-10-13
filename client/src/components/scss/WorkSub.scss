@@ -35,6 +35,7 @@
       margin: 30px;
       margin-top: 40px;
       width: 20%;
+      max-width: 40%;
       flex: 1 0 25%;
       height: 250px;
       &:hover {
@@ -109,12 +110,11 @@
 }
 
 .projects-list-item-date {
-  display: flex;
-  justify-content: flex-end;
   $font-weight: $font-thin;
+  float: right;
+  position: relative;
   font-size: $desktop-section-tags-size;
   margin-right: 30px;
-  margin-top: 20px;
 }
 .closing-opening-tags {
   color: $highlight;
@@ -147,6 +147,8 @@
       overflow: hidden;
       .projects-list-item {
         flex: 1 0 50%;
+        max-width: 100%;
+        overflow: auto;
       }
     }
   }
@@ -157,7 +159,7 @@
   }
   .project-list-margins {
     .project-list {
-      width: 100%; 
+      width: 100%;
     }
   }
 }

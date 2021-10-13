@@ -201,20 +201,20 @@ export const hireMeButton = [
   },
 ];
 
-export const reachMeInfo = [
+export const reachMeInfo =
+  'If you are interested in hiring me for your project please use the form to get in touch or contact me in the channels below.';
+
+export const reachMeInfoContact = [
   {
-    paragraph: 'If you are interested in hiring me for your project please use the form to get in touch or contact me in the channels below.',
-    email: {
-      icon: 'icon-here',
-      name: 'henriqve.dev@gmail.com'
-    },
-    phone: {
-      icon: 'phone-here',
-      number: '+55 11 9239842 290384029'
-    },
-    location: {
-      icon: 'location',
-      location: 'Vancouver, BC'
-    }
-  }
-]
+    icon: '/assets/images/logo.png',
+    val: 'henriqve.dev@gmail.com',
+  },
+  {
+    icon: '/assets/images/logo.png',
+    val: '+55 11 9899-8999',
+  },
+  {
+    icon: '/assets/images/logo.png',
+    val: 'Vancouver, BC',
+  },
+];

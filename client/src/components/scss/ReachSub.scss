@@ -1,0 +1,54 @@
+@import 'utilities/utils.scss';
+
+.form-container-sub {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+  .reach-sub-contact {
+    margin-left: 5%;
+    max-width: 50%;
+    .react-sub-paragraph {
+      max-width: 70%;
+      margin-left: 5%;
+      color: white;
+      word-spacing: 10px;
+    }
+    .reach-sub-info {
+      margin-left: 5%;
+      color: white;
+      margin-top: 5%;
+      display: flex;
+      div {
+        margin-top: 10px;
+        margin-left: 8%;
+      }
+      img {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+  }
+  div.highlight {
+    color: $highlight;
+  }
+}
+
+@media only screen and (max-width: $small-screen-cutoff) {
+  .form-container-sub {
+    display: block;
+    margin-top: 0%;
+    .reach-sub-contact {
+      margin-left: 5%;
+      max-width: 90%;
+      .react-sub-paragraph {
+        margin-top: 5%;
+        max-width: 100%;
+        margin-left: 0%;
+      }
+      .reach-sub-info {
+        margin-left: 0%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
