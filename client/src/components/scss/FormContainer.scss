@@ -64,6 +64,10 @@ input[type='email'] {
 }
 
 @media only screen and (max-width: $small-screen-cutoff) {
+  .display-captcha {
+    display: flex;
+    justify-content: center;
+  }
   .alert-message {
     margin: 0 auto;
   }
