@@ -1,32 +1,61 @@
 import { projectTitle, projects, tags } from '../../utils/utils.functions';
 import _ from 'lodash';
+import { useState } from 'react';
 import '../../scss/WorkSub.scss';
+import { useSpring, animated } from 'react-spring';
+import ReactModal from '../../utils/Modal';
 
 const WorkSub = () => {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+
+  const props = useSpring({
+    to: { marginBottom: 1 },
+    from: { marginBottom: 500 },
+  });
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   const displayProjects = () => {
     return _.map(projects, (e, count) => {
       return (
-        <div className={`${decideBackgroundColor(count)} projects-list-item`}>
-          <div className="projects-list-item-name">
-            <span className="bracket-color bracket-format">
-              {tags.closingOpening}
-            </span>
-            {e.name}
-            <div className="projects-list-item-description">
-              {e.description}
+        <>
+          <div
+            className={`${decideBackgroundColor(count)} projects-list-item`}
+            onClick={() => {
+              setName(e.name);
+              setDescription(e.description);
+              openModal();
+            }}
+          >
+            <div className="projects-list-item-name">
+              <span className="bracket-color bracket-format">
+                {tags.closingOpening}
+              </span>
+              {e.name}
+              <div className="projects-list-item-description">
+                {e.description}
+              </div>
+              <div className="projects-list-item-date">{e.date}</div>
             </div>
-            <div className="projects-list-item-date">{e.date}</div>
+            <div className="display-on-hover">
+              <a className="button-project" href={e.githubLink}>
+                Github
+              </a>
+              <a className="button-project" href={e.live}>
+                Live
+              </a>
+            </div>
+            <div className="onHoverDisplay"></div>
           </div>
-          <div className="display-on-hover">
-            <a className="button-project" href={e.githubLink}>
-              Github
-            </a>
-            <a className="button-project" href={e.live}>
-              Live
-            </a>
-          </div>
-          <div className="onHoverDisplay"></div>
-        </div>
+        </>
       );
     });
   };
@@ -45,14 +74,25 @@ const WorkSub = () => {
       </div>
     );
   };
+
   return (
     <>
       <div className="projects-title-main">
         <span className="projects-title">{displayProjectTitle()}</span>
       </div>
+
       <div className="project-list-margins projects-landing-page">
         <div className="project-list">{displayProjects()}</div>
       </div>
+      {modalIsOpen ? (
+        <ReactModal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          closeModal={closeModal}
+          description={description}
+          name={name}
+        />
+      ) : null}
     </>
   );
 };

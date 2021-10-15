@@ -30,6 +30,25 @@ body {
   height: 90vh;
 }
 
+.ReactModal__Overlay {
+  z-index: 2;
+  background-color: rgba(34, 34, 34, 0) !important;
+
+  transform: translatey(200px);
+  transition: all 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  background-color: rgba(34, 34, 34, 0.521) !important;
+  transform: translateX(0px);
+}
+
+.ReactModal__Overlay--before-close {
+  background-color: rgba(34, 34, 34, 0) !important;
+
+  transform: translateX(-100px);
+}
+
 canvas {
   position: fixed;
   width: 100vw !important;

@@ -39,18 +39,19 @@
       flex: 1 0 25%;
       height: 250px;
       &:hover {
-        .projects-list-item-name {
-          display: none;
-        }
-        .display-on-hover {
-          display: flex;
-          justify-content: space-around;
-          margin: 30px;
-          margin-top: 30%;
-        }
-        .projects-list-item-date {
-          display: none;
-        }
+        cursor: pointer;
+        // .projects-list-item-name {
+        //   display: none;
+        // }
+        // .display-on-hover {
+        //   display: flex;
+        //   justify-content: space-around;
+        //   margin: 30px;
+        //   margin-top: 30%;
+        // }
+        // .projects-list-item-date {
+        //   display: none;
+        // }
       }
     }
   }
@@ -112,9 +113,10 @@
 .projects-list-item-date {
   $font-weight: $font-thin;
   float: right;
-  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: $desktop-section-tags-size;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .closing-opening-tags {
   color: $highlight;
@@ -148,7 +150,7 @@
       .projects-list-item {
         flex: 1 0 50%;
         max-width: 100%;
-        overflow: auto;
+        height: 100%;
       }
     }
   }
