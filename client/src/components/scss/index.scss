@@ -33,7 +33,6 @@ body {
 .ReactModal__Overlay {
   z-index: 2;
   background-color: rgba(34, 34, 34, 0) !important;
-
   transform: translatey(200px);
   transition: all 500ms ease-in-out;
 }
@@ -45,7 +44,6 @@ body {
 
 .ReactModal__Overlay--before-close {
   background-color: rgba(34, 34, 34, 0) !important;
-
   transform: translateX(-100px);
 }
 
