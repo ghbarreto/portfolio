@@ -1,0 +1,45 @@
+@import 'utilities/utils.scss';
+
+.modal-header {
+  margin-top: 3%;
+  color: $white;
+  .modal-header-title {
+    margin-bottom: 3%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+  }
+  .modal-header-carousel {
+    width: 35%;
+    margin: 0 auto;
+  }
+  .modal-header-paragraph {
+    text-align: left;
+    max-width: 50%;
+    margin: 0 auto;
+    word-spacing: 4px;
+  }
+  .modal-header-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+  }
+}
+.carousel .thumb {
+  border: 3px solid $blue !important;
+}
+.thumb.selected {
+  border: 3px solid $yellow !important;
+}
+
+@media only screen and (max-width: $small-screen-cutoff) {
+  .modal-header-carousel {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: $phone-screen-size) {
+  .modal-header-carousel {
+    width: 80% !important;
+  }
+}

@@ -41,6 +41,8 @@ export const projects = [
     githubLink: 'https://github.com/',
     live: 'https://github.com',
     date: 'Jan, 2022',
+    images: [kyteLogo, emilLogo, lugaroLogo],
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
   },
 
   {
@@ -50,6 +52,8 @@ export const projects = [
     githubLink: 'https://github.com/',
     live: 'https://github.com',
     date: 'Jan, 2021',
+    images: [kyteLogo, emilLogo, lugaroLogo],
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
   },
   {
     name: 'my-portfolio',
@@ -57,6 +61,8 @@ export const projects = [
     githubLink: 'https://github.com/',
     live: 'https://github.com',
     date: 'March, 2020',
+    images: [kyteLogo, emilLogo, lugaroLogo],
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
   },
 ];
 export const jobExperience = {

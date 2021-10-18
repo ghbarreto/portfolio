@@ -2,18 +2,16 @@ import { projectTitle, projects, tags } from '../../utils/utils.functions';
 import _ from 'lodash';
 import { useState } from 'react';
 import '../../scss/WorkSub.scss';
-import { useSpring, animated } from 'react-spring';
 import ReactModal from '../../utils/Modal';
 
 const WorkSub = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-
-  const props = useSpring({
-    to: { marginBottom: 1 },
-    from: { marginBottom: 500 },
-  });
+  const [images, setImages] = useState([]);
+  const [text, setText] = useState('');
+  const [buttonLink, setButtonLink] = useState('');
+  const [livePreview, setLivePreview] = useState('');
 
   function openModal() {
     setIsOpen(true);
@@ -32,6 +30,10 @@ const WorkSub = () => {
             onClick={() => {
               setName(e.name);
               setDescription(e.description);
+              setImages(e.images);
+              setText(e.text);
+              setButtonLink(e.githubLink);
+              setLivePreview(e.live);
               openModal();
             }}
           >
@@ -87,10 +89,13 @@ const WorkSub = () => {
       {modalIsOpen ? (
         <ReactModal
           isOpen={modalIsOpen}
-          onRequestClose={closeModal}
           closeModal={closeModal}
           description={description}
           name={name}
+          images={images}
+          text={text}
+          github={buttonLink}
+          livePreview={livePreview}
         />
       ) : null}
     </>
