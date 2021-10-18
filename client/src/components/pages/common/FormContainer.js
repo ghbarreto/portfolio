@@ -4,11 +4,11 @@ import { connect, useDispatch } from 'react-redux';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { bindActionCreators } from 'redux';
 
-import '../scss/index.scss';
-import '../scss/FormContainer.scss';
+import '../../scss/index.scss';
+import '../../scss/FormContainer.scss';
 
-import { CLIENT_KEY } from '../utils/keys';
-import { submitEmail, checkCaptcha } from '../../actions';
+import { CLIENT_KEY } from '../../utils/keys';
+import { submitEmail, checkCaptcha } from '../../../actions';
 
 const FormComponent = ({ email, name, message, button, ...props }) => {
   const dispatch = useDispatch();

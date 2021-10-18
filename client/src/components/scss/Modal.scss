@@ -25,6 +25,12 @@
     margin: 5%;
   }
 }
+.x-icon{
+  color: $lightblue;
+  font-size: 25px;
+  margin-left: 3%;
+  margin-top: 3%;
+}
 .carousel .thumb {
   border: 3px solid $blue !important;
 }
@@ -36,10 +42,16 @@
   .modal-header-carousel {
     width: 50% !important;
   }
+  .modal-header-paragraph{
+    max-width: 70% !important;
+  }
 }
 
 @media only screen and (max-width: $phone-screen-size) {
   .modal-header-carousel {
     width: 80% !important;
+  }
+  .modal-header-paragraph{
+    max-width: 100% !important;
   }
 }

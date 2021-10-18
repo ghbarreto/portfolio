@@ -1,16 +1,17 @@
 import React, { useRef } from 'react';
 import { connect } from 'react-redux';
 import useOnScreen from '../utils/useOnScreen';
-import { CheckNavigation } from '../utils/CheckNavigation';
-import ReachSub from './sub/ReachSub';
+import { CheckNavigation } from './common/CheckNavigation';
 
-const Reach = () => {
+import WorkSub from '../pages/sub/WorkSub';
+
+const Work = () => {
   const ref = useRef();
   const isVisible = useOnScreen(ref);
 
   const returnVisibleContent = () => {
     if (isVisible) {
-      return <CheckNavigation location="Reach" />;
+      return <CheckNavigation location="Works" />;
     }
   };
 
@@ -19,7 +20,7 @@ const Reach = () => {
       <div ref={ref} style={{ color: 'white' }}>
         {returnVisibleContent()}
       </div>
-      <ReachSub />
+      <WorkSub />
     </>
   );
 };
@@ -30,4 +31,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Reach);
+export default connect(mapStateToProps)(Work);

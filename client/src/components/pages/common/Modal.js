@@ -1,10 +1,10 @@
 import Modal from 'react-modal';
-import React, { useState, useEffect } from 'react';
-import '../scss/Modal.scss';
+import React from 'react';
+import '../../scss/Modal.scss';
 import { useSpring, animated } from 'react-spring';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
-import Button from '../utils/Button';
+import Button from './Button';
 
 const ReactModal = ({
   isOpen,
@@ -30,7 +30,7 @@ const ReactModal = ({
   };
 
   const displayHeader = () => {
-    const imageRender = images.map(e => <img src={e} alt={e} />);
+    const imageRender = images.map(e => <img key={e} src={e} alt={e} />);
     return (
       <>
         <div className="modal-header">
@@ -74,7 +74,9 @@ const ReactModal = ({
         ariaHideApp={false}
       >
         <animated.div style={modalStyle}>
-          <div onClick={closeModal}>X</div>
+          <div className="x-icon">
+            <i className="fas fa-times" onClick={closeModal}></i>
+          </div>
 
           {description || name ? displayHeader() : ''}
         </animated.div>
@@ -94,9 +96,10 @@ const customStyles = {
     marginRight: '-50%',
     backgroundColor: '#222',
     border: '0',
-    boxShadow: '10px 10px 10px 5px rgba(0, 0, 0, 0.296)',
     transform: 'translate(-50%, -50%)',
+    boxShadow: '10px 10px 10px 5px rgba(0, 0, 0, 0.296)',
     borderRadius: '50px',
+    overflow: 'auto',
   },
 };
 

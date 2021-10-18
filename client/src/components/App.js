@@ -1,15 +1,15 @@
 import React from 'react';
 import './scss/index.scss';
 
-import Header from './screens/Header';
-import HeaderSub from './screens/sub/HeaderSub';
-import Home from './screens/Home';
-import About from './screens/About';
-import AboutSub from './screens/sub/AboutSub';
-import Work from './screens/Work';
-import Reach from './screens/Reach';
-import WorkTimeline from './screens/sub/WorkTimeline';
-import DisplayArrow from './utils/DisplayArrow';
+import Header from './pages/Header';
+import HeaderSub from './pages/sub/HeaderSub';
+import Home from './pages/Home';
+import About from './pages/About';
+import AboutSub from './pages/sub/AboutSub';
+import Work from './pages/Work';
+import Reach from './pages/Reach';
+import WorkTimeline from './pages/sub/WorkTimeline';
+import DisplayArrow from './pages/common/DisplayArrow';
 
 const App = () => {
   return (

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { details } from '../../actions';
+import { details } from '../../../actions';
 
 export const CheckNavigation = location => {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { tags, hireMeButton } from '../../utils/utils.functions';
-import SocialMediaButtons from '../../utils/SocialMediaButtons';
-import Button from '../../utils/Button';
+import SocialMediaButtons from '../common/SocialMediaButtons';
+import Button from '../common/Button';
 import '../../scss/HeaderSub.scss';
 
 const HeaderSub = ({ title, name, sub, job_title, header, name2 }) => {

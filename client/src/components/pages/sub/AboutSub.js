@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import '../../scss/AboutSub.scss';
 import useOnScreen from '../../utils/useOnScreen';
-import { CheckNavigation } from '../../utils/CheckNavigation';
+import { CheckNavigation } from '../common/CheckNavigation';
 import { knowledgeField, tags, skills } from '../../utils/utils.functions';
 
 const AboutSub = () => {

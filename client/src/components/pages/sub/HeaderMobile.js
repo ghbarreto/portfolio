@@ -6,7 +6,7 @@ import {
   buttonValuesMobile,
 } from '../../utils/utils.functions';
 import '../../scss/HeaderMobile.scss';
-import SocialMediaButtons from '../../utils/SocialMediaButtons';
+import SocialMediaButtons from '../common/SocialMediaButtons';
 
 const HeaderMobile = () => {
   const [triggerNav, setTriggerNav] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import useOnScreen from '../utils/useOnScreen';
-import { CheckNavigation } from '../utils/CheckNavigation';
+import { CheckNavigation } from './common/CheckNavigation';
 
 const Home = () => {
   const ref = useRef();

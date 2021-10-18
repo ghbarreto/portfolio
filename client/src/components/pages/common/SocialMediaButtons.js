@@ -1,7 +1,7 @@
 import React from 'react';
-import { socialMedia } from './utils.functions';
+import { socialMedia } from '../../utils/utils.functions';
 import _ from 'lodash';
-import '../scss/SocialMediaButtons.scss'
+import '../../scss/SocialMediaButtons.scss'
 
 const SocialMediaButtons = () => {
   const returnButtons = () => {

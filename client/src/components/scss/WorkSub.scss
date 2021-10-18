@@ -14,11 +14,9 @@
     font-size: $desktop-section-tags-size;
   }
 }
-
 .display-on-hover {
   display: none;
 }
-
 .project-list-margins {
   width: 90%;
   margin: 0 auto;
@@ -37,7 +35,7 @@
       width: 20%;
       max-width: 40%;
       flex: 1 0 25%;
-      height: 250px;
+      height: 100%;
       &:hover {
         cursor: pointer;
         // .projects-list-item-name {
@@ -133,35 +131,34 @@
   }
 }
 
-@media only screen and (max-width: $medium-screen+150) {
-  .projects-title-main {
-    grid-template-areas: 'a b c d';
-    grid-template-columns: 1fr 10fr 2fr 1fr;
-    .projects-title {
-      text-transform: uppercase;
-      margin-left: 75px;
-    }
-  }
+@media only screen and (max-width: $small-screen-cutoff) {
   .project-list-margins {
     .project-list {
-      width: 60%;
+      width: 100%;
       margin-bottom: 10px;
       overflow: hidden;
       .projects-list-item {
-        flex: 1 0 50%;
+        flex: 1 0 30%;
         max-width: 100%;
         height: 100%;
       }
     }
   }
 }
-@media only screen and (max-width: $small-screen-cutoff) {
+@media only screen and (max-width: $phone-screen-size) {
   .projects-title-main {
     display: block;
   }
   .project-list-margins {
+    width: 100%;
     .project-list {
+      display: block;
       width: 100%;
+      .projects-list-item {
+        flex: 1 0 100%;
+        width: 100%;
+        overflow: auto;
+      }
     }
   }
 }

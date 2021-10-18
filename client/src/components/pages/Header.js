@@ -1,6 +1,6 @@
 import React from 'react';
 import '../scss/Header.scss';
-import Particles from '../utils/Particle';
+import Particles from './common/Particle';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {

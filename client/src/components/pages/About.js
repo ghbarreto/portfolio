@@ -8,8 +8,8 @@ import {
   viewResume,
 } from '../utils/utils.functions';
 import useOnScreen from '../utils/useOnScreen';
-import Button from '../utils/Button';
-import { CheckNavigation } from '../utils/CheckNavigation';
+import Button from '../pages/common/Button';
+import { CheckNavigation } from './common/CheckNavigation';
 import '../scss/About.scss';
 
 const NAVIGATE = <CheckNavigation location="About" />;

@@ -7,7 +7,7 @@ import {
   reachMeInfo,
   reachMeInfoContact,
 } from '../../utils/utils.functions';
-import FormContainer from '../../utils/FormContainer';
+import FormContainer from '../common/FormContainer';
 
 const displayProjectTitle = () => {
   return (

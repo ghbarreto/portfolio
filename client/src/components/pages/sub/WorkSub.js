@@ -2,7 +2,7 @@ import { projectTitle, projects, tags } from '../../utils/utils.functions';
 import _ from 'lodash';
 import { useState } from 'react';
 import '../../scss/WorkSub.scss';
-import ReactModal from '../../utils/Modal';
+import ReactModal from '../common/Modal';
 
 const WorkSub = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
