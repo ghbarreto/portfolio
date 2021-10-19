@@ -5,6 +5,13 @@ export const projectTitle = ['Open Source Projects', 'Job History', 'Reach Me'];
 export const kyteLogo = '/assets/images/kyte.png';
 export const emilLogo = '/assets/images/emil.jpeg';
 export const lugaroLogo = '/assets/images/lugaro.jpeg';
+export const typeWriter = [
+  'Full-stack Developer',
+  'Front-end Developer',
+  ,
+  'Back-end Developer',
+  'Mobile Developer',
+];
 
 export const timelineHorizontal = [
   {

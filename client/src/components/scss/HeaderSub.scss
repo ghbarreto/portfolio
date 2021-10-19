@@ -28,7 +28,7 @@
       margin-left: 50px;
       letter-spacing: 5px;
     }
-    .center-text-button{
+    .center-text-button {
       display: none;
     }
     .center-text-social-media {
@@ -55,12 +55,10 @@
     .center-text-sub {
       color: $highlight;
       text-align: center;
+
       font-size: 50px;
       letter-spacing: 5px;
       font-weight: $font-semi;
-      &:nth-child(5) {
-        color: green;
-      }
     }
     .center-text-tag-end {
       margin-top: -20px;
@@ -114,7 +112,7 @@
         margin-bottom: -20px;
         text-align: center;
       }
-      .center-text-button{
+      .center-text-button {
         display: block;
       }
       .center-text-mobile-name {
@@ -152,10 +150,14 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $phone-screen-size) {
+  .center-text-full-mobile-header {
+    display: block !important;
+  }
   .center {
     .center-text {
       margin-top: 40%;
+      width: 100%;
     }
     .center-text-tag {
       margin-bottom: -25px !important;
@@ -176,6 +178,7 @@
       left: 50%;
     }
   }
+
   .main-style .arrow {
     margin: 0 auto;
   }
