@@ -6,12 +6,13 @@ li {
 }
 
 .background-nav-bar-color {
-  background-color: $background-color;
-  height: 150px;
-  opacity: 0.8;
+  // background-color: $background-color;
+  height: 130px;
   position: fixed;
   z-index: 1;
   width: 100%;
+  backdrop-filter: blur(4px) 
+    drop-shadow(4px 4px 10px $background-color);
 }
 .fixed-image-sizing {
   width: 50px;

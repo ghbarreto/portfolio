@@ -1,19 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+
 import {
   logo,
   tags,
   informations,
   buttonValuesMobile,
 } from '../../utils/utils.functions';
+import { useOnClickOutside } from '../../utils/useOnClickOutside';
 import '../../scss/HeaderMobile.scss';
 import SocialMediaButtons from '../common/SocialMediaButtons';
 
 const HeaderMobile = () => {
   const [triggerNav, setTriggerNav] = useState(false);
+  const ref = useRef();
+
+  const appearAnimation = triggerNav
+    ? 'side-menu-appear'
+    : 'side-menu-disappear';
 
   const handleModal = () => {
     return triggerNav === true ? setTriggerNav(false) : setTriggerNav(true);
   };
+
+  useOnClickOutside(ref, () =>
+    triggerNav === true ? setTriggerNav(false) : null
+  );
 
   const displaySideMenuLinks = () => {
     return Object.values(buttonValuesMobile).map(e => {
@@ -30,6 +41,7 @@ const HeaderMobile = () => {
       );
     });
   };
+
   return (
     <>
       <div className="mobile-header-full">
@@ -55,7 +67,8 @@ const HeaderMobile = () => {
           </div>
 
           <nav
-            className="side-menu"
+            ref={ref}
+            className={`side-menu ${appearAnimation}`}
             style={{ display: triggerNav ? 'block' : 'none' }}
           >
             <div className="side-menu-header">
@@ -70,7 +83,9 @@ const HeaderMobile = () => {
 
             <span className="social-media-links">
               <div className="side-menu-mobile-name">
-                <span className="side-menu-tag-color">{tags.closingTagName}</span>
+                <span className="side-menu-tag-color">
+                  {tags.closingTagName}
+                </span>
                 {informations.name}
               </div>
               <SocialMediaButtons />

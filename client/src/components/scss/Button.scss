@@ -4,6 +4,7 @@
   background-color: $lightblue;
   border-radius: 50px;
   text-align: center;
+  width: 200px;
   color: $white;
   &:hover {
     background-color: $white;
@@ -20,16 +21,13 @@ a {
   }
 }
 @media only screen and (max-width: $small-screen-cutoff) {
-  .button-centeralize {
-    display: flex !important;
-    justify-content: center !important;
-  }
+  
 }
 
 @media only screen and (max-width: $phone-screen-size) {
   .button-centeralize {
-    display: flex !important;
-    justify-content: center !important;
+    width: 120px;
+    margin: 0 auto;
   }
   .button-style {
     margin-top: 15px;

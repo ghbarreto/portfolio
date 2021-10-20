@@ -1,6 +1,8 @@
-import { projectTitle, projects, tags } from '../../utils/utils.functions';
-import _ from 'lodash';
 import { useState } from 'react';
+import _ from 'lodash';
+
+import Animate from '../common/Animate';
+import { projectTitle, projects, tags } from '../../utils/utils.functions';
 import '../../scss/WorkSub.scss';
 import ReactModal from '../common/Modal';
 
@@ -23,10 +25,13 @@ const WorkSub = () => {
 
   const displayProjects = () => {
     return _.map(projects, (e, count) => {
+      const odd = count % 2 === 0 ? 'TopToBottom' : 'BottomToTop';
       return (
-        <>
+        <Animate
+          anim={odd}
+          className={`${decideBackgroundColor(count)} projects-list-item`}
+        >
           <div
-            className={`${decideBackgroundColor(count)} projects-list-item`}
             onClick={() => {
               setName(e.name);
               setDescription(e.description);
@@ -57,7 +62,7 @@ const WorkSub = () => {
             </div>
             <div className="onHoverDisplay"></div>
           </div>
-        </>
+        </Animate>
       );
     });
   };
@@ -70,10 +75,10 @@ const WorkSub = () => {
 
   const displayProjectTitle = () => {
     return (
-      <div>
+      <Animate anim={'Opacity'}>
         <span className="closing-opening-tags">{tags.closingOpening}</span>{' '}
         {projectTitle[0]}
-      </div>
+      </Animate>
     );
   };
 

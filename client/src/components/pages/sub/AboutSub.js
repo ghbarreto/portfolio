@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+
+import Animate from '../common/Animate';
 import '../../scss/AboutSub.scss';
 import useOnScreen from '../../utils/useOnScreen';
 import { CheckNavigation } from '../common/CheckNavigation';
@@ -10,17 +12,24 @@ const AboutSub = () => {
   const NAVIGATE = <CheckNavigation location="About" />;
 
   const displayKnowledgeSection = () => {
-    return Object.values(knowledgeField).map(e => {
+    return Object.values(knowledgeField).map((e, i) => {
+      const odd = i % 2 === 0 ? 'LeftToRight' : 'RightToLeft';
       return (
-        <div className="knowledge-section-fields">
-          <span className="about-tags">{tags.closingOpening}</span>
-          <span className="main-jobtitle-date cellphone-font-size">{e.title}</span>
-          <span className="about-tags">
-            {tags.slash}
-            {tags.slash}
-          </span>
-          <div className="experience-job cellphone-font-size">{e.qualifications}</div>
-        </div>
+        <Animate anim={odd}>
+          <div className="knowledge-section-fields">
+            <span className="about-tags">{tags.closingOpening}</span>
+            <span className="main-jobtitle-date cellphone-font-size">
+              {e.title}
+            </span>
+            <span className="about-tags">
+              {tags.slash}
+              {tags.slash}
+            </span>
+            <div className="experience-job cellphone-font-size">
+              {e.qualifications}
+            </div>
+          </div>
+        </Animate>
       );
     });
   };
@@ -38,15 +47,21 @@ const AboutSub = () => {
   return (
     <div className="about-sub-flex">
       <div className="knowledge-section">
-        <div className="section-tags section-tags-mobile">KNOWLEDGE</div>
+        <Animate anim={'LeftToRight'}>
+          <div className="section-tags section-tags-mobile">KNOWLEDGE</div>
+        </Animate>
         {displayKnowledgeSection()}
       </div>
+      <div ref={ref}>{isVisible && NAVIGATE}</div>
       <div className="skills-section">
-        <div className="section-tags section-tags-mobile">SKILLS</div>
+        <Animate anim={'TopToBottom'}>
+          <div className="section-tags section-tags-mobile">SKILLS</div>
+        </Animate>
         <div className="parent-skills">
-          <div className="parent-skills-flex">{displaySkillsSection()}</div>
+          <Animate anim={'Opacity'}>
+            <div className="parent-skills-flex">{displaySkillsSection()}</div>
+          </Animate>
         </div>
-        <div ref={ref}>{isVisible && NAVIGATE}</div>
       </div>
     </div>
   );

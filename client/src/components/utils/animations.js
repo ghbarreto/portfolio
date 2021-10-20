@@ -3,21 +3,23 @@ export const animations = {
   leftToRight: {
     from: { x: -200, opacity: 0 },
     to: { x: 0, opacity: 1 },
-    delay: 0,
+    delay: 150,
   },
   rightToLeft: {
     from: { x: 400, opacity: 0 },
     to: { x: 0, opacity: 1 },
-    delay: 0,
+    delay: 150,
   },
   topToBottom: {
     from: { y: -120, opacity: 0 },
     to: { y: 0, opacity: 1 },
-    delay: 0,
+    delay: 150,
   },
   bottomToTop: {
     from: { y: 120, opacity: 0 },
     to: { y: 0, opacity: 1 },
-    delay: 0,
+    delay: 150,
   },
 };
+
+

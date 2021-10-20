@@ -9,7 +9,7 @@
     'x b c';
   .about-section-container-text {
     font-size: $desktop-font-size;
-    grid-area: a;
+    grid-area: a ;
   }
   .information-about-section {
     grid-area: b;
@@ -48,7 +48,7 @@
     }
   }
   div.about-section-container-text.word-color.cellphone-font-size {
-    font-size: 40px;
+    font-size: $medium-section-size;
     margin-left: 10px;
   }
   .image-about-section-desktop {
