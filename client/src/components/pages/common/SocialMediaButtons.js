@@ -1,13 +1,13 @@
 import React from 'react';
 import { socialMedia } from '../../utils/utils.functions';
 import _ from 'lodash';
-import '../../scss/SocialMediaButtons.scss'
+import '../../scss/SocialMediaButtons.scss';
 
 const SocialMediaButtons = () => {
   const returnButtons = () => {
-    return Object.values(socialMedia).map((e, v) => {
+    return Object.values(socialMedia).map((e, i) => {
       return (
-        <li>
+        <li key={i}>
           <a href={e.src}>
             <img
               className="social-media-img"

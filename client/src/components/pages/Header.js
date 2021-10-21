@@ -16,9 +16,9 @@ import HeaderMobile from './sub/HeaderMobile';
 const Header = ({ details }) => {
   const location = details.details;
   const renderButtons = () => {
-    return Object.values(buttonValues).map(e => {
+    return Object.values(buttonValues).map((e, i) => {
       const buttonDisplay = (
-        <li className="nav-menu-items">
+        <li className="nav-menu-items" key={i}>
           <span className="nav-menu-left-width"></span>
           <span className="color-brackets">{e.openingTag}</span>
           <span className="color-name">{e.name}</span>
@@ -41,7 +41,7 @@ const Header = ({ details }) => {
   const renderActiveButton = (opening, name, closing) => {
     return (
       <>
-        <li className="nav-menu-items">
+        <li className="nav-menu-items" key={name}>
           <span className="color-brackets color-selected">{opening}</span>
           <span className="color-name color-selected">{name}</span>
           <span className="color-brackets color-selected">{closing}</span>
@@ -60,9 +60,9 @@ const Header = ({ details }) => {
   };
 
   const renderSocialMedia = () => {
-    return Object.values(socialMedia).map(e => {
+    return Object.values(socialMedia).map((e, i) => {
       return (
-        <li>
+        <li key={i}>
           <a href={e.src}>
             <img
               className="fixed-image-sizing"
@@ -76,13 +76,11 @@ const Header = ({ details }) => {
   };
 
   const displayDot = () => {
-    return navigate.map(e => {
+    return navigate.map((e, i) => {
       return (
-        <>
-          <li>
-            <span className={`dot ${changeDotColor(e)}`}></span>
-          </li>
-        </>
+        <li key={i}>
+          <span className={`dot ${changeDotColor(e)}`}></span>
+        </li>
       );
     });
   };

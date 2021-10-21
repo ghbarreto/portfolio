@@ -22,7 +22,7 @@ const WorkTimeline = () => {
       count++;
       const arrows = count % 2 ? 'down' : 'up';
       return (
-        <div className={`horizontal-container-${count}`}>
+        <div key={count} className={`horizontal-container-${count}`}>
           <div className="background-border"></div>
           <div className="container-items">
             <img className="container-items-image" src={e.image} alt="logo" />

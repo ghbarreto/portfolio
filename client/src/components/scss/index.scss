@@ -32,7 +32,7 @@ body {
 
 .ReactModal__Overlay {
   z-index: 2;
-  background-color: rgba(34, 34, 34, 0) !important;
+  backdrop-filter: blur(4px) drop-shadow(4px 4px 10px $background-color);
   transform: translatey(200px);
   transition: all 500ms ease-in-out;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .ReactModal__Overlay--before-close {
-  background-color: rgba(34, 34, 34, 0) !important;
+  background-color: rgba(221, 18, 18, 0) !important;
   transform: translateX(-100px);
 }
 
@@ -122,8 +122,8 @@ canvas {
     height: 100vh;
     width: 100vw;
   }
-  .margin-left-phone{
-    margin-left: 10px !important; 
+  .margin-left-phone {
+    margin-left: 10px !important;
   }
   .projects-landing-page {
     width: 100vh;
@@ -148,10 +148,10 @@ canvas {
   .cellphone-font-size {
     font-size: $mobile-font-size !important;
   }
-  .margin-left-phone{
-    margin-left: 3px !important; 
+  .margin-left-phone {
+    margin-left: 3px !important;
   }
-  
+
   .section-tags-mobile {
     margin-top: 25px !important;
     font-size: 25px;

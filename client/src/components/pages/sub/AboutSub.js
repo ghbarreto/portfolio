@@ -15,29 +15,31 @@ const AboutSub = () => {
     return Object.values(knowledgeField).map((e, i) => {
       const odd = i % 2 === 0 ? 'LeftToRight' : 'RightToLeft';
       return (
-        <Animate anim={odd}>
-          <div className="knowledge-section-fields">
-            <span className="about-tags">{tags.closingOpening}</span>
-            <span className="main-jobtitle-date cellphone-font-size">
-              {e.title}
-            </span>
-            <span className="about-tags">
-              {tags.slash}
-              {tags.slash}
-            </span>
-            <div className="experience-job cellphone-font-size">
-              {e.qualifications}
+        <React.Fragment key={i}>
+          <Animate anim={odd}>
+            <div className="knowledge-section-fields">
+              <span className="about-tags">{tags.closingOpening}</span>
+              <span className="main-jobtitle-date cellphone-font-size">
+                {e.title}
+              </span>
+              <span className="about-tags">
+                {tags.slash}
+                {tags.slash}
+              </span>
+              <div className="experience-job cellphone-font-size">
+                {e.qualifications}
+              </div>
             </div>
-          </div>
-        </Animate>
+          </Animate>
+        </React.Fragment>
       );
     });
   };
 
   const displaySkillsSection = () => {
-    return skills.map(e => {
+    return skills.map((e, i) => {
       return (
-        <div className="list-of-skills cellphone-font-size">
+        <div key={i} className="list-of-skills cellphone-font-size">
           <span>{e}</span>
         </div>
       );

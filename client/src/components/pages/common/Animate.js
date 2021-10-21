@@ -4,7 +4,7 @@ import { animated, useSpring } from 'react-spring';
 
 import { animations } from '../../utils/animations';
 
-const Animation = ({ className, anim, ...props }) => {
+const Animation = ({ className, anim, key, ...props }) => {
   const [animate, setAnimate] = useState(false);
   const leftToRightAnimation = useSpring(animate && animations.leftToRight);
   const rightToLeftAnimation = useSpring(animate && animations.rightToLeft);
@@ -39,7 +39,7 @@ const Animation = ({ className, anim, ...props }) => {
   const displayAnimationOnViewPort = () => {
     return (
       animate && (
-        <animated.div className={className} style={animationValue()}>
+        <animated.div className={className} style={animationValue()} key={key}>
           {props.children}
         </animated.div>
       )

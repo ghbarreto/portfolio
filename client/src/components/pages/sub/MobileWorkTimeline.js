@@ -9,33 +9,31 @@ const MobileWorkTimeline = () => {
       index++;
       const arrows = index % 2 === 0 ? 'arrow-left' : 'arrow-right';
       return (
-        <>
-          <div className="mobile-container">
-            <div className={`mobile-dot mobile-dot-${index}`}></div>
-            <div
-              className={`mobile-border mobile-border-${index} mobile-border-left-${index}`}
-            ></div>
-            <div
-              className={`mobile-arrow mobile-arrow-${index} ${arrows} arrow-left-${index}`}
-            ></div>
-            <div className={`mobile-image mobile-image-left-${index}`}>
-              <div className="mobile-image-pos">
-                <img src={e.image} alt="a" />
-              </div>
-            </div>
-            <div className={`mobile-title mobile-title-${index}`}>
-              <span className={`color-${index}`}>{e.title} </span>
-              <span className="back-slashes">
-                {tags.slash}
-                {tags.slash}
-              </span>{' '}
-              <span className={`color-${index}`}>{e.date}</span>
-            </div>
-            <div className={`mobile-paragraph mobile-paragraph-${index}`}>
-              {e.description}
+        <div key={index} className="mobile-container">
+          <div className={`mobile-dot mobile-dot-${index}`}></div>
+          <div
+            className={`mobile-border mobile-border-${index} mobile-border-left-${index}`}
+          ></div>
+          <div
+            className={`mobile-arrow mobile-arrow-${index} ${arrows} arrow-left-${index}`}
+          ></div>
+          <div className={`mobile-image mobile-image-left-${index}`}>
+            <div className="mobile-image-pos">
+              <img src={e.image} alt="a" />
             </div>
           </div>
-        </>
+          <div className={`mobile-title mobile-title-${index}`}>
+            <span className={`color-${index}`}>{e.title} </span>
+            <span className="back-slashes">
+              {tags.slash}
+              {tags.slash}
+            </span>{' '}
+            <span className={`color-${index}`}>{e.date}</span>
+          </div>
+          <div className={`mobile-paragraph mobile-paragraph-${index}`}>
+            {e.description}
+          </div>
+        </div>
       );
     });
   };

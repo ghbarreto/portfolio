@@ -32,35 +32,33 @@ const ReactModal = ({
   const displayHeader = () => {
     const imageRender = images.map(e => <img key={e} src={e} alt={e} />);
     return (
-      <>
-        <div className="modal-header">
-          <div className="modal-header-carousel">
-            <Carousel autoPlay infiniteLoop>
-              {imageRender}
-            </Carousel>
-          </div>
-          <h2 className="modal-header-title">{name}</h2>
-          <div className="modal-header-paragraph">{text}</div>
-          <div className="modal-header-buttons">
-            <Button
-              value={github}
-              href={github}
-              style={buttonStyles}
-              icon={<i class="fab fa-github"></i>}
-            >
-              Github
-            </Button>
-            <Button
-              value={livePreview}
-              href={livePreview}
-              style={buttonStyles}
-              icon={<i class="fas fa-eye"></i>}
-            >
-              Live
-            </Button>
-          </div>
+      <div className="modal-header" key={imageRender}>
+        <div className="modal-header-carousel">
+          <Carousel autoPlay infiniteLoop>
+            {imageRender}
+          </Carousel>
         </div>
-      </>
+        <h2 className="modal-header-title">{name}</h2>
+        <div className="modal-header-paragraph">{text}</div>
+        <div className="modal-header-buttons">
+          <Button
+            value={github}
+            href={github}
+            style={buttonStyles}
+            icon={<i class="fab fa-github"></i>}
+          >
+            Github
+          </Button>
+          <Button
+            value={livePreview}
+            href={livePreview}
+            style={buttonStyles}
+            icon={<i class="fas fa-eye"></i>}
+          >
+            Live
+          </Button>
+        </div>
+      </div>
     );
   };
 

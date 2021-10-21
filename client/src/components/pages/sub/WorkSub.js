@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import _ from 'lodash';
 
 import Animate from '../common/Animate';
@@ -27,42 +27,45 @@ const WorkSub = () => {
     return _.map(projects, (e, count) => {
       const odd = count % 2 === 0 ? 'TopToBottom' : 'BottomToTop';
       return (
-        <Animate
-          anim={odd}
-          className={`${decideBackgroundColor(count)} projects-list-item`}
-        >
-          <div
-            onClick={() => {
-              setName(e.name);
-              setDescription(e.description);
-              setImages(e.images);
-              setText(e.text);
-              setButtonLink(e.githubLink);
-              setLivePreview(e.live);
-              openModal();
-            }}
+        <React.Fragment key={count}>
+          <Animate
+            anim={odd}
+            className={`${decideBackgroundColor(count)} projects-list-item`}
           >
-            <div className="projects-list-item-name">
-              <span className="bracket-color bracket-format">
-                {tags.closingOpening}
-              </span>
-              {e.name}
-              <div className="projects-list-item-description">
-                {e.description}
+            <div
+              key={count}
+              onClick={() => {
+                setName(e.name);
+                setDescription(e.description);
+                setImages(e.images);
+                setText(e.text);
+                setButtonLink(e.githubLink);
+                setLivePreview(e.live);
+                openModal();
+              }}
+            >
+              <div className="projects-list-item-name">
+                <span className="bracket-color bracket-format">
+                  {tags.closingOpening}
+                </span>
+                {e.name}
+                <div className="projects-list-item-description">
+                  {e.description}
+                </div>
+                <div className="projects-list-item-date">{e.date}</div>
               </div>
-              <div className="projects-list-item-date">{e.date}</div>
+              <div className="display-on-hover">
+                <a className="button-project" href={e.githubLink}>
+                  Github
+                </a>
+                <a className="button-project" href={e.live}>
+                  Live
+                </a>
+              </div>
+              <div className="onHoverDisplay"></div>
             </div>
-            <div className="display-on-hover">
-              <a className="button-project" href={e.githubLink}>
-                Github
-              </a>
-              <a className="button-project" href={e.live}>
-                Live
-              </a>
-            </div>
-            <div className="onHoverDisplay"></div>
-          </div>
-        </Animate>
+          </Animate>
+        </React.Fragment>
       );
     });
   };

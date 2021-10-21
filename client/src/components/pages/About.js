@@ -24,26 +24,28 @@ const About = () => {
     return Object.values(jobExperience).map((e, i) => {
       const odd = i % 2 === 0 ? 'RightToLeft' : 'LeftToRight';
       return (
-        <Animate anim={odd}>
-          <div className="experience-section">
-            <span className="about-tags cellphone-font-size">
-              {tags.closingOpening}
-            </span>
-            <span className="main-jobtitle-date cellphone-font-size">
-              {e.title}
-            </span>
-            <span className="about-tags cellphone-font-size">
-              {tags.slash}
-              {tags.slash}
-            </span>
-            <span className="main-jobtitle-date cellphone-font-size">
-              {e.date}
-            </span>
-            <div className="experience-job cellphone-font-size">
-              {e.experience}
+        <React.Fragment key={e.title}>
+          <Animate anim={odd}>
+            <div className="experience-section">
+              <span className="about-tags cellphone-font-size">
+                {tags.closingOpening}
+              </span>
+              <span className="main-jobtitle-date cellphone-font-size">
+                {e.title}
+              </span>
+              <span className="about-tags cellphone-font-size">
+                {tags.slash}
+                {tags.slash}
+              </span>
+              <span className="main-jobtitle-date cellphone-font-size">
+                {e.date}
+              </span>
+              <div className="experience-job cellphone-font-size">
+                {e.experience}
+              </div>
             </div>
-          </div>
-        </Animate>
+          </Animate>
+        </React.Fragment>
       );
     });
   };
@@ -70,11 +72,10 @@ const About = () => {
             </div>
           </div>
           <div className="image-about-section desktop-image">
-          <Animate anim={'Opacity'}>
-            <img src={aboutBanner} alt="about-banner" />
-          </Animate>
+            <Animate anim={'Opacity'}>
+              <img src={aboutBanner} alt="about-banner" />
+            </Animate>
           </div>
-
 
           {/* MOBILE */}
           <span className="mobile-view margin-left-phone">

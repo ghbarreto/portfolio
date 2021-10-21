@@ -27,9 +27,9 @@ const HeaderMobile = () => {
   );
 
   const displaySideMenuLinks = () => {
-    return Object.values(buttonValuesMobile).map(e => {
+    return Object.values(buttonValuesMobile).map((e, i) => {
       return (
-        <li className="side-menu-items">
+        <li className="side-menu-items" key={i}>
           <div className="side-menu-margins">
             <span className="side-menu-left-width"></span>
             <span className="color-brackets">{e.openingTag}</span>

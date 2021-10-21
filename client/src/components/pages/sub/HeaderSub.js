@@ -13,14 +13,14 @@ const HeaderSub = ({ title, name, sub, job_title, header, name2 }) => {
   const closingTag = `${tags.closingTagName} h1 ${tags.closingOpening}`;
 
   const colorName = (val, val2) => {
-    return Object.values(val).map(e => (
-      <div className={`center-text-${val2}`}>{e}</div>
+    return Object.values(val).map((e, i) => (
+      <div key={i} className={`center-text-${val2}`}>{e}</div>
     ));
   };
 
   const displayHireButton = () => {
-    return Object.values(hireMeButton).map(e => {
-      return <Button value={e.title} styles={e.styles} src={e.src} />;
+    return Object.values(hireMeButton).map((e, i) => {
+      return <Button key={i} value={e.title} styles={e.styles} src={e.src} />;
     });
   };
 

@@ -19,10 +19,10 @@ const displayProjectTitle = () => {
 };
 
 const displayReachInfo = () => {
-  return reachMeInfoContact.map(e => {
+  return reachMeInfoContact.map((e, i) => {
     const flagEmail = e.val === 'henriqve.dev@gmail.com' ? 'highlight' : '';
     return (
-      <div key={e.val} className="reach-sub-info">
+      <div key={i} className="reach-sub-info">
         <img src={e.icon} alt={e.icon} />
         <div>{e.val}</div>
       </div>
