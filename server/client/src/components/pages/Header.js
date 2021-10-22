@@ -96,7 +96,7 @@ const Header = ({ details }) => {
 
   return (
     <>
-      {/* <Particles /> */}
+      <Particles />
       <div className="mobile-header">
         <HeaderMobile />
       </div>

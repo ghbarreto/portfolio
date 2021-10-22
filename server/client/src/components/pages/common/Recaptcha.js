@@ -3,7 +3,8 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { connect, useDispatch } from 'react-redux';
 
 import { checkCaptcha } from '../../../actions';
-import { CLIENT_KEY } from '../../utils/keys';
+
+const CLIENT_KEY = '6LeWr7IcAAAAAOtW0Gc5Zu_nlspO8uHAcRYm1Esu';
 
 const Recaptcha = ({ setCaptchaChecking, checked_captcha, ...props }) => {
   const dispatch = useDispatch();
