@@ -3,11 +3,12 @@ const assert = require('assert');
 const { response } = require('./emailSendFunction');
 
 module.exports = app => {
-  app.post('/contact', async (req, res) => {
+  app.post('/api/contact', async (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
-    const captcha = req.body.captcha;
     const message = req.body.message;
+
+    console.log(name, email, message);
 
     assert(name, email, message);
 
@@ -17,10 +18,9 @@ module.exports = app => {
         name,
         email,
         message,
-        captcha,
       });
       insertValues.save();
-      res.status(200).send('inserted data');
+      res.status(200).send('inserted data ', { name }, { email }, { message });
     } catch (err) {
       res.status(404).send('Unable to insert data: ', err);
     }
