@@ -1,60 +1,60 @@
 import React, { useState, useEffect } from 'react';
 import { Formik, Field, Form } from 'formik';
 import { connect, useDispatch } from 'react-redux';
-import ReCAPTCHA from 'react-google-recaptcha';
-import { bindActionCreators } from 'redux';
 
 import '../../scss/index.scss';
 import '../../scss/FormContainer.scss';
 
-import { CLIENT_KEY } from '../../utils/keys';
-import { submitEmail, checkCaptcha } from '../../../actions';
+import Icons from '../common/Icons';
+import Recaptcha from '../common/Recaptcha';
+import { submitEmail } from '../../../actions';
 
 const FormComponent = ({ email, name, message, button, ...props }) => {
   const dispatch = useDispatch();
   const [isFocused, setIsFocused] = useState(false);
-  const [captcha, setCaptcha] = useState();
-  const [flag, setFlag] = useState();
   const [captchaCheck, setCaptchaCheck] = useState();
-  const setFocus = isFocused ? 'lost-focus' : '';
-  const showAlert = isFocused ? 'Please fill all fields' : '';
+  const [correctValues, setCorrectValues] = useState();
+  const [emailSentCounter, setEmailSentCounter] = useState(0);
+  const [incorrectValues, setIncorrectValues] = useState();
+  const setFocus = isFocused && emailSentCounter === 0 ? 'lost-focus' : '';
+  const showAlert =
+    isFocused && emailSentCounter === 0 ? (
+      <Icons icon={'lostFocus'}>Please, fill all fields.</Icons>
+    ) : (
+      ''
+    );
+  const emailSent = correctValues ? (
+    <Icons icon={'emailSent'}>'Email sent.'</Icons>
+  ) : (
+    ''
+  );
 
-  const getCaptchaValidation = async () => {
-    if (!captcha) return;
-    await dispatch(checkCaptcha(captcha));
-    setFlag(true);
-  };
-
-  const setCaptchaValidation = () => {
-    if (props.checked_captcha.captcha) {
-      return setCaptchaCheck(props.checked_captcha.captcha.success);
+  const setCaptchaChecking = value => {
+    if (value) {
+      return setCaptchaCheck(value);
     }
   };
 
-  useEffect(() => {
-    setCaptchaValidation();
-  }, [flag]);
-
-  useEffect(() => {
-    getCaptchaValidation();
-  }, [captcha]);
-
   const submitForm = ({ email, name, message }) => {
     if (name && message && email && captchaCheck === true)
-      return setIsFocused(false) && dispatch(submitEmail(name, email, message));
+      try {
+        dispatch(submitEmail(name, email, message));
+        setCorrectValues(true);
+        setIsFocused(false);
+        setEmailSentCounter(1);
+      } catch (err) {
+        setIncorrectValues(err);
+      }
     if (!name || !email || !message || captchaCheck === false)
       return setIsFocused(true);
   };
-  const onChangeRecaptcha = value => {
-    setCaptcha(value);
-  };
-
   const onFocused = () => {
     setIsFocused(false);
   };
   const lostFocus = () => {
     setIsFocused(true);
   };
+
   return (
     <>
       <div className="form-container">
@@ -64,13 +64,23 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
             email: '',
             message: '',
           }}
-          onSubmit={values => {
+          onSubmit={(values, { resetForm }) => {
             onFocused();
             submitForm(values);
+            resetForm();
+            setIsFocused(false);
           }}
         >
-          <Form>
+          <Form onBlur={() => lostFocus()} onFocus={() => onFocused()}>
             <div className="alert-message">{showAlert}</div>
+
+            <div style={{ color: 'green' }} className="">
+              {emailSent}
+            </div>
+
+            <div style={{ color: 'red' }} className="">
+              {incorrectValues}
+            </div>
 
             <Field
               className={`field ${setFocus}`}
@@ -97,18 +107,23 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
               onBlur={() => lostFocus()}
               onFocus={() => onFocused()}
             />
-            <div className="display-captcha">
+            <div onFocus={() => onFocused()} className="display-captcha">
               {captchaCheck ? (
-                <div>Authenticated</div>
+                'Authenticated'
               ) : (
-                <ReCAPTCHA
-                  theme="dark"
-                  sitekey={CLIENT_KEY}
-                  onChange={onChangeRecaptcha}
+                <Recaptcha
+                  onBlur={() => lostFocus()}
+                  captchaCheck={captchaCheck}
+                  setCaptchaChecking={setCaptchaChecking}
                 />
               )}
             </div>
-            <button className="button-field button" type="submit">
+            <button
+              onBlur={() => lostFocus()}
+              onFocus={() => onFocused()}
+              className="button-field button"
+              type="submit"
+            >
               {button}
             </button>
           </Form>
@@ -118,23 +133,14 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
   );
 };
 
+const style = {
+  border: '1px solid red',
+};
+
 const mapStateToProps = state => {
   return {
     checked_captcha: state.details,
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    dispatch,
-    ...bindActionCreators(
-      {
-        submitEmail,
-        checkCaptcha,
-      },
-      dispatch
-    ),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(FormComponent);
+export default connect(mapStateToProps, { submitEmail })(FormComponent);

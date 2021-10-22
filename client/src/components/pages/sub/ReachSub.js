@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Icons from '../common/Icons';
 import '../../scss/WorkTimeline.scss';
 import '../../scss/ReachSub.scss';
 import {
@@ -23,7 +25,7 @@ const displayReachInfo = () => {
     const flagEmail = e.val === 'henriqve.dev@gmail.com' ? 'highlight' : '';
     return (
       <div key={i} className="reach-sub-info">
-        <img src={e.icon} alt={e.icon} />
+        <Icons icon={e.icon} />
         <div>{e.val}</div>
       </div>
     );

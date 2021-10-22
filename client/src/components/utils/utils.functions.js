@@ -219,15 +219,15 @@ export const reachMeInfo =
 
 export const reachMeInfoContact = [
   {
-    icon: '/assets/images/logo.png',
+    icon: 'email',
     val: 'henriqve.dev@gmail.com',
   },
   {
-    icon: '/assets/images/logo.png',
+    icon: 'phone',
     val: '+55 11 9899-8999',
   },
   {
-    icon: '/assets/images/logo.png',
+    icon: 'location',
     val: 'Vancouver, BC',
   },
 ];

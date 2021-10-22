@@ -56,7 +56,7 @@ const AboutSub = () => {
       </div>
       <div ref={ref}>{isVisible && NAVIGATE}</div>
       <div className="skills-section">
-        <Animate anim={'TopToBottom'}>
+        <Animate anim={'TopToBottom'} startAnimate>
           <div className="section-tags section-tags-mobile">SKILLS</div>
         </Animate>
         <div className="parent-skills">
