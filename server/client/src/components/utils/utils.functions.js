@@ -151,19 +151,19 @@ export const tags = {
 export const buttonValues = [
   {
     name: 'Reach',
-    to: '/Reach',
+    to: 5,
     openingTag: tags.openBracket,
     closingTag: tags.closingBracket,
   },
   {
     name: 'Works',
-    to: '/Works',
+    to: 3,
     openingTag: tags.openBracket,
     closingTag: tags.closingBracket,
   },
   {
     name: 'About',
-    to: '/about',
+    to: 1,
     openingTag: tags.openBracket,
     closingTag: tags.closingBracket,
   },
@@ -172,19 +172,19 @@ export const buttonValues = [
 export const buttonValuesMobile = [
   {
     name: 'About',
-    to: '/about',
+    to: 1,
     openingTag: tags.openBracket,
     closingTag: tags.closingBracket,
   },
   {
     name: 'Works',
-    to: '/Works',
+    to: 3,
     openingTag: tags.openBracket,
     closingTag: tags.closingBracket,
   },
   {
     name: 'Reach',
-    to: '/Reach',
+    to: 5,
     openingTag: tags.openBracket,
     closingTag: tags.closingBracket,
   },

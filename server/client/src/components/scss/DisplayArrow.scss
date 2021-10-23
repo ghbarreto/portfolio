@@ -34,7 +34,9 @@
 
 .main-style {
   position: fixed;
-  left: 47.9%;
+  z-index: 5;
+  width: 100%;
+  text-align: center;
   top: 89%;
   .arrow {
     display: inline-block;

@@ -11,8 +11,7 @@ li {
   position: fixed;
   z-index: 1;
   width: 100%;
-  backdrop-filter: blur(4px) 
-    drop-shadow(4px 4px 10px $background-color);
+  backdrop-filter: blur(4px) drop-shadow(4px 4px 10px $background-color);
 }
 .fixed-image-sizing {
   width: 50px;
@@ -94,6 +93,7 @@ li {
   }
 }
 .left-right-fixed {
+  z-index: 5;
   position: fixed;
   top: 40%;
   .left-right-social-media {

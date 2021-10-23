@@ -5,7 +5,7 @@ import { CheckNavigation } from './common/CheckNavigation';
 
 import WorkSub from '../pages/sub/WorkSub';
 
-const Work = () => {
+const Work = props => {
   const ref = useRef();
   const isVisible = useOnScreen(ref);
 
@@ -20,7 +20,7 @@ const Work = () => {
       <div ref={ref} style={{ color: 'white' }}>
         {returnVisibleContent()}
       </div>
-      <WorkSub />
+      {props.children}
     </>
   );
 };
