@@ -16,7 +16,7 @@ import '../scss/About.scss';
 
 const NAVIGATE = <CheckNavigation location="About" />;
 
-const About = () => {
+const About = props => {
   const ref = useRef();
   const isVisible = useOnScreen(ref);
 
@@ -52,7 +52,10 @@ const About = () => {
   const animateComponent = () => {
     return (
       <>
-        <div className="about-section-container margin-left-phone">
+        <div
+          style={{ marginTop: '10%' }}
+          className="about-section-container margin-left-phone"
+        >
           <Animate anim={'LeftToRight'}>
             <div className="about-section-container-text word-color cellphone-font-size">
               I am a{' '}
@@ -95,6 +98,7 @@ const About = () => {
             </Animate>
           </span>
         </div>
+        {props.children}
       </>
     );
   };

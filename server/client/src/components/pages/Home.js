@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import useOnScreen from '../utils/useOnScreen';
 import { CheckNavigation } from './common/CheckNavigation';
 
-const Home = () => {
+const Home = props => {
   const ref = useRef();
   const isVisible = useOnScreen(ref);
 
@@ -13,9 +13,12 @@ const Home = () => {
   };
 
   return (
-    <div ref={ref} style={{ color: 'white' }}>
-      {returnVisibleContent()}
-    </div>
+    <>
+      <div ref={ref} style={{ color: 'white' }}>
+        {returnVisibleContent()}
+      </div>
+      {props.children}
+    </>
   );
 };
 

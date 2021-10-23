@@ -1,7 +1,6 @@
 import React from 'react';
 import '../scss/Header.scss';
 import Particles from './common/Particle';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
   buttonValues,
@@ -13,12 +12,16 @@ import {
 } from '../utils/utils.functions';
 import HeaderMobile from './sub/HeaderMobile';
 
-const Header = ({ details }) => {
+const Header = ({ details, ...props }) => {
   const location = details.details;
   const renderButtons = () => {
     return Object.values(buttonValues).map((e, i) => {
       const buttonDisplay = (
-        <li className="nav-menu-items" key={i}>
+        <li
+          onClick={() => props.handlePageChange(e.to)}
+          className="nav-menu-items"
+          key={i}
+        >
           <span className="nav-menu-left-width"></span>
           <span className="color-brackets">{e.openingTag}</span>
           <span className="color-name">{e.name}</span>
@@ -96,9 +99,9 @@ const Header = ({ details }) => {
 
   return (
     <>
-      <Particles />
+      {/* <Particles /> */}
       <div className="mobile-header">
-        <HeaderMobile />
+        <HeaderMobile handlePageChange={props.handlePageChange} />
       </div>
       <div className="background-nav-bar-color"></div>
       <div className="fixed-nav-bar">
@@ -120,6 +123,8 @@ const Header = ({ details }) => {
           <span className="left-right-navigation-block ">{displayDot()}</span>
         </ul>
       </div>
+
+      {props.children}
     </>
   );
 };

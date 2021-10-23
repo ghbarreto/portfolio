@@ -7,14 +7,25 @@ import SocialMediaButtons from '../common/SocialMediaButtons';
 import Button from '../common/Button';
 import '../../scss/HeaderSub.scss';
 import Animate from '../common/Animate';
+import Home from '../Home';
 
-const HeaderSub = ({ title, name, sub, job_title, header, name2 }) => {
+const HeaderSub = ({
+  title,
+  name,
+  sub,
+  job_title,
+  header,
+  name2,
+  ...props
+}) => {
   const openingTag = `${tags.openingTag} h1 ${tags.closingOpening}`;
   const closingTag = `${tags.closingTagName} h1 ${tags.closingOpening}`;
 
   const colorName = (val, val2) => {
     return Object.values(val).map((e, i) => (
-      <div key={i} className={`center-text-${val2}`}>{e}</div>
+      <div key={i} className={`center-text-${val2}`}>
+        {e}
+      </div>
     ));
   };
 
@@ -81,6 +92,7 @@ const HeaderSub = ({ title, name, sub, job_title, header, name2 }) => {
           </Animate>
         </div>
       </div>
+      {props.children}
     </>
   );
 };

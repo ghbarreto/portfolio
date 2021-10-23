@@ -6,7 +6,7 @@ import { projectTitle, projects, tags } from '../../utils/utils.functions';
 import '../../scss/WorkSub.scss';
 import ReactModal from '../common/Modal';
 
-const WorkSub = () => {
+const WorkSub = props => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -65,6 +65,7 @@ const WorkSub = () => {
               <div className="onHoverDisplay"></div>
             </div>
           </Animate>
+          {props.children}
         </React.Fragment>
       );
     });

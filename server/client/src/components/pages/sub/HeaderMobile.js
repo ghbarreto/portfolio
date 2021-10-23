@@ -10,7 +10,7 @@ import { useOnClickOutside } from '../../utils/useOnClickOutside';
 import '../../scss/HeaderMobile.scss';
 import SocialMediaButtons from '../common/SocialMediaButtons';
 
-const HeaderMobile = () => {
+const HeaderMobile = props => {
   const [triggerNav, setTriggerNav] = useState(false);
   const ref = useRef();
 
@@ -29,7 +29,14 @@ const HeaderMobile = () => {
   const displaySideMenuLinks = () => {
     return Object.values(buttonValuesMobile).map((e, i) => {
       return (
-        <li className="side-menu-items" key={i}>
+        <li
+          onClick={() => {
+            props.handlePageChange(e.to);
+            setTriggerNav(false);
+          }}
+          className="side-menu-items"
+          key={i}
+        >
           <div className="side-menu-margins">
             <span className="side-menu-left-width"></span>
             <span className="color-brackets">{e.openingTag}</span>

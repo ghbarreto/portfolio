@@ -18,6 +18,7 @@
     "react-icons": "^4.3.1",
     "react-intersection-observer": "^8.32.1",
     "react-modal": "^3.14.3",
+    "react-page-scroller": "^2.2.1",
     "react-particles-js": "^3.5.3",
     "react-redux": "^7.2.5",
     "react-responsive-carousel": "^3.2.21",
