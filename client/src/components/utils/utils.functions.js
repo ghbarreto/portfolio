@@ -5,13 +5,6 @@ export const projectTitle = ['Open Source Projects', 'Job History', 'Reach Me'];
 export const kyteLogo = '/assets/images/kyte.png';
 export const emilLogo = '/assets/images/emil.jpeg';
 export const lugaroLogo = '/assets/images/lugaro.jpeg';
-export const typeWriter = [
-  'Full-stack Developer',
-  'Front-end Developer',
-  ,
-  'Back-end Developer',
-  'Mobile Developer',
-];
 
 export const timelineHorizontal = [
   {
@@ -68,6 +61,46 @@ export const projects = [
     githubLink: 'https://github.com/',
     live: 'https://github.com',
     date: 'March, 2020',
+    images: [kyteLogo, emilLogo, lugaroLogo],
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
+  },
+  {
+    name: 'FFXIV-Info',
+    description:
+      'An app developed by me to help people know various features about the game FFXIV',
+    githubLink: 'https://github.com/',
+    live: 'https://github.com',
+    date: 'Jan, 2022',
+    images: [kyteLogo, emilLogo, lugaroLogo],
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
+  },
+  {
+    name: 'FFXIV-Info',
+    description:
+      'An app developed by me to help people know various features about the game FFXIV',
+    githubLink: 'https://github.com/',
+    live: 'https://github.com',
+    date: 'Jan, 2022',
+    images: [kyteLogo, emilLogo, lugaroLogo],
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
+  },
+  {
+    name: 'FFXIV-Info',
+    description:
+      'An app developed by me to help people know various features about the game FFXIV',
+    githubLink: 'https://github.com/',
+    live: 'https://github.com',
+    date: 'Jan, 2022',
+    images: [kyteLogo, emilLogo, lugaroLogo],
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
+  },
+  {
+    name: 'FFXIV-Info',
+    description:
+      'An app developed by me to help people know various features about the game FFXIV',
+    githubLink: 'https://github.com/',
+    live: 'https://github.com',
+    date: 'Jan, 2022',
     images: [kyteLogo, emilLogo, lugaroLogo],
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
   },
@@ -193,17 +226,17 @@ export const socialMedia = [
   {
     name: 'Github',
     src: 'http://www.facebook.com',
-    img: '/assets/images/github.png',
+    img: 'github',
   },
   {
     name: 'Linkedin',
     src: 'www.linkedin.com',
-    img: '/assets/images/linkedin.png',
+    img: 'linkedin',
   },
   {
     name: 'Twitter',
     src: 'twitter.com',
-    img: '/assets/images/twitter.png',
+    img: 'twitter',
   },
 ];
 

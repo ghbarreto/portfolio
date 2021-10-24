@@ -95,13 +95,20 @@ const HeaderMobile = props => {
                 </span>
                 {informations.name}
               </div>
-              <SocialMediaButtons />
+              <SocialMediaButtons
+                className="social-media-links"
+                style={styles}
+              />
             </span>
           </nav>
         </div>
       </div>
     </>
   );
+};
+
+const styles = {
+  color: 'red',
 };
 
 export default HeaderMobile;

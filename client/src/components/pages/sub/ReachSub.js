@@ -35,7 +35,7 @@ const displayReachInfo = () => {
 const ReachSub = () => {
   return (
     <>
-      <div className="projects-title-main">
+      <div className="projects-title-main reach-sub">
         <span className="projects-title">{displayProjectTitle()}</span>
       </div>
       <div className="form-container-sub">

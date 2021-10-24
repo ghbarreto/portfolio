@@ -107,25 +107,27 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
               onBlur={() => lostFocus()}
               onFocus={() => onFocused()}
             />
-            <div onFocus={() => onFocused()} className="display-captcha">
-              {captchaCheck ? (
-                'Authenticated'
-              ) : (
-                <Recaptcha
-                  onBlur={() => lostFocus()}
-                  captchaCheck={captchaCheck}
-                  setCaptchaChecking={setCaptchaChecking}
-                />
-              )}
+            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+              <div onFocus={() => onFocused()} className="display-captcha">
+                {captchaCheck ? (
+                  'Authenticated'
+                ) : (
+                  <Recaptcha
+                    onBlur={() => lostFocus()}
+                    captchaCheck={captchaCheck}
+                    setCaptchaChecking={setCaptchaChecking}
+                  />
+                )}
+              </div>
+              <button
+                onBlur={() => lostFocus()}
+                onFocus={() => onFocused()}
+                className="button-field button"
+                type="submit"
+              >
+                {button}
+              </button>
             </div>
-            <button
-              onBlur={() => lostFocus()}
-              onFocus={() => onFocused()}
-              className="button-field button"
-              type="submit"
-            >
-              {button}
-            </button>
           </Form>
         </Formik>
       </div>

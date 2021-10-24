@@ -1,6 +1,5 @@
 @import 'utilities/utils.scss';
 
-  
 @media only screen and (min-width: $medium-screen+1) {
   .vertical-project-list {
     display: none !important;
@@ -8,9 +7,7 @@
 }
 .vertical-project-list {
   display: block;
-  margin-top: 10%;
   .vertical-line {
-    margin-top: 10%;
     margin: 0 auto;
     width: 0px;
     border: 1px solid $white;
@@ -72,16 +69,16 @@
   }
 }
 
-@media only screen and (max-width: $medium-screen /*1050px*/) {
+@media only screen and (max-width: 1050px /*1050px*/) {
   .vertical-line {
-    height: 900px;
+    height: 700px;
   }
 
   // CUSTOMIZE EACH ENTRY
   .mobile-image {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
   }
 
@@ -90,7 +87,7 @@
   }
   .mobile-dot-1 {
     background-color: $lightblue;
-    margin-top: 12.5%;
+    margin-top: 5.5%;
     transform: translateX(-55%);
   }
   .mobile-arrow-1 {
@@ -99,17 +96,17 @@
   }
   .mobile-border-left-1 {
     border: 0.5px solid $blue;
-    margin-top: 13.3%;
-    transform: translateX(-120%);
-    width: 15%;
+    margin-top: 6.3%;
+    transform: translateX(-150%);
+    width: 5%;
   }
   .arrow-left-1 {
     left: 46%;
-    margin-top: 12.7%;
+    margin-top: 5.6%;
   }
   .mobile-image-left-1 {
-    right: 65%;
-    margin-top: 6%;
+    right: 56%;
+    margin-top: 3%;
     background-color: $lightblue;
   }
   .mobile-title-1 {
@@ -129,7 +126,7 @@
   }
   .mobile-dot-2 {
     background-color: $highlight;
-    margin-top: 41.5%;
+    margin-top: 30%;
     transform: translateX(-55%);
   }
   .mobile-arrow-2 {
@@ -138,27 +135,27 @@
   }
   .mobile-border-left-2 {
     border: 0.5px solid $highlight;
-    margin-top: 42.2%;
-    transform: translateX(18%);
-    width: 15%;
+    margin-top: 30.7%;
+    transform: translateX(60%);
+    width: 5%;
   }
   .arrow-left-2 {
-    left: 52%;
-    margin-top: 41.5%;
+    left: 52.4%;
+    margin-top: 30.1%;
   }
   .mobile-image-left-2 {
-    left: 65%;
-    margin-top: 35%;
+    left: 57%;
+    margin-top: 26%;
     background-color: $highlight;
   }
   .mobile-title-2 {
-    margin-left: -43%;
-    margin-top: 34%;
+    margin-left: -40%;
+    margin-top: 23%;
     font-size: 20px;
   }
   .mobile-paragraph-2 {
-    margin-left: -43%;
-    margin-top: 39%;
+    margin-left: -40%;
+    margin-top: 29%;
     font-size: 20px;
   }
 
@@ -168,7 +165,7 @@
   }
   .mobile-dot-3 {
     background-color: $yellow;
-    margin-top: 70.5%;
+    margin-top: 50.5%;
     transform: translateX(-55%);
   }
   .mobile-arrow-3 {
@@ -177,26 +174,26 @@
   }
   .mobile-border-left-3 {
     border: 0.5px solid $yellow;
-    margin-top: 71.5%;
-    transform: translateX(-124%);
-    width: 15%;
+    margin-top: 51.5%;
+    transform: translateX(-174%);
+    width: 5%;
   }
   .arrow-left-3 {
     left: 45%;
-    margin-top: 70.7%;
+    margin-top: 50.8%;
   }
   .mobile-image-left-3 {
-    right: 65%;
-    margin-top: 63%;
+    right: 59%;
+    margin-top: 47%;
     background-color: $yellow;
   }
   .mobile-title-3 {
     margin-left: 4%;
-    margin-top: 70%;
+    margin-top: 50%;
   }
   .mobile-paragraph-3 {
     margin-left: 4%;
-    margin-top: 75%;
+    margin-top: 57%;
   }
 }
 
@@ -274,7 +271,7 @@
     margin-top: 49%;
   }
   .mobile-image-left-2 {
-    right: 5%;
+    left: 70%;
     margin-top: 38%;
     background-color: $highlight;
   }

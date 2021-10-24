@@ -53,9 +53,11 @@
 
 .main-styleUp {
   position: fixed;
-  left: 47.9%;
+  z-index: 5;
+  width: 100%;
+  text-align: center;
   top: 15%;
-  z-index: 1;
+  z-index: 5;
   .arrow {
     display: inline-block;
     width: 35px;

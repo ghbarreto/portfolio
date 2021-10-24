@@ -34,6 +34,9 @@
 }
 
 @media only screen and (max-width: $small-screen-cutoff) {
+  .reach-sub {
+    margin-top: 0;
+  }
   .form-container-sub {
     display: block;
     margin-top: 0%;

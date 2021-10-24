@@ -14,10 +14,12 @@ li {
   backdrop-filter: blur(4px) drop-shadow(4px 4px 10px $background-color);
 }
 .fixed-image-sizing {
-  width: 50px;
+  // width: 50px;
+  z-index: 2;
+  font-size: 24px;
   margin-left: 12px;
   padding: 4px;
-  background: none;
+  color: $highlight;
   &:hover {
     opacity: 0.5;
   }

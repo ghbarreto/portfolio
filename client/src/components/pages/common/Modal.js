@@ -5,6 +5,7 @@ import { useSpring, animated } from 'react-spring';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import Button from './Button';
+import Icons from '../common/Icons';
 
 const ReactModal = ({
   isOpen,
@@ -24,11 +25,6 @@ const ReactModal = ({
     delay: 100,
   });
 
-  const buttonStyles = {
-    padding: '15px',
-    fontSize: 15,
-  };
-
   const displayHeader = () => {
     const imageRender = images.map(e => <img key={e} src={e} alt={e} />);
     return (
@@ -44,16 +40,14 @@ const ReactModal = ({
           <Button
             value={github}
             href={github}
-            style={buttonStyles}
-            icon={<i class="fab fa-github"></i>}
+            icon={<Icons icon={'github'} sizes={25} />}
           >
             Github
           </Button>
           <Button
             value={livePreview}
             href={livePreview}
-            style={buttonStyles}
-            icon={<i class="fas fa-eye"></i>}
+            icon={<Icons icon={'live-preview'} sizes={25} />}
           >
             Live
           </Button>
@@ -72,10 +66,9 @@ const ReactModal = ({
         ariaHideApp={false}
       >
         <animated.div style={modalStyle}>
-          <div className="x-icon">
-            <i className="fas fa-times" onClick={closeModal}></i>
+          <div className="x-icon" onClick={closeModal}>
+            <Icons icon={'close'} sizes={25} />
           </div>
-
           {description || name ? displayHeader() : ''}
         </animated.div>
       </Modal>

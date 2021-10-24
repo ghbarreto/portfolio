@@ -10,6 +10,7 @@ import {
   navigate,
   informations,
 } from '../utils/utils.functions';
+import Icons from './common/Icons';
 import HeaderMobile from './sub/HeaderMobile';
 
 const Header = ({ details, ...props }) => {
@@ -67,11 +68,7 @@ const Header = ({ details, ...props }) => {
       return (
         <li key={i}>
           <a href={e.src}>
-            <img
-              className="fixed-image-sizing"
-              src={e.img}
-              alt={`${e.name} icon`}
-            />
+            <Icons className="fixed-image-sizing" icon={e.img} sizes={30} />
           </a>
         </li>
       );

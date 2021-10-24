@@ -1,6 +1,7 @@
 import React from 'react';
 import { socialMedia } from '../../utils/utils.functions';
 import _ from 'lodash';
+import Icons from './Icons';
 import '../../scss/SocialMediaButtons.scss';
 
 const SocialMediaButtons = () => {
@@ -9,11 +10,7 @@ const SocialMediaButtons = () => {
       return (
         <li key={i}>
           <a href={e.src}>
-            <img
-              className="social-media-img"
-              src={e.img}
-              alt={`${e.name} icon`}
-            />
+            <Icons className="social-media-img" icon={e.img} sizes={30} />
           </a>
         </li>
       );

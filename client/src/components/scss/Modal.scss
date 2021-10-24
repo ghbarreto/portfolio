@@ -25,11 +25,14 @@
     margin: 5%;
   }
 }
-.x-icon{
+.x-icon {
   color: $lightblue;
   font-size: 25px;
   margin-left: 3%;
   margin-top: 3%;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .carousel .thumb {
   border: 3px solid $blue !important;
@@ -42,7 +45,7 @@
   .modal-header-carousel {
     width: 50% !important;
   }
-  .modal-header-paragraph{
+  .modal-header-paragraph {
     max-width: 70% !important;
   }
 }
@@ -51,7 +54,11 @@
   .modal-header-carousel {
     width: 80% !important;
   }
-  .modal-header-paragraph{
+  .modal-header-paragraph {
     max-width: 100% !important;
+  }
+
+  .modal-header-buttons {
+    display: inline-block !important;
   }
 }

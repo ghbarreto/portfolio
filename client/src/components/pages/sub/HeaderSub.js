@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 
-import { animations } from '../../utils/animations';
 import { tags, hireMeButton } from '../../utils/utils.functions';
 import SocialMediaButtons from '../common/SocialMediaButtons';
 import Button from '../common/Button';
 import '../../scss/HeaderSub.scss';
 import Animate from '../common/Animate';
-import Home from '../Home';
+import Icons from '../common/Icons';
 
 const HeaderSub = ({
   title,
@@ -31,7 +30,16 @@ const HeaderSub = ({
 
   const displayHireButton = () => {
     return Object.values(hireMeButton).map((e, i) => {
-      return <Button key={i} value={e.title} styles={e.styles} src={e.src} />;
+      const icon = <Icons icon={'hire-me'} size={25} />;
+      return (
+        <Button
+          key={i}
+          value={e.title}
+          styles={e.styles}
+          src={e.src}
+          icon={icon}
+        />
+      );
     });
   };
 
