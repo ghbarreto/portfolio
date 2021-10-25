@@ -13,6 +13,14 @@ body {
   height: 80vh;
 }
 
+svg {
+  margin: 0 0 -2px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
 .projects-landing-page {
   height: 100vh;
   overflow: auto;

@@ -8,7 +8,7 @@ const Button = ({ href, value, style, className, buttonStyles, ...props }) => {
       className={`button-centeralize ${className}`}
       styles={style}
     >
-      <a className={`button-style`} style={style} href={href}>
+      <a className={`button-style ${buttonStyles}`} style={style} href={href}>
         {props.icon} {props.children || value}
       </a>
     </div>

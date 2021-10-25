@@ -25,11 +25,28 @@ const displayReachInfo = () => {
     const flagEmail = e.val === 'henriqve.dev@gmail.com' ? 'highlight' : '';
     return (
       <div key={i} className="reach-sub-info">
-        <Icons icon={e.icon} />
+        <Icons
+          icon={e.icon}
+          sizes={30}
+          styles={{ marginTop: '3px', color: colours(i) }}
+        />
         <div>{e.val}</div>
       </div>
     );
   });
+};
+
+const colours = val => {
+  switch (val) {
+    case 0:
+      return '#00c2cb';
+    case 1:
+      return '#fd3a8c';
+    case 2:
+      return '#ffe881';
+    default:
+      return 'white';
+  }
 };
 
 const ReachSub = () => {
@@ -48,7 +65,7 @@ const ReachSub = () => {
             name="Name"
             email="E-mail"
             message="Message"
-            button={'SEND'}
+            button="Send"
           />
         </div>
       </div>
