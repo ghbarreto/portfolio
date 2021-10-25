@@ -109,8 +109,9 @@
 }
 
 .projects-list-item-date {
+  display: flex;
+  justify-content: space-around;
   $font-weight: $font-thin;
-  float: right;
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: $desktop-section-tags-size;

@@ -1,10 +1,14 @@
 import React from 'react';
 import '../../scss/Button.scss';
 
-const Button = ({ href, value, ...props }) => {
+const Button = ({ href, value, style, className, buttonStyles, ...props }) => {
   return (
-    <div className="button-centeralize">
-      <a className="button-style" style={props.style} href={href}>
+    <div
+      onClick={props.onClick}
+      className={`button-centeralize ${className}`}
+      styles={style}
+    >
+      <a className={`button-style`} style={style} href={href}>
         {props.icon} {props.children || value}
       </a>
     </div>

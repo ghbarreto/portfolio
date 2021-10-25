@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
 
 import Animate from '../common/Animate';
 import { projectTitle, projects, tags } from '../../utils/utils.functions';
 import '../../scss/WorkSub.scss';
 import ReactModal from '../common/Modal';
+import Button from '../common/Button';
+import Icons from '../common/Icons';
 
 const WorkSub = props => {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -32,18 +34,7 @@ const WorkSub = props => {
             anim={odd}
             className={`${decideBackgroundColor(count)} projects-list-item`}
           >
-            <div
-              key={count}
-              onClick={() => {
-                setName(e.name);
-                setDescription(e.description);
-                setImages(e.images);
-                setText(e.text);
-                setButtonLink(e.githubLink);
-                setLivePreview(e.live);
-                openModal();
-              }}
-            >
+            <div key={count}>
               <div className="projects-list-item-name">
                 <span className="bracket-color bracket-format">
                   {tags.closingOpening}
@@ -52,7 +43,23 @@ const WorkSub = props => {
                 <div className="projects-list-item-description">
                   {e.description}
                 </div>
-                <div className="projects-list-item-date">{e.date}</div>
+                <div className="projects-list-item-date">
+                  <Button
+                    icon={<Icons icon={'AiOutlinePlus'} sizes={18} />}
+                    onClick={() => {
+                      setName(e.name);
+                      setDescription(e.description);
+                      setImages(e.images);
+                      setText(e.text);
+                      setButtonLink(e.githubLink);
+                      setLivePreview(e.live);
+                      openModal();
+                    }}
+                  >
+                    More
+                  </Button>
+                  <div>{e.date}</div>
+                </div>
               </div>
               <div className="display-on-hover">
                 <a className="button-project" href={e.githubLink}>
@@ -93,10 +100,18 @@ const WorkSub = props => {
       </div>
 
       <div className="project-list-margins projects-landing-page">
-        <div className="project-list">{displayProjects()}</div>
+        <div
+          onMouseEnter={() => props.handlePageScroller(true)}
+          onMouseLeave={() => props.handlePageScroller(false)}
+          className="project-list"
+        >
+          {displayProjects()}
+        </div>
       </div>
       {modalIsOpen ? (
         <ReactModal
+          stopPageScroller={props.stopPageScroller}
+          handlePageScroller={props.handlePageScroller}
           isOpen={modalIsOpen}
           closeModal={closeModal}
           description={description}

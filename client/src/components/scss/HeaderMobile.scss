@@ -15,14 +15,15 @@
 
 @media only screen and (max-width: $small-screen-cutoff) {
   .mobile-header-fixed {
+    backdrop-filter: blur(4px) drop-shadow(4px 4px 10px $background-color);
     max-width: $small-screen-cutoff;
-    margin-left: 5%;
     position: fixed;
     width: 95%;
-    top: 5%;
     .navigation {
       margin: 0 auto;
+      margin-left: 5%;
       display: flex;
+      margin-top: 3%;
       color: $white;
       .navigation-mobile-name {
         display: inline-block;
@@ -39,6 +40,7 @@
         width: 80px;
       }
       .burger-nav {
+        margin-top: 3% !important;
         &:hover {
           cursor: pointer;
           font-size: 3px;
@@ -79,8 +81,9 @@
     // display: flex;
     height: 500px;
     width: 79%;
-    top: -45%;
-    right: 0;
+    margin-top: 10.5%;
+    left: 25.5%;
+    right: 25%;
     bottom: 0;
     background-color: $background-color;
     z-index: 2;

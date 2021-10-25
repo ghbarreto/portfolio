@@ -96,7 +96,7 @@ const Header = ({ details, ...props }) => {
 
   return (
     <>
-      {/* <Particles /> */}
+      <Particles />
       <div className="mobile-header">
         <HeaderMobile handlePageChange={props.handlePageChange} />
       </div>

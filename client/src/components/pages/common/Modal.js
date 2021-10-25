@@ -1,5 +1,5 @@
 import Modal from 'react-modal';
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../scss/Modal.scss';
 import { useSpring, animated } from 'react-spring';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -24,6 +24,15 @@ const ReactModal = ({
     to: { marginBottom: 0 },
     delay: 100,
   });
+
+  const stopPageFromScrolling = () => {
+    if (props.stopPageScroller === true) return;
+    if (props.stopPageScroller === false) return props.handlePageScroller(true);
+  };
+
+  useEffect(() => {
+    stopPageFromScrolling();
+  }, [props.stopPageScroller]);
 
   const displayHeader = () => {
     const imageRender = images.map(e => <img key={e} src={e} alt={e} />);

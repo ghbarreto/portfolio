@@ -9,6 +9,7 @@ import {
 import { useOnClickOutside } from '../../utils/useOnClickOutside';
 import '../../scss/HeaderMobile.scss';
 import SocialMediaButtons from '../common/SocialMediaButtons';
+import Icons from '../common/Icons';
 
 const HeaderMobile = props => {
   const [triggerNav, setTriggerNav] = useState(false);
@@ -79,8 +80,8 @@ const HeaderMobile = props => {
             style={{ display: triggerNav ? 'block' : 'none' }}
           >
             <div className="side-menu-header">
-              <div className="x-icon">
-                <i className="fas fa-times" onClick={() => handleModal()}></i>
+              <div className="x-icon" onClick={() => handleModal()}>
+                <Icons icon="close" sizes={35} />
               </div>
               <img src={logo} alt="logo" />
             </div>

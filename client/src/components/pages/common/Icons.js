@@ -6,6 +6,7 @@ import {
   AiOutlineMail,
   AiFillTwitterCircle,
   AiOutlineEye,
+  AiOutlinePlus,
 } from 'react-icons/ai';
 import { HiOutlinePhone } from 'react-icons/hi';
 import { VscLocation } from 'react-icons/vsc';
@@ -37,6 +38,8 @@ const Icons = ({ icon, styles, className, sizes, ...props }) => {
         return <IoCloseCircle />;
       case 'hire-me':
         return <MdOutlineWork />;
+      case 'AiOutlinePlus':
+        return <AiOutlinePlus />;
       default:
         return <FaQuestion />;
     }

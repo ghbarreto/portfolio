@@ -94,16 +94,6 @@ export const projects = [
     images: [kyteLogo, emilLogo, lugaroLogo],
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
   },
-  {
-    name: 'FFXIV-Info',
-    description:
-      'An app developed by me to help people know various features about the game FFXIV',
-    githubLink: 'https://github.com/',
-    live: 'https://github.com',
-    date: 'Jan, 2022',
-    images: [kyteLogo, emilLogo, lugaroLogo],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
-  },
 ];
 export const jobExperience = {
   kyte: {

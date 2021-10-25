@@ -15,13 +15,14 @@ import DisplayArrow from './pages/common/DisplayArrow';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [stopPageScroller, setStopPageScroller] = useState(false);
 
   const handlePageChange = number => {
     setCurrentPage(number);
   };
 
-  const handleBeforePageChange = number => {
-    console.log(number);
+  const handlePageScroller = bool => {
+    return setStopPageScroller(bool);
   };
 
   return (
@@ -34,9 +35,10 @@ const App = () => {
 
       <ReactPageScroller
         pageOnChange={handlePageChange}
-        onBeforePageScroll={handleBeforePageChange}
         customPageNumber={currentPage}
         containerHeight={'100vh'}
+        blockScrollUp={stopPageScroller}
+        blockScrollDown={stopPageScroller}
         animationTimer={1500}
         renderAllPagesOnFirstRender={false}
       >
@@ -53,7 +55,10 @@ const App = () => {
         <About />
         <AboutSub />
 
-        <WorkSub>
+        <WorkSub
+          stopPageScroller={stopPageScroller}
+          handlePageScroller={handlePageScroller}
+        >
           <Work />
         </WorkSub>
 
