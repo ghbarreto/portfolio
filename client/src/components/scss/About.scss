@@ -45,11 +45,13 @@
     display: block;
     .image-about-section img {
       max-width: 100%;
+      margin: 0 auto;
     }
   }
   div.about-section-container-text.word-color.cellphone-font-size {
     font-size: $medium-section-size;
     margin-left: 10px;
+    padding-top: 10%;
   }
   .image-about-section-desktop {
     display: none;
@@ -65,15 +67,59 @@
   }
 
   .image-about-section-mobile img {
-    display: block !important;
-    margin-left: 20px;
+    display: flex !important;
+    justify-content: center !important;
     height: 250px !important;
-    width: 300px !important;
+    width: 100% !important;
   }
   .desktop-image {
     display: none;
   }
   .button-desktop-about {
     display: block;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .about-section-container-text {
+    font-size: 11px !important;
+  }
+  .cellphone-font-size {
+    font-size: 13px !important;
+  }
+  .section-tags-mobile {
+    margin-top: 25px !important;
+    font-size: 16px !important;
+    .main-jobtitle-date {
+      font-size: 11px !important;
+      letter-spacing: 1px;
+    }
+  }
+  .about-tags {
+    font-size: 13px !important;
+  }
+  .image-about-section {
+    text-align: center !important;
+  }
+  .experience-job {
+    font-size: 12px !important;
+  }
+  .about-section-container .image-about-section {
+    width: 70% !important;
+    height: 70% !important;
+    margin: 0 auto !important;
+  }
+  div.center-text-mobile-header {
+    font-size: 40px !important;
+  }
+  div.center-text-mobile-name {
+    margin-top: 15px !important;
+    font-size: 40px !important;
+  }
+  .center-text-title {
+    font-size: 17px !important;
+  }
+  .center-text-sub {
+    font-size: 17px !important;
   }
 }

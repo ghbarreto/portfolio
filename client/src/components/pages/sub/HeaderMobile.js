@@ -19,8 +19,12 @@ const HeaderMobile = props => {
     ? 'side-menu-appear'
     : 'side-menu-disappear';
 
-  const handleModal = () => {
-    return triggerNav === true ? setTriggerNav(false) : setTriggerNav(true);
+  const handleModal = bool => {
+    if (triggerNav === true && bool === true) {
+      return setTriggerNav(false);
+    } else {
+      return setTriggerNav(bool);
+    }
   };
 
   useOnClickOutside(ref, () =>
@@ -65,7 +69,7 @@ const HeaderMobile = props => {
             </div>
             <nav>
               <ul className="burger-nav">
-                <div onClick={() => handleModal()}>
+                <div onClick={() => handleModal(true)}>
                   <li className="hamburger-nav nav1"></li>
                   <li className="hamburger-nav nav2"></li>
                   <li className="hamburger-nav nav3"></li>

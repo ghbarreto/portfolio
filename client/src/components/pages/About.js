@@ -9,6 +9,7 @@ import {
   viewResume,
 } from '../utils/utils.functions';
 import Animate from './common/Animate';
+import Icons from './common/Icons';
 import useOnScreen from '../utils/useOnScreen';
 import Button from '../pages/common/Button';
 import { CheckNavigation } from './common/CheckNavigation';
@@ -70,7 +71,11 @@ const About = props => {
               <Animate anim={'LeftToRight'}>EXPERIENCE</Animate>
               {displayExperience()}
               <Animate anim={'Opacity'}>
-                <Button href={viewResume.resume} value={viewResume.value} />
+                <Button
+                  icon={<Icons icon={'resume'} sizes={25} />}
+                  href={viewResume.resume}
+                  value={viewResume.value}
+                />
               </Animate>
             </div>
           </div>
@@ -94,7 +99,11 @@ const About = props => {
               </div>
             </Animate>
             <Animate anim={'BottomToTop'}>
-              <Button href={viewResume.resume} value={viewResume.value} />
+              <Button
+                icon={<Icons icon={'resume'} sizes={25} />}
+                href={viewResume.resume}
+                value={viewResume.value}
+              />
             </Animate>
           </span>
         </div>

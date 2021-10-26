@@ -24,17 +24,14 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
       ''
     );
   const emailSent = correctValues ? (
-    <Icons icon={'emailSent'}>Email sent!</Icons>
-  ) : (
-    ''
-  );
-
-  const a = (
     <div className="email-sent">
       <Icons icon={'emailSent'} sizes={23} />
       Email sent!
     </div>
+  ) : (
+    ''
   );
+
   const setCaptchaChecking = value => {
     if (value) {
       return setCaptchaCheck(value);
@@ -83,7 +80,6 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
             <div style={{ color: 'green' }} className="">
               {emailSent}
             </div>
-            {a}
             <div style={{ color: 'red' }} className="">
               {incorrectValues}
             </div>

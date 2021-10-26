@@ -55,3 +55,35 @@
     }
   }
 }
+
+@media screen and (max-height: 700px) {
+  .reach-sub {
+    margin-top: 0;
+  }
+  .projects-title-main {
+    margin-top: -10px;
+  }
+  .form-container-sub {
+    display: block;
+    margin-top: 0%;
+    .reach-sub-contact {
+      margin-left: 5%;
+      max-width: 90%;
+      .react-sub-paragraph {
+        font-size: 12px;
+        word-spacing: 1.5px;
+      }
+      .reach-sub-info {
+        margin-top: -5px;
+        margin-left: 0%;
+        margin-bottom: 20px;
+        div {
+          font-size: 10px;
+        }
+        svg {
+          margin-top: -20px;
+        }
+      }
+    }
+  }
+}

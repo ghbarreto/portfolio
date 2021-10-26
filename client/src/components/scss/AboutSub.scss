@@ -31,7 +31,7 @@
         padding: 5px;
         font-size: $desktop-section-tags-size;
         margin-right: 20px;
-        flex-grow: 1; 
+        flex-grow: 1;
         font-weight: $font-semi;
         width: 30px;
         border-radius: 50px;
@@ -62,25 +62,55 @@
 @media only screen and (max-width: $small-screen-cutoff) {
   .about-sub-flex {
     display: block;
-    .knowledge-section{
-      margin-left: 5px;
+    .knowledge-section {
+      margin-left: 15px;
     }
-    .knowledge-section-fields{
-      margin-top: 5px;
-      .experience-job{
-        width:95%;
-        margin-left: 5px;
+    .knowledge-section-fields {
+      margin-left: 5px;
+      margin-top: 3px;
+      .experience-job {
+        width: 90%;
+        margin-left: 15px;
       }
     }
-    .skills-section{
-      margin-left: 5px;
+    .skills-section {
+      margin-left: 15px;
     }
   }
 }
 @media only screen and (max-width: $phone-screen-size) {
-  .list-of-skills{
+  .skills-section {
+    margin-top: -14px;
+  }
+
+  .list-of-skills {
     flex-basis: 5% !important;
-    margin-right: 10px !important;
-    margin-top: 15px !important;
+    margin-right: 15px !important;
+    margin-top: 8px !important;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .about-sub-flex {
+    display: block;
+    .knowledge-section {
+      margin-left: 15px;
+    }
+    .knowledge-section-fields {
+      margin-left: 5px;
+      margin-top: -10px;
+      .experience-job {
+        width: 90%;
+        margin-left: 15px;
+      }
+    }
+    .skills-section {
+      margin-left: 15px;
+    }
+  }
+  .list-of-skills {
+    flex-basis: 5% !important;
+    margin-right: 5px !important;
+    margin-top: 5px !important;
   }
 }

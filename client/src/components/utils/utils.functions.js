@@ -1,5 +1,11 @@
 export const logo = '/assets/images/logo.png';
-export const navigate = ['Home', 'About', 'Works', 'Reach'];
+export const navigate = [
+  { loc: 'Home', to: 0 },
+  { loc: 'About', to: 1 },
+  { loc: 'Works', to: 3 },
+  { loc: 'Reach', to: 5 },
+];
+
 export const aboutBanner = '/assets/images/about-banner.png';
 export const projectTitle = ['Open Source Projects', 'Job History', 'Reach Me'];
 export const kyteLogo = '/assets/images/kyte.png';

@@ -3,6 +3,7 @@ import { FaQuestion } from 'react-icons/fa';
 import { MdOutlineMarkEmailRead, MdOutlineWork } from 'react-icons/md';
 import { BiError } from 'react-icons/bi';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
+import { VscBook } from 'react-icons/vsc';
 import {
   AiOutlineMail,
   AiFillTwitterCircle,
@@ -47,6 +48,8 @@ const Icons = ({ icon, styles, className, sizes, bold, ...props }) => {
         return <AiOutlineSend />;
       case 'check':
         return <BsFillCheckCircleFill />;
+      case 'resume':
+        return <VscBook />;
       default:
         return <FaQuestion />;
     }

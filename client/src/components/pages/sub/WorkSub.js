@@ -45,6 +45,7 @@ const WorkSub = props => {
                 </div>
                 <div className="projects-list-item-date">
                   <Button
+                    style={{ backgroundColor: 'white', color: '#222' }}
                     icon={<Icons icon={'AiOutlinePlus'} sizes={18} />}
                     onClick={() => {
                       setName(e.name);
@@ -56,7 +57,7 @@ const WorkSub = props => {
                       openModal();
                     }}
                   >
-                    More
+                    more
                   </Button>
                   <div>{e.date}</div>
                 </div>

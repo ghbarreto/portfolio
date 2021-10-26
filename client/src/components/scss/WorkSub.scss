@@ -116,6 +116,9 @@
   margin-bottom: 20px;
   font-size: $desktop-section-tags-size;
   margin-right: 20px;
+  div {
+    width: 100%;
+  }
 }
 .closing-opening-tags {
   color: $highlight;
@@ -150,17 +153,43 @@
   .projects-title-main {
     display: block;
   }
+  .projects-list-item-date {
+    div {
+      font-size: 17px;
+    }
+  }
   .project-list-margins {
-    width: 80%;
+    width: 100%;
     .project-list {
       display: block;
-      width: 100%;
       .projects-list-item {
         flex: 1 0 100%;
         width: 90%;
         margin: 30px;
         margin: 12px auto;
         overflow: hidden;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .bracket-format {
+    font-size: 25px !important;
+  }
+  .projects-list-item-date {
+    div {
+      font-size: 17px;
+    }
+  }
+  .project-list-margins {
+    width: 100%;
+    .project-list {
+      .projects-list-item {
+        .projects-list-item-description {
+          font-size: 15px;
+          margin-top: 15px;
+        }
       }
     }
   }

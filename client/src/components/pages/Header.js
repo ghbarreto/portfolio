@@ -78,8 +78,8 @@ const Header = ({ details, ...props }) => {
   const displayDot = () => {
     return navigate.map((e, i) => {
       return (
-        <li key={i}>
-          <span className={`dot ${changeDotColor(e)}`}></span>
+        <li key={i} onClick={() => props.handlePageChange(e.to)}>
+          <span className={`dot ${changeDotColor(e.loc)}`}></span>
         </li>
       );
     });

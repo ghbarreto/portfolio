@@ -6,6 +6,7 @@
   }
 }
 .vertical-project-list {
+  margin-top: 5%;
   display: block;
   .vertical-line {
     margin: 0 auto;
@@ -71,7 +72,7 @@
 
 @media only screen and (max-width: 1050px /*1050px*/) {
   .vertical-line {
-    height: 700px;
+    height: 550px;
   }
 
   // CUSTOMIZE EACH ENTRY
@@ -323,5 +324,10 @@
     margin-left: 4%;
     margin-top: 94%;
     font-size: 11px;
+  }
+}
+@media screen and (max-height: 700px) {
+  .vertical-line {
+    height: 400px;
   }
 }
