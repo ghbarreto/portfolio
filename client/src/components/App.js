@@ -28,6 +28,7 @@ const App = () => {
   return (
     <>
       <Header handlePageChange={handlePageChange} />
+
       <DisplayArrow
         handlePageChange={handlePageChange}
         currentPage={currentPage}

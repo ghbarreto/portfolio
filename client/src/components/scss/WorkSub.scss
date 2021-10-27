@@ -14,8 +14,14 @@
     font-size: $desktop-section-tags-size;
   }
 }
-.display-on-hover {
+.project-desktop {
+  display: block;
+}
+
+.carousel-mobile {
   display: none;
+  width: 100%;
+  border-radius: 50px;
 }
 .project-list-margins {
   width: 90%;
@@ -26,6 +32,7 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 200px;
+    border-radius: 50px;
     width: 90%;
     margin: 0 auto;
     .projects-list-item {
@@ -57,6 +64,7 @@
 
 .yellow {
   background-color: $yellow;
+  height: 100%;
   .bracket-color {
     color: $highlight;
   }
@@ -64,6 +72,8 @@
 
 .blue {
   background-color: $lightblue;
+  height: 100%;
+
   .bracket-color {
     color: $yellow;
   }
@@ -71,6 +81,7 @@
 
 .pink {
   background-color: $highlight;
+  height: 100%;
   .bracket-color {
     color: $white;
   }
@@ -149,25 +160,55 @@
     }
   }
 }
-@media only screen and (max-width: $phone-screen-size) {
+@media only screen and (max-width: $phone-screen-size+250) {
   .projects-title-main {
     display: block;
   }
+  .carousel-mobile {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
   .projects-list-item-date {
     div {
-      font-size: 17px;
+      font-size: 27px;
     }
   }
+  .project-desktop {
+    display: none;
+  }
+
+  .projects-list-name-wrapped {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: $font-semi;
+  }
+  .projects-list-name {
+    font-weight: $font-semi;
+  }
+  li.react-multi-carousel-dot {
+    margin-bottom: 20px;
+  }
   .project-list-margins {
-    width: 100%;
+    width: 90%;
+    padding-top: 10%;
     .project-list {
       display: block;
-      .projects-list-item {
-        flex: 1 0 100%;
-        width: 90%;
-        margin: 30px;
-        margin: 12px auto;
-        overflow: hidden;
+      .projects-list-item-description {
+        font-size: 25px;
+        width: 70%;
+        padding-top: 5%;
+        margin: 0 auto;
+      }
+      .projects-list-item-date {
+        margin-bottom: 8%;
+        width: 100%;
+        text-align: center;
+        div {
+          width: 100%;
+        }
       }
     }
   }

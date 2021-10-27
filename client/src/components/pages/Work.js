@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import useOnScreen from '../utils/useOnScreen';
 import { CheckNavigation } from './common/CheckNavigation';
 
-import WorkSub from '../pages/sub/WorkSub';
-
 const Work = props => {
   const ref = useRef();
   const isVisible = useOnScreen(ref);
