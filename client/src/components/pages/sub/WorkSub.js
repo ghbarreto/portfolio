@@ -12,12 +12,7 @@ import Icons from '../common/Icons';
 
 const WorkSub = props => {
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [images, setImages] = useState([]);
-  const [text, setText] = useState('');
-  const [buttonLink, setButtonLink] = useState('');
-  const [livePreview, setLivePreview] = useState('');
+  const [carouselValues, setCarouselValues] = useState({});
 
   function openModal() {
     setIsOpen(true);
@@ -56,15 +51,21 @@ const WorkSub = props => {
                 </div>
                 <div className="projects-list-item-date">
                   <Button
-                    style={{ backgroundColor: 'white', color: '#222' }}
+                    style={{
+                      backgroundColor: 'white',
+                      color: '#222',
+                      padding: '9px ',
+                    }}
                     icon={<Icons icon={'AiOutlinePlus'} sizes={18} />}
                     onClick={() => {
-                      setName(e.name);
-                      setDescription(e.description);
-                      setImages(e.images);
-                      setText(e.text);
-                      setButtonLink(e.githubLink);
-                      setLivePreview(e.live);
+                      setCarouselValues({
+                        name: e.name,
+                        description: e.description,
+                        images: e.images,
+                        text: e.text,
+                        githubLink: e.githubLink,
+                        livePreview: e.live,
+                      });
                       openModal();
                     }}
                   >
@@ -80,7 +81,6 @@ const WorkSub = props => {
       );
     });
   };
-
   const displayProjectsMobile = () => {
     return _.map(projects, (e, count) => {
       const odd = count % 2 === 0 ? 'TopToBottom' : 'BottomToTop';
@@ -95,15 +95,21 @@ const WorkSub = props => {
           <div className="projects-list-item-description">{e.description}</div>
           <div className="projects-list-item-date">
             <Button
-              style={{ backgroundColor: 'white', color: '#222' }}
+              style={{
+                backgroundColor: 'white',
+                color: '#222',
+                padding: '9px ',
+              }}
               icon={<Icons icon={'AiOutlinePlus'} sizes={18} />}
               onClick={() => {
-                setName(e.name);
-                setDescription(e.description);
-                setImages(e.images);
-                setText(e.text);
-                setButtonLink(e.githubLink);
-                setLivePreview(e.live);
+                setCarouselValues({
+                  name: e.name,
+                  description: e.description,
+                  images: e.images,
+                  text: e.text,
+                  githubLink: e.githubLink,
+                  livePreview: e.live,
+                });
                 openModal();
               }}
             >
@@ -177,13 +183,8 @@ const WorkSub = props => {
           stopPageScroller={props.stopPageScroller}
           handlePageScroller={props.handlePageScroller}
           isOpen={modalIsOpen}
+          carouselValues={carouselValues}
           closeModal={closeModal}
-          description={description}
-          name={name}
-          images={images}
-          text={text}
-          github={buttonLink}
-          livePreview={livePreview}
         />
       ) : null}
     </>

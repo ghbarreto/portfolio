@@ -72,9 +72,16 @@ const About = props => {
               {displayExperience()}
               <Animate anim={'Opacity'}>
                 <Button
-                  icon={<Icons icon={'resume'} sizes={25} />}
+                  icon={
+                    <Icons
+                      icon={'resume'}
+                      sizes={25}
+                      styles={{ margin: '-4px', marginLeft: '5px' }}
+                    />
+                  }
                   href={viewResume.resume}
                   value={viewResume.value}
+                  style={{ padding: '10px ' }}
                 />
               </Animate>
             </div>
@@ -100,9 +107,16 @@ const About = props => {
             </Animate>
             <Animate anim={'BottomToTop'}>
               <Button
-                icon={<Icons icon={'resume'} sizes={25} />}
+                style={{ padding: '10px ' }}
                 href={viewResume.resume}
                 value={viewResume.value}
+                icon={
+                  <Icons
+                    styles={{ margin: '-4px', marginLeft: '5px' }}
+                    icon={'resume'}
+                    sizes={25}
+                  />
+                }
               />
             </Animate>
           </span>

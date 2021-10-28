@@ -11,12 +11,7 @@ const ReactModal = ({
   isOpen,
   closeModal,
   onRequestClose,
-  name,
-  description,
-  images,
-  text,
-  github,
-  livePreview,
+  carouselValues,
   ...props
 }) => {
   const modalStyle = useSpring({
@@ -35,7 +30,9 @@ const ReactModal = ({
   }, [props.stopPageScroller]);
 
   const displayHeader = () => {
-    const imageRender = images.map(e => <img key={e} src={e} alt={e} />);
+    const imageRender = carouselValues.images.map(e => (
+      <img key={e} src={e} alt={e} />
+    ));
     return (
       <div className="modal-header" key={imageRender}>
         <div className="modal-header-carousel">
@@ -43,19 +40,21 @@ const ReactModal = ({
             {imageRender}
           </Carousel>
         </div>
-        <h2 className="modal-header-title">{name}</h2>
-        <div className="modal-header-paragraph">{text}</div>
+        <h2 className="modal-header-title">{carouselValues.name}</h2>
+        <div className="modal-header-paragraph">{carouselValues.text}</div>
         <div className="modal-header-buttons">
           <Button
-            value={github}
-            href={github}
+            value={carouselValues.githubLink}
+            style={{ padding: '10px ' }}
+            href={carouselValues.githubLink}
             icon={<Icons icon={'github'} sizes={25} />}
           >
             Github
           </Button>
           <Button
-            value={livePreview}
-            href={livePreview}
+            style={{ padding: '10px ' }}
+            value={carouselValues.livePreview}
+            href={carouselValues.livePreview}
             icon={<Icons icon={'live-preview'} sizes={25} />}
           >
             Live
@@ -78,7 +77,9 @@ const ReactModal = ({
           <div className="x-icon" onClick={closeModal}>
             <Icons icon={'close'} sizes={25} />
           </div>
-          {description || name ? displayHeader() : ''}
+          {carouselValues.description || carouselValues.name
+            ? displayHeader()
+            : ''}
         </animated.div>
       </Modal>
     </animated.div>

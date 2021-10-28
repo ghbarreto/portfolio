@@ -34,7 +34,13 @@ const Recaptcha = ({ setCaptchaChecking, checked_captcha, ...props }) => {
   };
 
   return (
-    <ReCAPTCHA theme="dark" sitekey={CLIENT_KEY} onChange={onChangeRecaptcha} />
+    <ReCAPTCHA
+      theme="dark"
+      size="normal"
+      badge="bottomright"
+      sitekey={CLIENT_KEY}
+      onChange={onChangeRecaptcha}
+    />
   );
 };
 
