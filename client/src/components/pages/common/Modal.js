@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import '../../scss/Modal.scss';
 import { useSpring, animated } from 'react-spring';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'react-multi-carousel';
 import Button from './Button';
 import Icons from '../common/Icons';
 
@@ -95,7 +95,7 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    backgroundColor: '#222',
+    backgroundColor: 'white',
     border: '0',
     transform: 'translate(-50%, -50%)',
     boxShadow: '10px 10px 10px 5px rgba(0, 0, 0, 0.296)',
