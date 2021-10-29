@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import '../../scss/Modal.scss';
 import { useSpring, animated } from 'react-spring';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Carousel from 'react-multi-carousel';
+import Carousel from '../common/Carousel';
 import Button from './Button';
 import Icons from '../common/Icons';
 
@@ -35,12 +35,21 @@ const ReactModal = ({
     ));
     return (
       <div className="modal-header" key={imageRender}>
-        <div className="modal-header-carousel">
-          <Carousel autoPlay infiniteLoop>
-            {imageRender}
-          </Carousel>
-        </div>
+        <div className="modal-header-carousel"></div>
         <h2 className="modal-header-title">{carouselValues.name}</h2>
+        <Carousel
+          infinite
+          keyBoardControl
+          autoPlay
+          swipeable
+          partialVisible
+          autoPlaySpeed={5000}
+          showDots
+          customTransition="transform 300ms ease-in-out"
+          transitionDuration={1500}
+        >
+          {imageRender}
+        </Carousel>
         <div className="modal-header-paragraph">{carouselValues.text}</div>
         <div className="modal-header-buttons">
           <Button

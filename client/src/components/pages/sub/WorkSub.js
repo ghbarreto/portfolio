@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import Animate from '../common/Animate';
 import { projectTitle, projects, tags } from '../../utils/utils.functions';
 import '../../scss/WorkSub.scss';
+import Carousel from '../common/Carousel';
 import ReactModal from '../common/Modal';
 import Button from '../common/Button';
 import Icons from '../common/Icons';
@@ -21,13 +21,6 @@ const WorkSub = props => {
   function closeModal() {
     setIsOpen(false);
   }
-
-  const responsive = {
-    mobile: {
-      breakpoint: { max: 850, min: 0 },
-      items: 1,
-    },
-  };
 
   const displayProjects = () => {
     return _.map(projects, (e, count) => {
@@ -155,20 +148,16 @@ const WorkSub = props => {
             onMouseLeave={() => props.handlePageScroller(false)}
           >
             <Carousel
-              dynamicHeight={false}
               infinite
               keyBoardControl
-              height="100%"
-              responsive={responsive}
               itemClass="image-item"
               autoPlay
               swipeable
               partialVisible
-              autoPlaySpeed={3000}
+              autoPlaySpeed={5000}
               showDots
               customTransition="transform 300ms ease-in-out"
               transitionDuration={1500}
-              responsive={responsive}
               containerClass="carousel-mobile"
             >
               {displayProjectsMobile()}

@@ -13,7 +13,12 @@ import {
 } from 'react-icons/ai';
 import { HiOutlinePhone } from 'react-icons/hi';
 import { VscLocation } from 'react-icons/vsc';
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import {
+  BsGithub,
+  BsLinkedin,
+  BsFillCaretRightFill,
+  BsCaretLeftFill,
+} from 'react-icons/bs';
 import { IoCloseCircle } from 'react-icons/io5';
 import '../../scss/index.scss';
 
@@ -50,6 +55,10 @@ const Icons = ({ icon, styles, className, sizes, bold, ...props }) => {
         return <BsFillCheckCircleFill />;
       case 'resume':
         return <VscBook />;
+      case 'rightArrow':
+        return <BsFillCaretRightFill />;
+      case 'leftArrow':
+        return <BsCaretLeftFill />;
       default:
         return <FaQuestion />;
     }
