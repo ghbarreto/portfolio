@@ -4,25 +4,30 @@
   margin-top: 3%;
   color: $background-color;
   .modal-header-title {
-    margin-bottom: 3%;
     text-align: left;
-    display: flex;
-    justify-content: center;
+    color: $lightblue;
+    text-transform: uppercase;
+    margin: 5%;
   }
-  .modal-header-carousel {
-    width: 35%;
-    margin: 0 auto;
+  .bracket-carousel {
+    color: black;
+    letter-spacing: 2px;
+    font-size: 28px;
   }
   .modal-header-paragraph {
+    margin: 5%;
     text-align: left;
-    max-width: 50%;
-    margin: 0 auto;
     word-spacing: 4px;
+    font-size: 20px;
+    margin-bottom: 15px;
   }
   .modal-header-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 5%;
+    a {
+      margin: 15px;
+    }
   }
 }
 .x-icon {

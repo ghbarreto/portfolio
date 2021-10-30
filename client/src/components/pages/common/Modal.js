@@ -35,28 +35,42 @@ const ReactModal = ({
     ));
     return (
       <div className="modal-header" key={imageRender}>
-        <div className="modal-header-carousel"></div>
-        <h2 className="modal-header-title">{carouselValues.name}</h2>
-        <Carousel
-          infinite
-          keyBoardControl
-          autoPlay
-          swipeable
-          partialVisible
-          autoPlaySpeed={5000}
-          showDots
-          customTransition="transform 300ms ease-in-out"
-          transitionDuration={1500}
-        >
-          {imageRender}
-        </Carousel>
+        <div className="modal-header-carousel">
+          <Carousel
+            infinite
+            keyBoardControl
+            itemClass="image-item"
+            autoPlay
+            swipeable
+            autoPlaySpeed={5000}
+            showDots
+            customTransition="transform 300ms ease-in-out"
+            transitionDuration={1500}
+            containerClass="carousel-main"
+          >
+            {imageRender}
+          </Carousel>
+        </div>
+        <h2 className="modal-header-title">
+          <span className="bracket-carousel">//</span>
+          {carouselValues.name}
+        </h2>
+
         <div className="modal-header-paragraph">{carouselValues.text}</div>
+
         <div className="modal-header-buttons">
           <Button
             value={carouselValues.githubLink}
             style={{ padding: '10px ' }}
             href={carouselValues.githubLink}
-            icon={<Icons icon={'github'} sizes={25} />}
+            styles={{
+              backgroundColor: '#fd3a8c',
+              color: 'black',
+              padding: '15px 30px',
+            }}
+            icon={
+              <Icons icon={'github'} sizes={25} styles={{ color: 'black' }} />
+            }
           >
             Github
           </Button>
@@ -64,7 +78,18 @@ const ReactModal = ({
             style={{ padding: '10px ' }}
             value={carouselValues.livePreview}
             href={carouselValues.livePreview}
-            icon={<Icons icon={'live-preview'} sizes={25} />}
+            styles={{
+              backgroundColor: '#ffe881',
+              color: 'black',
+              padding: '15px 30px',
+            }}
+            icon={
+              <Icons
+                icon={'live-preview'}
+                sizes={25}
+                styles={{ color: 'black' }}
+              />
+            }
           >
             Live
           </Button>
