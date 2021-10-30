@@ -26,9 +26,10 @@
     margin-left: 5px;
   }
   .image-about-section {
-    margin-right: 80px;
-    margin-top: 30px;
     grid-area: c;
+    margin-top: -20%;
+    margin-left: -5%;
+    z-index: 0;
   }
   .image-about-section-mobile {
     display: none;
