@@ -2,6 +2,16 @@
 
 .mobile-header {
   display: none;
+  @include tablet {
+    display: inline-block;
+  }
+}
+.center-text-full-mobile-header {
+  display: none;
+  @include phone {
+    width: 100%;
+    display: block;
+  }
 }
 .center {
   justify-content: center;
@@ -9,8 +19,23 @@
   .center-text {
     align-items: center;
     margin-top: 15%;
+    @include tablet {
+      margin-top: 30%;
+    }
+    @include phone {
+      margin-top: 40%;
+      width: 100%;
+    }
     .center-text-full-mobile-header {
       display: none;
+      @include tablet {
+        display: inline-block;
+      }
+    }
+    .margin-top-mobile {
+      @include phone {
+        margin-top: 20px !important;
+      }
     }
     .center-text-tag {
       font-size: 25px;
@@ -19,6 +44,13 @@
       padding: 3px;
       margin-left: 2%;
       margin-bottom: -7%;
+      @include tablet {
+        font-size: 15px;
+      }
+      @include phone {
+        margin-bottom: -25px !important;
+        margin-left: 10%;
+      }
     }
     .center-text-title {
       color: $highlight;
@@ -27,12 +59,34 @@
       font-weight: $font-semi;
       margin-left: 50px;
       letter-spacing: 5px;
+      @include tablet {
+        font-size: $mobile-section-size;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
     }
     .center-text-button {
       display: none;
+      @include tablet {
+        display: block;
+      }
+      @include phone {
+        margin-top: -20px;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 20px;
+      }
     }
     .center-text-social-media {
       display: none;
+      @include tablet {
+        display: flex;
+        justify-content: center;
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
     }
     .center-text-name {
       display: flex;
@@ -43,9 +97,33 @@
       font-size: 90px;
       padding: 3px;
       margin-top: 20px;
+      @include tablet {
+        display: none;
+      }
       &:nth-child(5) {
         color: $yellow;
         margin-left: 25px;
+      }
+    }
+    .center-text-mobile {
+      display: none;
+      @include tablet {
+        display: inline;
+        &:nth-child(1) {
+          color: $yellow;
+        }
+      }
+    }
+    .center-text-mobile-name {
+      @include tablet {
+        color: $white;
+        font-weight: $font-heavy;
+        font-size: 70px;
+        text-align: center;
+        margin-top: -10px;
+        &:nth-child(1) {
+          color: $yellow;
+        }
       }
     }
     .color-change {
@@ -55,18 +133,34 @@
     .center-text-sub {
       color: $highlight;
       text-align: center;
-
       font-size: 50px;
       letter-spacing: 5px;
       font-weight: $font-semi;
+      @include tablet {
+        margin-bottom: 40px !important;
+        font-size: $mobile-section-size;
+        font-weight: $font-heavy;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      @include phone {
+        margin-top: 2px !important;
+      }
     }
     .center-text-tag-end {
       margin-top: -20px;
       font-size: 25px;
       font-weight: $font-semi;
-      display: flex;
-      justify-content: flex-end;
       color: grey;
+      margin-left: 80%;
+      @include tablet {
+        margin-top: 2px;
+        margin-top: -10px;
+        font-size: $mobile-tag-size;
+      }
+      @include phone {
+        margin-left: 75%;
+      }
     }
   }
   .button-centeralize {
@@ -75,112 +169,13 @@
   }
 }
 
-@media only screen and (max-width: $small-screen-cutoff) {
-  .mobile-header {
-    display: block;
-  }
-  .center {
-    .center-text {
-      margin-top: 30%;
-      .center-text-container {
-        .center-text-full-mobile-header {
-          display: inline-block;
-        }
-      }
-      .center-text-social-media {
-        display: flex;
-        justify-content: center;
-        img {
-          height: 50px;
-          width: 50px;
-        }
-      }
-      .center-text-title {
-        font-size: $mobile-section-size;
-        margin: 0 auto;
-        margin-bottom: 20px;
-      }
-      .center-text-tag {
-        margin-bottom: -50px;
-        margin-left: 30px;
-        font-size: $mobile-tag-size;
-      }
-      .center-text-mobile-header {
-        color: $white;
-        font-weight: $font-heavy;
-        font-size: 70px;
-        margin-top: 10px;
-        margin-bottom: -20px;
-        text-align: center;
-      }
-      .center-text-button {
-        display: block;
-      }
-      .center-text-mobile-name {
-        color: $white;
-        font-weight: $font-heavy;
-        font-size: 70px;
-        text-align: center;
-        margin-top: -10px;
-        &:nth-child(1) {
-          color: $yellow;
-        }
-      }
-      .center-text-mobile {
-        display: inline;
-        &:nth-child(1) {
-          color: $yellow;
-        }
-      }
-      .center-text-name {
-        display: none;
-      }
-      .center-text-sub {
-        margin-top: 10px;
-        font-size: $mobile-section-size;
-        font-weight: $font-heavy;
-        margin: 0 auto;
-        margin-top: 30px;
-      }
-      .center-text-tag-end {
-        margin-top: 2px;
-        margin-top: -10px;
-        font-size: $mobile-tag-size;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: $phone-screen-size) {
-  .center-text-full-mobile-header {
-    display: block !important;
-  }
-  .center {
-    .center-text {
-      margin-top: 40%;
-      width: 100%;
-    }
-    .center-text-tag {
-      margin-bottom: -25px !important;
-    }
-    .center-text-sub {
-      margin-top: 2px !important;
-    }
-    .margin-top-mobile {
-      margin-top: 20px !important;
-    }
-    .center-text-button {
-      margin-top: -20px;
-      justify-content: center;
-      display: flex;
-      margin-bottom: 20px;
-    }
-    .main-style .arrow {
-      left: 50%;
-    }
-  }
-
-  .main-style .arrow {
-    margin: 0 auto;
+.center-text-mobile-header {
+  @include tablet {
+    color: $white;
+    font-weight: $font-heavy;
+    font-size: 70px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+    text-align: center;
   }
 }

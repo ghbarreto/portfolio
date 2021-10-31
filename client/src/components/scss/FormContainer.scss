@@ -7,15 +7,12 @@
     justify-content: center;
   }
 }
-input[type='text'] {
+input.field {
   padding: 10px 10px;
   padding-top: -20px;
   font-size: 19px;
 }
-input[type='email'] {
-  font-size: 19px;
-  padding: 10px 10px;
-}
+
 .alert-message {
   color: $white;
   font-size: 20px;

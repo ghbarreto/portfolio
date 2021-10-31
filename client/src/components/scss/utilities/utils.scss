@@ -32,6 +32,7 @@ $medium-experience-size: 20px;
 
 // media-queries
 $small-screen: 300px;
+$phone-small-size: 500px;
 $small-screen-cutoff: 1200px;
 $medium-screen: 1050px;
 $medium-big-screen: 1450px;
@@ -47,6 +48,12 @@ $phone-screen-size: 600px;
 
 @mixin tablet {
   @media only screen and (max-width: $small-screen-cutoff) {
+    @content;
+  }
+}
+
+@mixin small-phone {
+  @media only screen and (max-width: $phone-small-size) {
     @content;
   }
 }

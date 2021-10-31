@@ -1,9 +1,5 @@
 @import 'utilities/utils.scss';
 
-.mobile-header-fixed {
-  z-index: 2;
-}
-
 @keyframes reveal {
   from {
     clip-path: inset(0 0 0 100%);
@@ -12,224 +8,208 @@
     clip-path: inset(0 0 0 0);
   }
 }
-
-@media only screen and (max-width: $small-screen-cutoff) {
-  .mobile-header-fixed {
-    backdrop-filter: blur(4px) drop-shadow(4px 4px 10px $background-color);
-    max-width: $small-screen-cutoff;
-    position: fixed;
-    width: 95%;
-    .navigation {
-      margin: 0 auto;
-      margin-left: 5%;
-      display: flex;
-      margin-top: 3%;
-      color: $white;
-      .navigation-mobile-name {
-        display: inline-block;
-        color: $white;
-        margin-left: 2%;
-        font-size: $medium-section-size;
-        margin-top: 3%;
-      }
-      .mobile-tag-color {
-        color: $highlight;
-      }
-      img {
-        height: 80px;
-        width: 80px;
-      }
-      .burger-nav {
-        margin-top: 3% !important;
-        &:hover {
-          cursor: pointer;
-          font-size: 3px;
+.mobile-header-fixed {
+  z-index: 2;
+  backdrop-filter: blur(4px) drop-shadow(4px 4px 10px $background-color);
+  max-width: $small-screen-cutoff;
+  position: fixed;
+  width: 100%;
+  .navigation {
+    margin: 0 auto;
+    margin-left: 5%;
+    display: flex;
+    margin-top: 3%;
+    color: $white;
+    @include phone {
+      div {
+        img {
+          height: 50px !important;
+          width: 50px !important;
+          margin-top: -10px;
         }
       }
-      .hamburger-nav {
-        z-index: 3;
-        position: absolute;
-        margin-top: 3%;
-        height: 2px;
-        width: 30px;
-        border-radius: 2px;
-      }
-      .nav1 {
-        border: 3px solid $lightblue;
-        top: -2px;
-        left: 90%;
-      }
-      .nav2 {
-        border: 3px solid $highlight;
-        top: 6.9px;
-        left: 90%;
-      }
-      .nav3 {
-        border: 3px solid $lightblue;
-        top: 16px;
-        left: 90%;
+    }
+    .navigation-mobile-name {
+      display: inline-block;
+      color: $white;
+      margin-left: 2%;
+      font-size: $medium-section-size;
+      margin-top: 3%;
+      @include phone {
+        font-size: 15px;
       }
     }
-  }
-  .side-menu-appear {
-    animation: reveal 0.4s backwards;
-  }
-  .side-menu-disappear {
-    animation: disappear 0.4s backwards;
-  }
-  .side-menu {
-    // display: flex;
-    height: 500px;
-    width: 79%;
-    margin-top: 10.5%;
-    left: 25.5%;
-    right: 25%;
-    bottom: 0;
-    background-color: $background-color;
-    z-index: 2;
-    position: absolute;
-    box-shadow: 4px 2px 6px 6px;
-    div {
-      img {
-        height: 80px;
-        width: 80px;
-        position: absolute;
-        right: 30%;
-        top: 2%;
-      }
+    .mobile-tag-color {
+      color: $highlight;
     }
-    .x-icon {
-      color: $lightblue;
-      font-size: 30px;
-      position: absolute;
-      left: 8%;
-      top: 4%;
+    img {
+      height: 80px;
+      width: 80px;
+    }
+    .burger-nav {
+      margin-top: 3% !important;
       &:hover {
         cursor: pointer;
-        opacity: 0.5;
+        font-size: 3px;
       }
     }
-    .side-menu-header {
-      width: 100%;
-      color: white;
-      display: flex;
-      justify-content: space-around;
-    }
-    .side-menu-links {
-      position: relative;
-      right: 30%;
-      color: $white;
-      font-size: 26px;
-      top: 20%;
-      margin-top: 30px;
-      .side-menu-items {
-        .side-menu-margins {
-          position: relative;
-          left: 25%;
-          text-align: center;
-          border-radius: 50px;
-          margin-top: 40px;
-          &:hover {
-            left: 35%;
-            background-color: $lightblue;
-            width: 80%;
-            color: $yellow;
-            cursor: pointer;
-            font-weight: $font-heavy;
-            .color-brackets {
-              color: $yellow !important;
-            }
-          }
-        }
-        .color-brackets {
-          color: $highlight;
-        }
-      }
-    }
-    .social-media-links {
+    .hamburger-nav {
+      z-index: 3;
       position: absolute;
-      top: 80%;
-      width: 90%;
-      text-align: center;
+      margin-top: 3%;
+      height: 2px;
+      width: 30px;
+      border-radius: 2px;
+    }
+    .nav1 {
+      border: 3px solid $lightblue;
+      top: 6px;
+      left: 90%;
+      @include phone {
+        top: 18%;
+      }
+      @include small-phone {
+        left: 88%;
+      }
+    }
+    .nav2 {
+      border: 3px solid $highlight;
+      top: 15px;
+      left: 90%;
+      @include phone {
+        top: 34%;
+      }
+      @include small-phone {
+        left: 88%;
+      }
+    }
+    .nav3 {
+      border: 3px solid $lightblue;
+      top: 24px;
+      left: 90%;
+      @include phone {
+        top: 50%;
+      }
+      @include small-phone {
+        left: 88%;
+      }
     }
   }
 }
-@media only screen and (max-width: $small-screen-cutoff) {
-  .side-menu {
+.side-menu-appear {
+  animation: reveal 0.4s backwards;
+}
+.side-menu-disappear {
+  animation: disappear 0.4s backwards;
+}
+.side-menu {
+  height: 500px;
+  width: 79%;
+  margin-top: 10.5%;
+  left: 25.5%;
+  right: 25%;
+  bottom: 0;
+  background-color: $background-color;
+  z-index: 2;
+  position: absolute;
+  box-shadow: 4px 2px 6px 6px;
+  @include tablet {
+    top: -85% !important;
+    .side-menu-mobile-name {
+      margin-top: -30px;
+      font-size: $mobile-section-size;
+      color: $white;
+      .side-menu-tag-color {
+        color: $highlight;
+      }
+    }
+  }
+  @include phone {
     top: -79% !important;
   }
-  .social-media-img {
-    height: 40px !important;
-    width: 40px !important;
+  @include small-phone {
+    .side-menu-mobile-name {
+      font-size: 18px;
+    }
+    svg {
+      height: 30px;
+    }
   }
-  .side-menu-mobile-name {
-    margin-top: -30px;
-    font-size: $mobile-section-size;
-    color: $white;
-  }
-  .side-menu-tag-color {
-    color: $highlight;
-  }
-  .side-menu-header {
+  div {
     img {
-      height: 80px !important;
-      width: 80px !important;
+      height: 80px;
+      width: 80px;
+      position: absolute;
+      right: 30%;
+      top: 2%;
+      @include tablet {
+        margin-top: 2%;
+        height: 50px !important;
+        width: 50px !important;
+      }
+    }
+  }
+  .x-icon {
+    color: $lightblue;
+    font-size: 30px;
+    position: absolute;
+    left: 8%;
+    top: 2%;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+    @include tablet {
       margin-top: 30px;
     }
-  }
-  .x-icon {
-    margin-top: 30px;
-  }
-}
-
-@media only screen and (max-width: $phone-screen-size) {
-  .navigation-mobile-name {
-    font-size: $mobile-font-size !important;
-  }
-  .navigation div {
-    img {
-      height: 50px !important;
-      width: 50px !important;
-      margin-top: -10px;
-    }
-  }
-  .nav1 {
-    left: 80% !important;
-  }
-  .nav2 {
-    left: 80% !important;
-  }
-  .nav3 {
-    left: 80% !important;
-  }
-  .side-menu {
-    top: -79% !important;
-  }
-  .x-icon {
-    margin-top: 15px;
-  }
-  .side-menu-header {
-    img {
-      height: 50px !important;
-      width: 50px !important;
+    @include phone {
       margin-top: 15px;
     }
   }
-}
-
-@media only screen and (max-width: 500px) {
-  .navigation-mobile-name {
-    font-size: $mobile-tag-size !important;
+  .side-menu-header {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
   }
-  img .social-media-img {
-    height: 50px !important;
-    width: 50px !important;
-  }
-  .side-menu-mobile-name {
+  .side-menu-links {
+    display: flex;
+    justify-content: center;
     color: $white;
-    font-size: $mobile-font-size;
+    font-size: 26px;
+    margin-right: 15%;
+    margin-top: 15%;
+    @include tablet {
+      margin-top: 10%;
+    }
+    @include phone {
+      margin-top: 25% !important;
+    }
+    .side-menu-items {
+      .side-menu-margins {
+        position: relative;
+        left: 25%;
+        text-align: center;
+        border-radius: 50px;
+        margin-top: 40px;
+        &:hover {
+          color: $yellow;
+          cursor: pointer;
+          font-weight: $font-heavy;
+          .color-brackets {
+            color: $yellow !important;
+          }
+        }
+      }
+      .color-brackets {
+        color: $highlight;
+      }
+    }
   }
-  .side-menu-tag-color {
-    color: $highlight;
+  .social-media-links {
+    position: absolute;
+    top: 80%;
+    width: 90%;
+    text-align: center;
   }
 }

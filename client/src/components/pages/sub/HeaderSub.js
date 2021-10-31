@@ -60,7 +60,7 @@ const HeaderSub = ({
     <>
       <div className="center">
         <div className="center-text">
-          <Animate anim={'TopToBottom'}>
+          <Animate anim={'TopToBottom'} animTimer={1000}>
             <div className="center-text-title">{title}</div>
           </Animate>
           <div className="center-text-container">

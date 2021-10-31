@@ -4,13 +4,25 @@ import { animated, useSpring } from 'react-spring';
 
 import { animations } from '../../utils/animations';
 
-const Animation = ({ className, anim, key, ...props }) => {
+const Animation = ({ className, anim, key, animTimer, ...props }) => {
   const [animate, setAnimate] = useState(false);
-  const leftToRightAnimation = useSpring(animate && animations.leftToRight);
-  const rightToLeftAnimation = useSpring(animate && animations.rightToLeft);
-  const topToBottomAnimation = useSpring(animate && animations.topToBottom);
-  const opacityAnimation = useSpring(animate && animations.opacity);
-  const bottomToTopAnimation = useSpring(animate && animations.bottomToTop);
+  const animateDelay = animTimer ? animTimer : 500;
+
+  const leftToRightAnimation = useSpring(
+    animate && animations(animateDelay).leftToRight
+  );
+  const rightToLeftAnimation = useSpring(
+    animate && animations(animateDelay).rightToLeft
+  );
+  const topToBottomAnimation = useSpring(
+    animate && animations(animateDelay).topToBottom
+  );
+  const opacityAnimation = useSpring(
+    animate && animations(animateDelay).opacity
+  );
+  const bottomToTopAnimation = useSpring(
+    animate && animations(animateDelay).bottomToTop
+  );
 
   const animationValue = () => {
     switch (anim) {

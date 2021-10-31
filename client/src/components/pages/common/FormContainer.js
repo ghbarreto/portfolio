@@ -109,7 +109,7 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
               onBlur={() => lostFocus()}
               onFocus={() => onFocused()}
             />
-            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+            <div>
               <div onFocus={() => onFocused()} className="display-captcha">
                 {captchaCheck ? (
                   <div className="authenticated-message">
@@ -140,10 +140,6 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
       </div>
     </>
   );
-};
-
-const style = {
-  border: '1px solid red',
 };
 
 const mapStateToProps = state => {
