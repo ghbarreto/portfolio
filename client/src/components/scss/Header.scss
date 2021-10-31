@@ -4,7 +4,6 @@ li {
   display: inline;
   text-decoration: none;
 }
-
 .background-nav-bar-color {
   // background-color: $background-color;
   height: 130px;
@@ -29,6 +28,9 @@ li {
   position: fixed;
   width: 100%;
   margin-top: 40px;
+  @include tablet {
+    display: none;
+  }
   .nav-bar {
     position: relative;
     margin-bottom: 20px;
@@ -136,11 +138,5 @@ li {
         background-color: $white;
       }
     }
-  }
-}
-
-@media only screen and (max-width: $small-screen-cutoff) {
-  .fixed-nav-bar {
-    display: none;
   }
 }

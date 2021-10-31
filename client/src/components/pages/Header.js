@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../scss/Header.scss';
 import Particles from './common/Particle';
 import { connect } from 'react-redux';

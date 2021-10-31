@@ -13,17 +13,24 @@ import Icons from '../common/Icons';
 
 const HeaderMobile = props => {
   const [triggerNav, setTriggerNav] = useState(false);
+  const [modalOpen, setModalOpen] = useState(0);
   const ref = useRef();
 
   const appearAnimation = triggerNav
     ? 'side-menu-appear'
     : 'side-menu-disappear';
-
-  const handleModal = bool => {
-    if (triggerNav === true && bool === true) {
-      return setTriggerNav(false);
-    } else {
-      return setTriggerNav(bool);
+  const handleModal = () => {
+    if (triggerNav === false && modalOpen === 1) {
+      setModalOpen(0);
+      setTriggerNav(false);
+    }
+    if (triggerNav === false && modalOpen === 0) {
+      setModalOpen(1);
+      setTriggerNav(true);
+    }
+    if (modalOpen === 1 && triggerNav === true) {
+      setTriggerNav(false);
+      setModalOpen(0);
     }
   };
 
@@ -69,7 +76,7 @@ const HeaderMobile = props => {
             </div>
             <nav>
               <ul className="burger-nav">
-                <div onClick={() => handleModal(true)}>
+                <div onClick={() => handleModal()}>
                   <li className="hamburger-nav nav1"></li>
                   <li className="hamburger-nav nav2"></li>
                   <li className="hamburger-nav nav3"></li>

@@ -8,6 +8,10 @@
 body {
   background-color: $background-color;
 }
+html,
+body {
+  overscroll-behavior-y: contain;
+}
 
 .landing-page {
   height: 80vh;
@@ -113,16 +117,6 @@ canvas {
 ::-webkit-scrollbar-thumb {
   background: grey;
   border-radius: 10px;
-}
-
-@media only screen and (max-width: $medium-screen+150) {
-  .landing-page {
-    height: 100vh;
-    width: 100vh;
-  }
-  .projects-landing-page {
-    width: 100vh;
-  }
 }
 
 @media only screen and (max-width: $small-screen-cutoff) {

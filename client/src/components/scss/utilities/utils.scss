@@ -37,3 +37,16 @@ $medium-screen: 1050px;
 $medium-big-screen: 1450px;
 $big-screen: 1800px;
 $phone-screen-size: 600px;
+
+// Mixins
+@mixin phone {
+  @media only screen and (max-width: $phone-screen-size) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $small-screen-cutoff) {
+    @content;
+  }
+}

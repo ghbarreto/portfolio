@@ -2,11 +2,19 @@
 
 .display-captcha {
   margin-top: 20px;
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
 }
 input[type='text'] {
   padding: 10px 10px;
   padding-top: -20px;
   font-size: 19px;
+}
+input[type='email'] {
+  font-size: 19px;
+  padding: 10px 10px;
 }
 .alert-message {
   color: $white;
@@ -16,6 +24,9 @@ input[type='text'] {
   width: 80%;
   text-align: center;
   border-radius: 50px;
+  @include tablet {
+    margin: 0 auto;
+  }
 }
 .email-sent {
   font-size: 20px;
@@ -33,16 +44,19 @@ input[type='text'] {
   border-radius: 50px;
   padding: 5px;
 }
-input[type='email'] {
-  font-size: 19px;
-  padding: 10px 10px;
-}
+
 .form-container {
+  @include tablet {
+    text-align: center;
+  }
   .field {
     border: 0px;
     border-radius: 20px;
     width: 80%;
     margin-top: 3%;
+    @include tablet {
+      width: 70%;
+    }
   }
   .lost-focus {
     border: 2px solid $highlight;
@@ -76,27 +90,7 @@ input[type='email'] {
   .button-field {
     margin-right: 10%;
     margin-top: 3%;
-  }
-}
-
-@media only screen and (max-width: $small-screen-cutoff) {
-  .display-captcha {
-    display: flex;
-    justify-content: center;
-  }
-  .alert-message {
-    margin: 0 auto;
-  }
-  input[type='email'] {
-    font-size: 19px;
-    padding: 10px 10px;
-  }
-  .form-container {
-    text-align: center;
-    .field {
-      width: 70%;
-    }
-    .button-field {
+    @include tablet {
       float: right;
       margin-right: 15%;
     }
