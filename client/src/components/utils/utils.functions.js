@@ -19,7 +19,7 @@ export const timelineHorizontal = [
     date: '2018',
     image: emilLogo,
     description:
-      'Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet',
+      'Fixed bugs from the existing website and implemented enhancements that significantly improved web functionality ',
   },
   {
     title: 'Web Developer',
@@ -27,15 +27,14 @@ export const timelineHorizontal = [
     date: '2019',
     image: lugaroLogo,
     description:
-      'Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet',
+      'Developed wireframes, site maps and content inventories for new website designs',
   },
   {
     title: 'Full-stack Developer',
     company: 'Kyte',
     date: '2021',
     image: kyteLogo,
-    description:
-      'Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet Lorem Ipsum Dolor Amet',
+    description: 'Developed full-stack web applications using the MERN stack',
   },
 ];
 
@@ -54,7 +53,7 @@ export const projects = [
   {
     name: 'covid-api',
     description:
-      'An app developed by me to help people track covid growth in countries',
+      'An app developed by me to help people track covid growth in countries around the world',
     githubLink: 'https://github.com/',
     live: 'https://github.com',
     date: 'Jan, 2021',
@@ -63,7 +62,8 @@ export const projects = [
   },
   {
     name: 'my-portfolio',
-    description: 'My old portfolio',
+    description:
+      'My old potfolio developed using Node.JS, MongoDB, and EJS for the front-end',
     githubLink: 'https://github.com/',
     live: 'https://github.com',
     date: 'March, 2020',
@@ -71,9 +71,9 @@ export const projects = [
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
   },
   {
-    name: 'FFXIV-Info',
+    name: 'Multiple App',
     description:
-      'An app developed by me to help people know various features about the game FFXIV',
+      'An app that I developed that has a lot of small features like weather-app, fizzbuzz, to-do list, and others.',
     githubLink: 'https://github.com/',
     live: 'https://github.com',
     date: 'Jan, 2022',
@@ -83,20 +83,21 @@ export const projects = [
 ];
 export const jobExperience = {
   kyte: {
-    title: 'Full Stack Dev',
-    date: 'June 2021 - Jan 2022',
-    experience: 'Worked with react and a few other languages',
+    title: 'Full Stack Developer',
+    date: 'June 2021 - Present',
+    experience:
+      'Worked with the MERN stack to create webpages and landing pages for the Kyte App.',
   },
   lugaro: {
     title: 'Web Developer',
     date: 'June 2020, Jan 2021',
-    experience: 'Worked with wordpress and a few other languages',
+    experience:
+      'Worked with WordPress and PHP to help fix website bugs and achieve code improvement.',
   },
 };
 export const skills = [
   'NextJS',
   'Firebase',
-  'VueJS',
   'Python',
   'Typescript',
   'Azure',
@@ -107,7 +108,6 @@ export const skills = [
   'MongoDB',
   'SQL',
   'Git',
-  'PHP',
   'Express',
   'RESTful',
   'React',
@@ -121,23 +121,23 @@ export const reachMeParagraph = {
 export const knowledgeField = {
   full_stack: {
     title: 'Full Stack Development',
-    qualifications: 'I am trained in React, React.js bla bla bla bla bla',
+    qualifications: 'MERN developer, but also know Python/Flask.',
   },
   database: {
-    title: 'Database',
-    qualifications: 'I am trained in React, React.js bla bla bla bla bla',
+    title: 'Databases',
+    qualifications: 'Mainly NOSQL, but also SQL.',
   },
   mobile_app: {
     title: 'Mobile App Dev',
-    qualifications: 'I am trained in React, React.js bla bla bla bla bla',
+    qualifications: 'React Native and Firebase',
   },
   front_end: {
     title: 'Frond End Design',
-    qualifications: 'I am trained in React, React.js bla bla bla bla bla',
+    qualifications: 'React/Redux, NextJS, Angular, and Vue.',
   },
 };
 export const viewResume = {
-  resume: 'www.facebook.com',
+  resume: '/assets/pdf/CV.pdf',
   value: 'View Resume',
 };
 export const informations = {
@@ -201,17 +201,17 @@ export const buttonValuesMobile = [
 export const socialMedia = [
   {
     name: 'Github',
-    src: 'http://www.facebook.com',
+    src: 'https://www.github.com/ghbarreto',
     img: 'github',
   },
   {
     name: 'Linkedin',
-    src: 'www.linkedin.com',
+    src: 'https://www.linkedin.com/in/ghbarreto/',
     img: 'linkedin',
   },
   {
     name: 'Twitter',
-    src: 'twitter.com',
+    src: 'https://twitter.com/ghbarretoo',
     img: 'twitter',
   },
 ];
@@ -233,7 +233,7 @@ export const reachMeInfoContact = [
   },
   {
     icon: 'phone',
-    val: '+55 11 9899-8999',
+    val: '[Please, use the form to contact me.]',
   },
   {
     icon: 'location',

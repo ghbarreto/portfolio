@@ -9,7 +9,7 @@ const SocialMediaButtons = () => {
     return Object.values(socialMedia).map((e, i) => {
       return (
         <li key={i}>
-          <a href={e.src}>
+          <a href={e.src} target="_blank">
             <Icons className="social-media-img" icon={e.img} sizes={30} />
           </a>
         </li>

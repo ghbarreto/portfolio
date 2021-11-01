@@ -13,6 +13,7 @@
     color: $white;
     &:hover {
       background-color: $white;
+      color: $highlight;
     }
     @include phone {
       margin-top: 15px;

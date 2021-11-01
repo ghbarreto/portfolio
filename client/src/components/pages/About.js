@@ -79,6 +79,7 @@ const About = props => {
                       styles={{ margin: '-4px', marginLeft: '5px' }}
                     />
                   }
+                  target={'_blank'}
                   href={viewResume.resume}
                   value={viewResume.value}
                   style={{ padding: '10px ' }}
