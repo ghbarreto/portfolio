@@ -17,6 +17,12 @@
     @include tablet {
       margin-left: 15px;
     }
+    @include phone {
+      padding-top: 20px;
+    }
+    @include small-phone {
+      padding-top: 10px;
+    }
   }
   .skills-section {
     grid-area: c;
@@ -30,21 +36,25 @@
       margin-top: 3px;
     }
     @include phone {
-      margin-left: 5px;
-      margin-top: -10px;
+      padding-top: 5px;
       .experience-job {
         width: 90%;
         font-size: 24px;
         margin-left: 15px;
       }
     }
+    .about-tags {
+      @include phone {
+        font-size: 15px;
+      }
+      @include small-phone {
+        font-size: 12px;
+      }
+    }
   }
   .skills-section {
     @include tablet {
       margin-left: 15px;
-    }
-    @include phone {
-      margin-top: -14px;
     }
   }
   .parent-skills {
@@ -61,7 +71,7 @@
         margin-right: 20px;
         flex-grow: 1;
         font-weight: $font-semi;
-        width: 30px;
+        width: 100%;
         border-radius: 50px;
         text-align: center;
         flex-basis: 20%;
@@ -72,26 +82,36 @@
           margin-top: 8px;
         }
         @include phone {
-          flex-basis: 14%;
-          margin-right: 15px;
-          margin-top: 8px;
+          flex-basis: 20%;
+          &:nth-child(1n) {
+            background-color: $yellow !important;
+          }
+          &:nth-child(2n) {
+            background-color: $highlight !important;
+          }
+          &:nth-child(6n) {
+            background-color: $white !important;
+          }
+          &:nth-child(5n) {
+            background-color: $lightblue !important;
+          }
+        }
+        @include small-phone {
+          flex-basis: 10%;
+          font-size: 12px !important;
         }
 
         &:nth-child(1n) {
           background-color: $yellow;
-          width: 100%;
         }
         &:nth-child(2n) {
           background-color: $highlight;
-          width: 100%;
         }
         &:nth-child(3n) {
           background-color: $white;
-          width: 100%;
         }
         &:nth-child(5n) {
           background-color: $lightblue;
-          width: 100%;
         }
       }
     }

@@ -72,13 +72,7 @@ const About = props => {
               {displayExperience()}
               <Animate anim={'Opacity'}>
                 <Button
-                  icon={
-                    <Icons
-                      icon={'resume'}
-                      sizes={25}
-                      styles={{ margin: '-4px', marginLeft: '5px' }}
-                    />
-                  }
+                  icon={<Icons icon={'resume'} sizes={25} />}
                   target={'_blank'}
                   href={viewResume.resume}
                   value={viewResume.value}
@@ -106,20 +100,22 @@ const About = props => {
                 <img src={aboutBanner} alt="about-banner" />
               </div>
             </Animate>
-            <Animate anim={'BottomToTop'}>
-              <Button
-                style={{ padding: '10px ' }}
-                href={viewResume.resume}
-                value={viewResume.value}
-                icon={
-                  <Icons
-                    styles={{ margin: '-4px', marginLeft: '5px' }}
-                    icon={'resume'}
-                    sizes={25}
-                  />
-                }
-              />
-            </Animate>
+            <div className="btn-about-sub">
+              <Animate anim={'BottomToTop'}>
+                <Button
+                  styles={{ padding: '10px 20px' }}
+                  href={viewResume.resume}
+                  value={viewResume.value}
+                  icon={
+                    <Icons
+                      styles={{ margin: '-4px', marginLeft: '5px' }}
+                      icon={'resume'}
+                      sizes={25}
+                    />
+                  }
+                />
+              </Animate>
+            </div>
           </span>
         </div>
         {props.children}

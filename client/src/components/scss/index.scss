@@ -79,6 +79,9 @@ canvas {
   font-size: $desktop-section-size;
   color: $highlight;
   margin-top: 50px;
+  @include small-phone {
+    font-size: 18px !important;
+  }
 }
 
 .about-tags {
@@ -148,7 +151,7 @@ canvas {
 
 @media only screen and (max-width: $phone-screen-size) {
   .cellphone-font-size {
-    font-size: $mobile-font-size !important;
+    font-size: 12px !important;
   }
   .margin-left-phone {
     margin-left: 3px !important;

@@ -26,6 +26,9 @@
       margin-top: 40%;
       width: 100%;
     }
+    @include small-phone {
+      margin-top: 20%;
+    }
     .center-text-full-mobile-header {
       display: none;
       @include tablet {

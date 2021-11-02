@@ -5,6 +5,13 @@
   grid-gap: 10px;
   grid-template-areas: 'a b c d';
   grid-template-columns: 1fr 10fr 10fr 1fr;
+  @include phone {
+    display: block;
+  }
+  @include small-phone {
+    margin-top: 3%;
+  }
+
   .projects-title {
     grid-area: b;
     text-transform: uppercase;
@@ -12,6 +19,9 @@
     color: $white;
     font-weight: $font-semi;
     font-size: $desktop-section-tags-size;
+    @include small-phone {
+      font-size: 19px;
+    }
   }
 }
 .project-desktop {
@@ -35,6 +45,11 @@
     border-radius: 50px;
     width: 90%;
     margin: 0 auto;
+    @include tablet {
+      width: 100%;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
     .projects-list-item {
       border-radius: 30px;
       margin: 30px;
@@ -43,6 +58,11 @@
       max-width: 40%;
       flex: 1 0 25%;
       height: 100%;
+      @include tablet {
+        flex: 1 0 30%;
+        max-width: 100%;
+        height: 100%;
+      }
       &:hover {
         cursor: pointer;
         // .projects-list-item-name {
@@ -136,34 +156,7 @@
   margin-right: 10px;
 }
 
-@media only screen and (max-width: $medium-big-screen) {
-  .project-list-margins {
-    .project-list {
-      .projects-list-item {
-        flex: 1 0 30%;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: $small-screen-cutoff) {
-  .project-list-margins {
-    .project-list {
-      width: 100%;
-      margin-bottom: 10px;
-      overflow: hidden;
-      .projects-list-item {
-        flex: 1 0 30%;
-        max-width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
 @media only screen and (max-width: $phone-screen-size+250) {
-  .projects-title-main {
-    display: block;
-  }
   .carousel-mobile {
     display: flex;
     width: 100%;

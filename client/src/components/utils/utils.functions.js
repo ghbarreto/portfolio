@@ -30,7 +30,7 @@ export const timelineHorizontal = [
       'Developed wireframes, site maps and content inventories for new website designs',
   },
   {
-    title: 'Full-stack Developer',
+    title: 'Full-stack Dev',
     company: 'Kyte',
     date: '2021',
     image: kyteLogo,
@@ -84,13 +84,13 @@ export const projects = [
 export const jobExperience = {
   kyte: {
     title: 'Full Stack Developer',
-    date: 'June 2021 - Present',
+    date: 'Current',
     experience:
       'Worked with the MERN stack to create webpages and landing pages for the Kyte App.',
   },
   lugaro: {
     title: 'Web Developer',
-    date: 'June 2020, Jan 2021',
+    date: 'June 2020',
     experience:
       'Worked with WordPress and PHP to help fix website bugs and achieve code improvement.',
   },
