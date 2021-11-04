@@ -1,14 +1,12 @@
 import Carousel from 'react-multi-carousel';
-import Icons from './Icons';
-import Button from './Button';
 import 'react-multi-carousel/lib/styles.css';
 
 const CarouselContainer = props => {
   const itemClassProps = props.itemClass || null;
   const responsive = {
-    desktop: {
-      breakpoint: { max: 2000, min: 850 },
-      items: 1,
+    biggerscreen: {
+      breakpoint: { max: 1200, min: 850 },
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 850, min: 0 },

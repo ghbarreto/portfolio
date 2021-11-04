@@ -44,7 +44,7 @@ const WorkSub = props => {
                 </div>
                 <div className="projects-list-item-date">
                   <Button
-                    style={{
+                    styles={{
                       backgroundColor: 'white',
                       color: '#222',
                       padding: '9px ',
@@ -88,7 +88,7 @@ const WorkSub = props => {
           <div className="projects-list-item-description">{e.description}</div>
           <div className="projects-list-item-date">
             <Button
-              style={{
+              styles={{
                 backgroundColor: 'white',
                 color: '#222',
                 padding: '9px ',
@@ -138,8 +138,8 @@ const WorkSub = props => {
 
       <div className="project-list-margins projects-landing-page">
         <div
-          onMouseEnter={() => props.handlePageScroller(true)}
-          onMouseLeave={() => props.handlePageScroller(false)}
+          // onMouseEnter={() => props.handlePageScroller(true)}
+          // onMouseLeave={() => props.handlePageScroller(false)}
           className="project-list"
         >
           {displayProjects()}
@@ -150,7 +150,7 @@ const WorkSub = props => {
             <Carousel
               infinite
               keyBoardControl
-              itemClass="image-item"
+              itemClass="image-item projects-list-item"
               autoPlay
               swipeable
               partialVisible

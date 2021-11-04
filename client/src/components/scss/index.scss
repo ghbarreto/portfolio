@@ -27,9 +27,7 @@ svg {
 
 .projects-landing-page {
   height: 100vh;
-  overflow: auto;
-  max-height: 70%;
-  margin-top: 30px;
+  // max-height: 70%;
 }
 
 .landing-page-section {
@@ -63,7 +61,7 @@ canvas {
   position: fixed;
   width: 100vw !important;
   height: 100vh !important;
-  z-index: -2;
+  z-index: -20;
 }
 
 .highlight-blue {
