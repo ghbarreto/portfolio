@@ -91,7 +91,7 @@ const WorkSub = props => {
               styles={{
                 backgroundColor: 'white',
                 color: '#222',
-                padding: '9px ',
+                padding: '9px',
               }}
               icon={<Icons icon={'AiOutlinePlus'} sizes={18} />}
               onClick={() => {
