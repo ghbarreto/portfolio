@@ -120,7 +120,6 @@ const WorkSub = props => {
     if (b === 1 || b === 5) return 'blue';
     if (b === 2 || b === 3) return 'pink';
   };
-
   const displayProjectTitle = () => {
     return (
       <Animate anim={'Opacity'}>
