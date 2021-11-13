@@ -43,6 +43,7 @@ const WorkSub = props => {
                   {e.description}
                 </div>
                 <div className="projects-list-item-date">
+                  <div className="project-button-more">
                   <Button
                     styles={{
                       backgroundColor: 'white',
@@ -64,6 +65,7 @@ const WorkSub = props => {
                   >
                     more
                   </Button>
+                  </div>
                   <div>{e.date}</div>
                 </div>
               </div>
@@ -87,6 +89,8 @@ const WorkSub = props => {
           </div>
           <div className="projects-list-item-description">{e.description}</div>
           <div className="projects-list-item-date">
+          <div className="project-button-more">
+
             <Button
               styles={{
                 backgroundColor: 'white',
@@ -106,8 +110,9 @@ const WorkSub = props => {
                 openModal();
               }}
             >
-              more
+                more
             </Button>
+              </div>
             <div>{e.date}</div>
           </div>
         </div>

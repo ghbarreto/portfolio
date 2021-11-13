@@ -192,9 +192,14 @@
         text-align: center;
         div {
           width: 100%;
-        }
+        }      
       }
     }
+  }
+}
+.project-button-more{
+  &:hover{
+    cursor: pointer;
   }
 }
 

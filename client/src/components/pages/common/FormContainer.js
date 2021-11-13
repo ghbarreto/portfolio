@@ -23,14 +23,6 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
     ) : (
       ''
     );
-  const emailSent = correctValues ? (
-    <div className="email-sent">
-      <Icons icon={'emailSent'} sizes={23} />
-      Email sent!
-    </div>
-  ) : (
-    ''
-  );
 
   const setCaptchaChecking = value => {
     if (value) {
@@ -60,84 +52,88 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
 
   return (
     <>
-      <div className="form-container">
-        <Formik
-          initialValues={{
-            name: '',
-            email: '',
-            message: '',
-          }}
-          onSubmit={(values, { resetForm }) => {
-            onFocused();
-            submitForm(values);
-            resetForm();
-            setIsFocused(false);
-          }}
-        >
-          <Form onBlur={() => lostFocus()} onFocus={() => onFocused()}>
-            <div className="alert-message">{showAlert}</div>
+      {correctValues ? (
+        <div className="email-sent">
+          <Icons icon={'emailSent'} sizes={23} />
+      Email sent!
+        </div>
+      ) : (
+        <div className="form-container">
+          <Formik
+            initialValues={{
+              name: '',
+              email: '',
+              message: '',
+            }}
+            onSubmit={(values, { resetForm }) => {
+              onFocused();
+              submitForm(values);
+              resetForm();
+              setIsFocused(false);
+            }}
+          >
+            <Form onBlur={() => lostFocus()} onFocus={() => onFocused()}>
+              <div className="alert-message">{showAlert}</div>
 
-            <div style={{ color: 'green' }} className="">
-              {emailSent}
-            </div>
-            <div style={{ color: 'red' }} className="">
-              {incorrectValues}
-            </div>
-
-            <Field
-              className={`field ${setFocus}`}
-              name="name"
-              type="text"
-              placeholder={name}
-              onBlur={() => lostFocus()}
-              onFocus={() => onFocused()}
-            />
-            <Field
-              className={`field ${setFocus}`}
-              name="email"
-              type="email"
-              placeholder={email}
-              onBlur={() => lostFocus()}
-              onFocus={() => onFocused()}
-            />
-            <Field
-              as="textarea"
-              className={`field field-area field-message ${setFocus}`}
-              name="message"
-              type="text"
-              placeholder={message}
-              onBlur={() => lostFocus()}
-              onFocus={() => onFocused()}
-            />
-            <div>
-              <div onFocus={() => onFocused()} className="display-captcha">
-                {captchaCheck ? (
-                  <div className="authenticated-message">
-                    <Icons icon="check" />
-                    Authenticated
-                  </div>
-                ) : (
-                  <Recaptcha
-                    onBlur={() => lostFocus()}
-                    captchaCheck={captchaCheck}
-                    setCaptchaChecking={setCaptchaChecking}
-                  />
-                )}
+              <div style={{ color: 'red' }} className="">
+                {incorrectValues}
               </div>
-              <button
+
+              <Field
+                className={`field ${setFocus}`}
+                name="name"
+                type="text"
+                placeholder={name}
                 onBlur={() => lostFocus()}
                 onFocus={() => onFocused()}
-                className="button-field button"
-                type="submit"
-              >
-                <Icons icon="submit" style={{ fontWeight: 'bold' }}>
-                  {button}
-                </Icons>
-              </button>
-            </div>
-          </Form>
-        </Formik>
-      </div>
+              />
+              <Field
+                className={`field ${setFocus}`}
+                name="email"
+                type="email"
+                placeholder={email}
+                onBlur={() => lostFocus()}
+                onFocus={() => onFocused()}
+              />
+              <Field
+                as="textarea"
+                className={`field field-area field-message ${setFocus}`}
+                name="message"
+                type="text"
+                placeholder={message}
+                onBlur={() => lostFocus()}
+                onFocus={() => onFocused()}
+              />
+              <div>
+                <div onFocus={() => onFocused()} className="display-captcha">
+                  {captchaCheck ? (
+                    <div className="authenticated-message">
+                      <Icons icon="check" />
+                    Authenticated
+                    </div>
+                  ) : (
+                    <Recaptcha
+                      onBlur={() => lostFocus()}
+                      captchaCheck={captchaCheck}
+                      setCaptchaChecking={setCaptchaChecking}
+                    />
+                  )}
+                </div>
+                <button
+                  onBlur={() => lostFocus()}
+                  onFocus={() => onFocused()}
+                  className="button-field button"
+                  type="submit"
+                >
+                  <Icons icon="submit" style={{ fontWeight: 'bold' }}>
+                    {button}
+                  </Icons>
+                </button>
+              </div>
+            </Form>
+          </Formik>
+        </div>
+      )}
     </>
   );
 };
