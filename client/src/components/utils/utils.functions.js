@@ -1,11 +1,4 @@
 export const logo = '/assets/images/logo.png';
-export const navigate = [
-  { loc: 'Home', to: 0 },
-  { loc: 'About', to: 1 },
-  { loc: 'Works', to: 3 },
-  { loc: 'Reach', to: 5 },
-];
-
 export const aboutBanner = '/assets/images/about-banner.png';
 export const projectTitle = ['Open Source Projects', 'Job History', 'Reach Me'];
 export const kyteLogo = '/assets/images/kyte.png';
@@ -124,6 +117,7 @@ export const skills = [
   'Redux',
   'R.Native',
 ];
+
 export const reachMeParagraph = {
   paragraph:
     'If you are interested in hiring me for your project please use the form to get in touch or contact me in the channels below.',
@@ -186,6 +180,13 @@ export const buttonValues = [
     openingTag: tags.openBracket,
     closingTag: tags.closingBracket,
   },
+];
+
+export const navigate = [
+  { loc: 'Home', to: 0 },
+  { loc: 'About', to: 1 },
+  { loc: 'Works', to: 3 },
+  { loc: 'Reach', to: 5 },
 ];
 
 export const buttonValuesMobile = [
