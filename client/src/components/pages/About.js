@@ -24,9 +24,11 @@ const About = props => {
   const displayExperience = () => {
     return Object.values(jobExperience).map((e, i) => {
       const odd = i % 2 === 0 ? 'RightToLeft' : 'LeftToRight';
+      const count = i + 1;
+      const animationTimer = Number(900 * count);
       return (
         <React.Fragment key={e.title}>
-          <Animate anim={odd}>
+          <Animate anim={odd} animTimer={animationTimer}>
             <div className="experience-section">
               <span className="about-tags cellphone-font-size">
                 {tags.closingOpening}
@@ -68,15 +70,17 @@ const About = props => {
 
           <div className="information-about-section desktop-view margin-left-phone">
             <div className="section-tags section-tags-mobile ">
-              <Animate anim={'LeftToRight'}>EXPERIENCE</Animate>
+              <Animate anim={'LeftToRight'} animTimer={1000}>
+                EXPERIENCE
+              </Animate>
               {displayExperience()}
-              <Animate anim={'Opacity'}>
+              <Animate anim={'Opacity'} animTimer={2500}>
                 <Button
                   icon={<Icons icon={'resume'} sizes={25} />}
                   target={'_blank'}
                   href={viewResume.resume}
                   value={viewResume.value}
-                  style={{ padding: '10px ' }}
+                  styles={buttonStyle.button}
                 />
               </Animate>
             </div>
@@ -103,7 +107,7 @@ const About = props => {
             <div className="btn-about-sub">
               <Animate anim={'BottomToTop'}>
                 <Button
-                  styles={{ padding: '10px 20px' }}
+                  styles={buttonStyle.button}
                   href={viewResume.resume}
                   value={viewResume.value}
                   icon={
@@ -134,6 +138,14 @@ const mapStateToProps = state => {
   return {
     details_: state.details,
   };
+};
+
+const buttonStyle = {
+  button: {
+    padding: '10px 20px',
+    backgroundColor: '#00c2cb',
+    color: 'white',
+  },
 };
 
 export default connect(mapStateToProps)(About);

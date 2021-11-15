@@ -14,9 +14,10 @@ const AboutSub = () => {
   const displayKnowledgeSection = () => {
     return Object.values(knowledgeField).map((e, i) => {
       const odd = i % 2 === 0 ? 'LeftToRight' : 'RightToLeft';
+      const animationTimer = Number(500 * (i + 1));
       return (
         <React.Fragment key={i}>
-          <Animate anim={odd}>
+          <Animate anim={odd} animTimer={animationTimer}>
             <div className="knowledge-section-fields">
               <span className="about-tags">{tags.closingOpening}</span>
               <span className="main-jobtitle-date cellphone-font-size">
@@ -49,18 +50,18 @@ const AboutSub = () => {
   return (
     <div className="about-sub-flex">
       <div className="knowledge-section">
-        <Animate anim={'LeftToRight'}>
+        <Animate anim={'LeftToRight'} animTimer={1000}>
           <div className="section-tags section-tags-mobile">KNOWLEDGE</div>
         </Animate>
         {displayKnowledgeSection()}
       </div>
       <div ref={ref}>{isVisible && NAVIGATE}</div>
       <div className="skills-section">
-        <Animate anim={'TopToBottom'} startAnimate>
+        <Animate anim={'TopToBottom'} animTimer={1000}>
           <div className="section-tags section-tags-mobile">SKILLS</div>
         </Animate>
         <div className="parent-skills">
-          <Animate anim={'Opacity'}>
+          <Animate anim={'Opacity'} animTimer={2500}>
             <div className="parent-skills-flex">{displaySkillsSection()}</div>
           </Animate>
         </div>

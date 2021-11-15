@@ -10,8 +10,8 @@
     padding: 5px;
     width: 100%;
     &:hover {
-      background-color: $white;
-      color: $highlight;
+      background-color: $white !important;
+      color: $highlight !important;
     }
     @include phone {
       margin-top: 15px;
@@ -29,6 +29,6 @@ a {
     font-size: $mobile-font-size;
   }
   &:hover {
-    color: $highlight;
+    color: $highlight !important;
   }
 }

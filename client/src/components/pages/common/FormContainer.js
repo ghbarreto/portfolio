@@ -53,9 +53,11 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
   return (
     <>
       {correctValues ? (
-        <div className="email-sent">
-          <Icons icon={'emailSent'} sizes={23} />
-      Email sent!
+        <div className="form-container" style={{ width: '100%' }}>
+          <div className="email-sent">
+            <Icons icon={'emailSent'} sizes={23} />
+            Thank you for contacting me!
+          </div>
         </div>
       ) : (
         <div className="form-container">
@@ -109,7 +111,7 @@ const FormComponent = ({ email, name, message, button, ...props }) => {
                   {captchaCheck ? (
                     <div className="authenticated-message">
                       <Icons icon="check" />
-                    Authenticated
+                      Authenticated
                     </div>
                   ) : (
                     <Recaptcha

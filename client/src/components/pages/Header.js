@@ -11,6 +11,7 @@ import {
   informations,
 } from '../utils/utils.functions';
 import Icons from './common/Icons';
+import Animate from './common/Animate';
 import HeaderMobile from './sub/HeaderMobile';
 
 const Header = ({ details, ...props }) => {
@@ -97,30 +98,31 @@ const Header = ({ details, ...props }) => {
   return (
     <>
       <Particles />
-      <div className="mobile-header">
-        <HeaderMobile handlePageChange={props.handlePageChange} />
-      </div>
-      <div className="background-nav-bar-color"></div>
-      <div className="fixed-nav-bar">
-        <div className="nav-bar">
-          <div className="nav-menu-logo">
-            <img className="logo" src={logo} alt="logo" />
-          </div>
-          {renderName()}
-          <ul className="nav-menu-buttons">{renderButtons()}</ul>
+      <Animate anim={'Opacity'}>
+        <div className="mobile-header">
+          <HeaderMobile handlePageChange={props.handlePageChange} />
         </div>
-      </div>
-      <div className="left-right-fixed">
-        <ul className="left-right-social-media" style={{ color: 'white' }}>
-          {renderSocialMedia()}
-        </ul>
-      </div>
-      <div className="right-fixed-navigation">
-        <ul className="left-right-navigation" style={{ color: 'white' }}>
-          <span className="left-right-navigation-block ">{displayDot()}</span>
-        </ul>
-      </div>
-
+        <div className="background-nav-bar-color"></div>
+        <div className="fixed-nav-bar">
+          <div className="nav-bar">
+            <div className="nav-menu-logo">
+              <img className="logo" src={logo} alt="logo" />
+            </div>
+            {renderName()}
+            <ul className="nav-menu-buttons">{renderButtons()}</ul>
+          </div>
+        </div>
+        <div className="left-right-fixed">
+          <ul className="left-right-social-media" style={{ color: 'white' }}>
+            {renderSocialMedia()}
+          </ul>
+        </div>
+        <div className="right-fixed-navigation">
+          <ul className="left-right-navigation" style={{ color: 'white' }}>
+            <span className="left-right-navigation-block ">{displayDot()}</span>
+          </ul>
+        </div>
+      </Animate>
       {props.children}
     </>
   );
