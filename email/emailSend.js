@@ -20,7 +20,7 @@ module.exports = app => {
         message,
       });
       insertValues.save();
-      res.status(200).send('inserted data ', { name }, { email }, { message });
+      res.status(200).send('inserted data: ', { name }, { email }, { message });
     } catch (err) {
       res.status(404).send('Unable to insert data: ', err);
     }
