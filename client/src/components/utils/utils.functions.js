@@ -3,17 +3,10 @@ export const aboutBanner = '/assets/images/about-banner.png';
 export const projectTitle = ['Open Source Projects', 'Job History', 'Reach Me'];
 export const kyteLogo = '/assets/images/kyte.png';
 export const emilLogo = '/assets/images/emil.jpeg';
+export const MH = '/assets/images/mousehaunt.png';
 export const lugaroLogo = '/assets/images/lugaro.jpeg';
 
 export const timelineHorizontal = [
-  {
-    title: 'Web Developer',
-    company: 'Emil Clothing',
-    date: '2018',
-    image: emilLogo,
-    description:
-      'Fixed bugs from the existing website and implemented enhancements that significantly improved web functionality ',
-  },
   {
     title: 'Web Developer',
     company: 'Lugaro Jewellers',
@@ -21,6 +14,14 @@ export const timelineHorizontal = [
     image: lugaroLogo,
     description:
       'Developed wireframes, site maps and content inventories for new website designs',
+  },
+  {
+    title: 'Full-stack Dev',
+    company: 'Mouse Haunt',
+    date: '2021',
+    image: MH,
+    description:
+      'Implemented inumerous pages included the store and career pages.',
   },
   {
     title: 'Full-stack Dev',
