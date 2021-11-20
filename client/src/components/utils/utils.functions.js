@@ -92,6 +92,12 @@ export const jobExperience = {
     experience:
       'Worked with the MERN stack to create webpages and landing pages for the Kyte App.',
   },
+  MH: {
+    title: 'Full Stack Developer',
+    date: 'Current',
+    experience:
+      'Worked with the NextJS create webpages and landing pages for the NFT Game Mouse Haunt.',
+  },
   lugaro: {
     title: 'Web Developer',
     date: 'June 2020',
