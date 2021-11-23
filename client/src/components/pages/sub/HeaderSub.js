@@ -35,7 +35,10 @@ const HeaderSub = ({
         <Button
           key={i}
           value={e.title}
-          styles={e.styles}
+          styles={{
+            backgroundColor: '#00c2cb',
+            color: 'white',
+          }}
           src={e.src}
           icon={icon}
         />

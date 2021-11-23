@@ -27,7 +27,7 @@ const About = props => {
       const count = i + 1;
       const animationTimer = Number(900 * count);
       return (
-        <React.Fragment key={e.title}>
+        <React.Fragment key={i}>
           <Animate anim={odd} animTimer={animationTimer}>
             <div className="experience-section">
               <span className="about-tags cellphone-font-size">

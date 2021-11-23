@@ -47,6 +47,28 @@ input.field {
     width: 70%;
   }
 }
+.field {
+  border: 0px;
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px 10px;
+  padding-top: -20px;
+}
+input {
+  border: 0px;
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px 10px;
+  padding-top: -20px;
+}
+
+input .field {
+  border: 0px;
+  border-radius: 20px;
+  width: 80%;
+  padding: 10px 10px;
+  padding-top: -20px;
+}
 
 .form-container {
   @include tablet {

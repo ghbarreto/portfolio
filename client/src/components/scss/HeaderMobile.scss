@@ -158,6 +158,7 @@
     &:hover {
       cursor: pointer;
       opacity: 0.5;
+      color: $highlight;
     }
     @include tablet {
       margin-top: 30px;

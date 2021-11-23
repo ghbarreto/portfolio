@@ -4,12 +4,8 @@ import 'react-multi-carousel/lib/styles.css';
 const CarouselContainer = props => {
   const itemClassProps = props.itemClass || null;
   const responsive = {
-    biggerscreen: {
-      breakpoint: { max: 1200, min: 850 },
-      items: 2,
-    },
     mobile: {
-      breakpoint: { max: 850, min: 0 },
+      breakpoint: { max: 4500, min: 0 },
       items: 1,
     },
   };

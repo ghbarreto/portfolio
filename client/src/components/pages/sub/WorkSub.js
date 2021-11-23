@@ -20,6 +20,7 @@ const WorkSub = props => {
 
   function closeModal() {
     setIsOpen(false);
+    props.handlePageScroller(false);
   }
 
   const displayProjects = () => {
@@ -44,27 +45,27 @@ const WorkSub = props => {
                 </div>
                 <div className="projects-list-item-date">
                   <div className="project-button-more">
-                  <Button
-                    styles={{
-                      backgroundColor: 'white',
-                      color: '#222',
-                      padding: '9px ',
-                    }}
-                    icon={<Icons icon={'AiOutlinePlus'} sizes={18} />}
-                    onClick={() => {
-                      setCarouselValues({
-                        name: e.name,
-                        description: e.description,
-                        images: e.images,
-                        text: e.text,
-                        githubLink: e.githubLink,
-                        livePreview: e.live,
-                      });
-                      openModal();
-                    }}
-                  >
-                    more
-                  </Button>
+                    <Button
+                      styles={{
+                        backgroundColor: 'white',
+                        color: '#222',
+                        padding: '9px ',
+                      }}
+                      icon={<Icons icon={'AiOutlinePlus'} sizes={18} />}
+                      onClick={() => {
+                        setCarouselValues({
+                          name: e.name,
+                          description: e.description,
+                          images: e.images,
+                          text: e.text,
+                          githubLink: e.githubLink,
+                          livePreview: e.live,
+                        });
+                        openModal();
+                      }}
+                    >
+                      more
+                    </Button>
                   </div>
                   <div>{e.date}</div>
                 </div>
@@ -89,30 +90,29 @@ const WorkSub = props => {
           </div>
           <div className="projects-list-item-description">{e.description}</div>
           <div className="projects-list-item-date">
-          <div className="project-button-more">
-
-            <Button
-              styles={{
-                backgroundColor: 'white',
-                color: '#222',
-                padding: '9px',
-              }}
-              icon={<Icons icon={'AiOutlinePlus'} sizes={18} />}
-              onClick={() => {
-                setCarouselValues({
-                  name: e.name,
-                  description: e.description,
-                  images: e.images,
-                  text: e.text,
-                  githubLink: e.githubLink,
-                  livePreview: e.live,
-                });
-                openModal();
-              }}
-            >
+            <div className="project-button-more">
+              <Button
+                styles={{
+                  backgroundColor: 'white',
+                  color: '#222',
+                  padding: '9px',
+                }}
+                icon={<Icons icon={'AiOutlinePlus'} sizes={18} />}
+                onClick={() => {
+                  setCarouselValues({
+                    name: e.name,
+                    description: e.description,
+                    images: e.images,
+                    text: e.text,
+                    githubLink: e.githubLink,
+                    livePreview: e.live,
+                  });
+                  openModal();
+                }}
+              >
                 more
-            </Button>
-              </div>
+              </Button>
+            </div>
             <div>{e.date}</div>
           </div>
         </div>
@@ -124,7 +124,7 @@ const WorkSub = props => {
     if (b === 0 || b === 4) return 'yellow';
     if (b === 1 || b === 5) return 'blue';
     if (b === 2 || b === 3) return 'pink';
-  }
+  };
   const displayProjectTitle = () => {
     return (
       <Animate anim={'Opacity'}>
@@ -148,8 +148,8 @@ const WorkSub = props => {
         >
           {displayProjects()}
           <div
-            onMouseEnter={() => props.handlePageScroller(true)}
-            onMouseLeave={() => props.handlePageScroller(false)}
+          // onMouseEnter={() => props.handlePageScroller(true)}
+          // onMouseLeave={() => props.handlePageScroller(false)}
           >
             <Carousel
               infinite
@@ -157,7 +157,6 @@ const WorkSub = props => {
               itemClass="image-item projects-list-item"
               autoPlay
               swipeable
-              partialVisible
               autoPlaySpeed={5000}
               showDots
               customTransition="transform 300ms ease-in-out"
@@ -170,7 +169,7 @@ const WorkSub = props => {
           </div>
         </div>
       </div>
-
+      {console.log(props)}
       {modalIsOpen ? (
         <ReactModal
           stopPageScroller={props.stopPageScroller}

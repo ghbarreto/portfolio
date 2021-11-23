@@ -41,7 +41,7 @@ export const projects = [
     live: 'https://github.com',
     date: 'Jan, 2022',
     images: [kyteLogo, emilLogo, lugaroLogo],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
+    text: 'This application was created to help people search important information regarding their characters and the server they are playing in without having to navigate in multiple \n websites to try to find information.',
   },
 
   {
@@ -97,12 +97,6 @@ export const jobExperience = {
     date: 'Current',
     experience:
       'Worked with the NextJS create webpages and landing pages for the NFT Game Mouse Haunt.',
-  },
-  lugaro: {
-    title: 'Web Developer',
-    date: 'June 2020',
-    experience:
-      'Worked with WordPress and PHP to help fix website bugs and achieve code improvement.',
   },
 };
 export const skills = [

@@ -20,11 +20,19 @@
     word-spacing: 4px;
     font-size: 20px;
     margin-bottom: 15px;
+    @include tablet {
+      font-size: 16px;
+    }
   }
   .modal-header-buttons {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     margin: 5%;
+    max-width: 500px;
+    @include phone {
+      display: block;
+      width: 100%;
+    }
     a {
       margin: 15px;
     }
@@ -35,8 +43,10 @@
   font-size: 25px;
   margin-left: 3%;
   margin-top: 3%;
+  width: 30px;
   &:hover {
     cursor: pointer;
+    color: $highlight;
   }
 }
 .carousel .thumb {
@@ -48,19 +58,13 @@
 
 @media only screen and (max-width: $small-screen-cutoff) {
   .modal-header-carousel {
-    width: 50% !important;
-  }
-  .modal-header-paragraph {
-    max-width: 70% !important;
+    width: 100% !important;
   }
 }
 
 @media only screen and (max-width: $phone-screen-size) {
   .modal-header-carousel {
     width: 80% !important;
-  }
-  .modal-header-paragraph {
-    max-width: 100% !important;
   }
 
   .modal-header-buttons {
