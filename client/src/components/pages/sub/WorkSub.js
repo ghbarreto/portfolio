@@ -169,7 +169,8 @@ const WorkSub = props => {
           </div>
         </div>
       </div>
-      {console.log(props)}
+
+      
       {modalIsOpen ? (
         <ReactModal
           stopPageScroller={props.stopPageScroller}

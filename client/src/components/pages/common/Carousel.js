@@ -12,20 +12,23 @@ const CarouselContainer = props => {
 
   return (
     <Carousel
-      dynamicHeight={props.dynamicHeight || false}
-      infinite={props.infinite || false}
-      keyBoardControl={props.keyBoardControl || false}
+      dynamicHeight={props.dynamicHeight}
+      infinite={props.infinite}
+      keyBoardControl={props.keyBoardControl}
       responsive={responsive}
-      centerMode={props.centerMode || false}
+      centerMode={props.centerMode}
       itemClass={`image-item ${itemClassProps}`}
-      autoPlay={props.autoPlay || false}
-      swipeable={props.swipeable || false}
-      partialVisible={props.partialVisible || false}
+      autoPlay={props.autoPlay}
+      swipeable={props.swipeable}
+      partialVisible={props.partialVisible}
       autoPlaySpeed={props.autoPlaySpeed ? props.autoPlaySpeed : 3000}
-      showDots={props.showDots || false}
+      showDots={props.showDots}
       customTransition={props.customTransition || 'transform 300ms ease-in-out'}
-      transitionDuration={props.transitionDuration || false}
+      transitionDuration={props.transitionDuration}
       responsive={responsive}
+      onClick={props.onClick}
+      beforeChange={props.beforeChange}
+      afterChange={props.afterChange}
       containerClass={props.containerClass}
       // customRightArrow={
       //   <Icons

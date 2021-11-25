@@ -77,6 +77,9 @@ canvas {
   font-size: $desktop-section-size;
   color: $highlight;
   margin-top: 50px;
+  @include tablet{
+    font-size: 23px;
+  }
   @include small-phone {
     font-size: 18px !important;
   }
@@ -87,6 +90,9 @@ canvas {
   color: $highlight;
   font-weight: $font-semi;
   margin: 6px;
+  @include tablet{
+    font-size: 15px;
+  }
 }
 
 .main-jobtitle-date {
@@ -95,17 +101,23 @@ canvas {
   color: $white;
   font-weight: $font-semi;
   letter-spacing: 2px;
+  @include tablet{
+    font-size: 17px;
+  }
 }
 
 .experience-job {
   color: $white;
   font-size: $desktop-experience-size;
+  @include tablet{
+    font-size: 17px;
+  }
 }
 
 // scrollbar
 /* width */
 ::-webkit-scrollbar {
-  width: 25px;
+  width: 5px;
   height: 1px;
 }
 
@@ -149,7 +161,7 @@ canvas {
 
 @media only screen and (max-width: $phone-screen-size) {
   .cellphone-font-size {
-    font-size: 12px !important;
+    font-size: 15px !important;
   }
   .margin-left-phone {
     margin-left: 3px !important;

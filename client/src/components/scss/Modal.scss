@@ -1,5 +1,19 @@
 @import 'utilities/utils.scss';
 
+.mobile-projects-list-item{
+  padding: 30px;
+  img{    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    width: 200px;
+    height: 200px;
+    &:hover{
+      cursor: zoom-in;
+    }
+  }
+  @include phone{
+    padding: 50px;  
+  }
+}
 .modal-header {
   margin-top: 3%;
   color: $background-color;
@@ -28,7 +42,7 @@
     display: flex;
     justify-content: space-around;
     margin: 5%;
-    max-width: 500px;
+    max-width: 600px;
     @include phone {
       display: block;
       width: 100%;
@@ -56,17 +70,8 @@
   border: 3px solid $yellow !important;
 }
 
-@media only screen and (max-width: $small-screen-cutoff) {
-  .modal-header-carousel {
-    width: 100% !important;
-  }
-}
 
 @media only screen and (max-width: $phone-screen-size) {
-  .modal-header-carousel {
-    width: 80% !important;
-  }
-
   .modal-header-buttons {
     display: inline-block !important;
   }

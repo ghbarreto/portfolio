@@ -40,7 +40,11 @@
       }
       .mobile-paragraph {
         position: absolute;
+        font-weight: 600;
         width: 40%;
+        @include tablet{
+          font-size: 15px;
+        }
       }
       .mobile-arrow {
         position: absolute;
@@ -194,7 +198,7 @@
   }
   .mobile-paragraph-3 {
     margin-left: 4%;
-    margin-top: 57%;
+    margin-top: 54%;
   }
 }
 

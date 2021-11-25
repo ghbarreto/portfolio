@@ -10,6 +10,7 @@ import {
   AiOutlineEye,
   AiOutlinePlus,
   AiOutlineSend,
+  AiOutlineEyeInvisible
 } from 'react-icons/ai';
 import { HiOutlinePhone } from 'react-icons/hi';
 import { VscLocation } from 'react-icons/vsc';
@@ -43,6 +44,8 @@ const Icons = ({ icon, styles, className, sizes, bold, ...props }) => {
         return <AiFillTwitterCircle />;
       case 'live-preview':
         return <AiOutlineEye />;
+      case 'no-live-preview':
+        return <AiOutlineEyeInvisible />;
       case 'close':
         return <IoCloseCircle />;
       case 'hire-me':

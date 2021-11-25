@@ -37,10 +37,10 @@ export const projects = [
     name: 'FFXIV-Info',
     description:
       'An app developed by me to help people know various features about the game FFXIV',
-    githubLink: 'https://github.com/',
-    live: 'https://github.com',
+    githubLink: 'https://github.com/ghbarreto/ffxiv-info',
+    live: 'https://ffxiv-info.herokuapp.com/',
     date: 'Jan, 2022',
-    images: [kyteLogo, emilLogo, lugaroLogo],
+    images: [kyteLogo, emilLogo, lugaroLogo, '/assets/images/ffxiv-info/server-list.png'],
     text: 'This application was created to help people search important information regarding their characters and the server they are playing in without having to navigate in multiple \n websites to try to find information.',
   },
 
@@ -48,41 +48,41 @@ export const projects = [
     name: 'covid-api',
     description:
       'An app developed by me to help people track covid growth in countries around the world',
-    githubLink: 'https://github.com/',
-    live: 'https://github.com',
+    githubLink: 'https://github.com/ghbarreto/covid-api',
+    live: 'https://covid-api-checker.herokuapp.com/',
     date: 'Jan, 2021',
     images: [kyteLogo, emilLogo, lugaroLogo],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
+    text: 'During the pandemic, I was travelling in one of the worst countries to be in during covid, because of how that affected me daily, I decided to create a program so I could monitor how much covid cases increased, how many deaths per day and a few graphics.',
   },
   {
     name: 'my-portfolio',
     description:
       'My old potfolio developed using Node.JS, MongoDB, and EJS for the front-end',
-    githubLink: 'https://github.com/',
-    live: 'https://github.com',
+    githubLink: 'https://github.com/ghbarreto/my-portfolio',
+    live: 'https://ghbarreto-old.herokuapp.com/',
     date: 'March, 2020',
     images: [kyteLogo, emilLogo, lugaroLogo],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
+    text: 'This was the first portfolio I ever designed, I am not a designer at all but it was a great experience trying to put things together on my own, fresh out of college I did not really know any big frameworks such as React or Vue, so I just gave a shot writting it on nodejs using a handlebar as the front-end, really great experience overall.',
   },
   {
     name: 'Multiple App',
     description:
       'An app that I developed that has a lot of small features like weather-app, fizzbuzz, to-do list, and others.',
     githubLink: 'https://github.com/',
-    live: 'https://github.com',
+    live: null,
     date: 'Jan, 2022',
     images: [kyteLogo, emilLogo, lugaroLogo],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
+    text: 'This project is still under development, but the idea is that I will have multiple small features developed within a website, in other words, I will develop a todo-list, a weather app, fizzbuzz, a few algorithms, and much more.',
   },
   {
     name: 'Company App (Gas)',
     description:
       'An app that I for a company that sells gas in Brazil, it allows selling, registering clients, and managing stock.',
     githubLink: 'https://github.com/',
-    live: 'https://github.com',
+    live: null,
     date: 'Jan, 2022',
     images: [kyteLogo, emilLogo, lugaroLogo],
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies vulputate augue eu pharetra. Etiam libero nibh, ullamcorper aliquet varius id, rutrum id mi. Vivamus tincidunt, dolor ut cursus rhoncus, metus odio blandit mauris, quis placerat diam orci nec mauris. In dapibus lectus a mi maximus luctus. Ut ornare convallis sem.',
+    text: "My wifes' family has a company which sells gas, one day I decided to talk to my mother-in-law about her business and wether or not a website would help her attracting more clients, we ended up talking about inventory management and she told me they were still using pencil and paper to write their daily costs, so I decided to help her by automating that process.",
   },
 ];
 export const jobExperience = {

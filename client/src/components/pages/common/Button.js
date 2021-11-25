@@ -12,8 +12,9 @@ const Button = ({
 }) => {
   const buttonCenter = buttonCenteralize ? 'button-centeralize' : null;
   return (
-    <React.Fragment className={`${buttonCenter} ${className}`}>
+    <React.Fragment >
       <a
+        className={`${buttonCenter} ${className}`}
         target={`${props.target}`}
         onClick={props.onClick}
         style={styles}
