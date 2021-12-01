@@ -46,7 +46,7 @@ const App = () => {
         <HeaderSub
           title={'Hello!'}
           name={"I'm Gabriel"}
-          sub={'Web Developer'}
+          sub={['Web Developer', 'Full-stack Dev', 'App Developer']}
           header={"I'm"}
           name2={'Gabriel'}
         >

@@ -49,7 +49,7 @@ const HeaderSub = ({
   const displayTypeWriter = () => {
     return (
       <Typewriter
-        words={[sub]}
+        words={sub}
         loop={4}
         cursor
         cursorStyle={'|'}
