@@ -22,7 +22,6 @@ const displayProjectTitle = () => {
 
 const displayReachInfo = () => {
   return reachMeInfoContact.map((e, i) => {
-    const flagEmail = e.val === 'henriqve.dev@gmail.com' ? 'highlight' : '';
     return (
       <div key={i} className="reach-sub-info">
         <Icons
@@ -30,7 +29,18 @@ const displayReachInfo = () => {
           sizes={30}
           styles={{ marginTop: '3px', color: colours(i) }}
         />
-        <div>{e.val}</div>
+        {e.val === 'henriqve.dev@gmail.com' ? (
+          <div
+            onClick={e => {
+              window.location.href = `mailto:henriqve.dev@gmail.com`;
+              e.preventDefault();
+            }}
+          >
+            {e.val}
+          </div>
+        ) : (
+          <div>{e.val}</div>
+        )}
       </div>
     );
   });

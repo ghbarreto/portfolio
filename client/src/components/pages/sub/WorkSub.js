@@ -154,7 +154,7 @@ const WorkSub = props => {
             <Carousel
               infinite
               keyBoardControl
-              itemClass="image-item projects-list-item"
+              itemClass="image-item"
               autoPlay
               swipeable
               autoPlaySpeed={5000}

@@ -36,53 +36,74 @@ export const projects = [
   {
     name: 'FFXIV-Info',
     description:
-      'An app developed by me to help people know various features about the game FFXIV',
+      'An app developed by me to help people know various features about the game Final Fantasy.',
     githubLink: 'https://github.com/ghbarreto/ffxiv-info',
     live: 'https://ffxiv-info.herokuapp.com/',
     date: 'Jan, 2022',
-    images: [kyteLogo, emilLogo, lugaroLogo, '/assets/images/ffxiv-info/server-list.png'],
+    images: [
+      '/assets/images/ffxiv-info/server-list.png',
+      '/assets/images/ffxiv-info/character-search.png',
+      '/assets/images/ffxiv-info/table-items.png',
+      '/assets/images/ffxiv-info/character-info.png',
+    ],
     text: 'This application was created to help people search important information regarding their characters and the server they are playing in without having to navigate in multiple \n websites to try to find information.',
   },
 
   {
     name: 'covid-api',
     description:
-      'An app developed by me to help people track covid growth in countries around the world',
+      'An app developed by me to help people track covid growth in countries around the world.',
     githubLink: 'https://github.com/ghbarreto/covid-api',
     live: 'https://covid-api-checker.herokuapp.com/',
     date: 'Jan, 2021',
-    images: [kyteLogo, emilLogo, lugaroLogo],
+    images: [
+      '/assets/images/covid-api/graphs.png',
+      '/assets/images/covid-api/start.png',
+      '/assets/images/covid-api/territories.png',
+    ],
     text: 'During the pandemic, I was travelling in one of the worst countries to be in during covid, because of how that affected me daily, I decided to create a program so I could monitor how much covid cases increased, how many deaths per day and a few graphics.',
+  },
+  {
+    name: 'Company App (Gas)',
+    description:
+      'An app for a company that sells gas in Brazil, it helps automating stock management.',
+    githubLink: 'https://github.com/',
+    live: null,
+    date: 'Jan, 2022',
+    images: [
+      '/assets/images/gas-company/pedidos.png',
+      '/assets/images/gas-company/product.png',
+    ],
+    text: "Still barebones, my wifes' family has a company which sells gas, one day I decided to talk to my mother-in-law about her business and wether or not a website would help her attracting more clients, we ended up talking about inventory management and she told me they were still using pencil and paper to write their daily costs, so I decided to help her by automating that process.",
   },
   {
     name: 'my-portfolio',
     description:
-      'My old potfolio developed using Node.JS, MongoDB, and EJS for the front-end',
+      'Used to be my potfolio. Developed using Node.JS, MongoDB, and EJS for the front-end.',
     githubLink: 'https://github.com/ghbarreto/my-portfolio',
     live: 'https://ghbarreto-old.herokuapp.com/',
     date: 'March, 2020',
-    images: [kyteLogo, emilLogo, lugaroLogo],
+    images: [
+      '/assets/images/old-portfolio/header.png',
+      '/assets/images/old-portfolio/body.png',
+      '/assets/images/old-portfolio/project1.png',
+      '/assets/images/old-portfolio/project2.png',
+      '/assets/images/old-portfolio/project3.png',
+      '/assets/images/old-portfolio/github.png',
+      '/assets/images/old-portfolio/form.png',
+      '/assets/images/old-portfolio/footer.png'
+    ],
     text: 'This was the first portfolio I ever designed, I am not a designer at all but it was a great experience trying to put things together on my own, fresh out of college I did not really know any big frameworks such as React or Vue, so I just gave a shot writting it on nodejs using a handlebar as the front-end, really great experience overall.',
   },
   {
     name: 'Multiple App',
     description:
-      'An app that I developed that has a lot of small features like weather-app, fizzbuzz, to-do list, and others.',
+      'An app that I developed that has a lot of small features like weather-app, fizzbuzz, to-do list.',
     githubLink: 'https://github.com/',
     live: null,
     date: 'Jan, 2022',
-    images: [kyteLogo, emilLogo, lugaroLogo],
+    images: [],
     text: 'This project is still under development, but the idea is that I will have multiple small features developed within a website, in other words, I will develop a todo-list, a weather app, fizzbuzz, a few algorithms, and much more.',
-  },
-  {
-    name: 'Company App (Gas)',
-    description:
-      'An app that I for a company that sells gas in Brazil, it allows selling, registering clients, and managing stock.',
-    githubLink: 'https://github.com/',
-    live: null,
-    date: 'Jan, 2022',
-    images: [kyteLogo, emilLogo, lugaroLogo],
-    text: "My wifes' family has a company which sells gas, one day I decided to talk to my mother-in-law about her business and wether or not a website would help her attracting more clients, we ended up talking about inventory management and she told me they were still using pencil and paper to write their daily costs, so I decided to help her by automating that process.",
   },
 ];
 export const jobExperience = {

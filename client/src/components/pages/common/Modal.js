@@ -28,14 +28,14 @@ const ReactModal = ({
   };
 
   const [displayLightBox, setDisplayLightBox] = useState(false);
-  const [image, setImage] = useState()
+  const [image, setImage] = useState();
 
   useEffect(() => {
     stopPageFromScrolling();
   }, [props.stopPageScroller]);
 
   const setDisplayLightBoxFalse = () => setDisplayLightBox(false);
-  
+
   const setLightBox = e => {
     return (
       <Lightbox
@@ -46,7 +46,6 @@ const ReactModal = ({
     );
   };
 
-  console.log(displayLightBox);
   const displayHeader = () => {
     const imageRender = carouselValues.images.map(e => (
       <>
@@ -55,7 +54,7 @@ const ReactModal = ({
           src={e}
           alt={e}
           onClick={() => {
-            setImage(e)
+            setImage(e);
             setDisplayLightBox(true);
           }}
         />
@@ -82,7 +81,19 @@ const ReactModal = ({
             {imageRender}
           </Carousel>
         </div>
-        <div style={{ color: '#fd3a8c', marginLeft: '50px', fontSize: '12px', fontWeight: 'bold'}}>* click image to expand</div>
+
+        <div
+          style={{
+            color: '#fd3a8c',
+            marginLeft: '50px',
+            fontSize: '12px',
+            fontWeight: 'bold',
+          }}
+        >
+          {imageRender.length > 1
+            ? '* click image to expand'
+            : '* still working on images'}
+        </div>
         <h2 className="modal-header-title">
           <span className="bracket-carousel">//</span>
           {carouselValues.name}

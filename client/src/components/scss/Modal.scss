@@ -1,11 +1,15 @@
 @import 'utilities/utils.scss';
 
 .mobile-projects-list-item{
-  padding: 30px;
+  // padding: 30px;
   img{    
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
+    @include tablet{
+      width: 280px;
+      height: 200px;
+    }
     &:hover{
       cursor: zoom-in;
     }
