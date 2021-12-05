@@ -167,7 +167,7 @@ export const viewResume = {
   value: 'View Resume',
 };
 export const informations = {
-  name: 'Gabriel Barrett',
+  name: 'Gabriel Barreto',
   jobTitle: 'Full-stack Developer',
   basedIn: 'Vancouver, Canada',
   from: 'São Paulo, SP',
