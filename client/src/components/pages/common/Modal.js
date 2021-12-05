@@ -16,12 +16,14 @@ const ReactModal = ({
   carouselValues,
   ...props
 }) => {
+  
   const modalStyle = useSpring({
     from: { marginBottom: -400 },
     to: { marginBottom: 0 },
     delay: 100,
   });
   const { width } = useDimensions();
+
   const stopPageFromScrolling = () => {
     if (props.stopPageScroller === true) return;
     if (props.stopPageScroller === false) return props.handlePageScroller(true);

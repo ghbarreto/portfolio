@@ -7,6 +7,7 @@ import Button from '../common/Button';
 import '../../scss/HeaderSub.scss';
 import Animate from '../common/Animate';
 import Icons from '../common/Icons';
+import useDimensions from '../../utils/useDimensions'
 
 const HeaderSub = ({
   title,
@@ -39,6 +40,7 @@ const HeaderSub = ({
             backgroundColor: '#00c2cb',
             color: 'white',
           }}
+          onClick={() => props.handlePageChange(5)}
           src={e.src}
           icon={icon}
         />

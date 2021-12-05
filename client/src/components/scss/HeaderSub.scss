@@ -29,6 +29,9 @@
     @include small-phone {
       padding-top: 20%;
     }
+    @include small-height{
+      padding-top: 0 !important;
+    }
     .center-text-full-mobile-header {
       display: none;
       @include tablet {

@@ -39,7 +39,7 @@ export const projects = [
       'An app developed by me to help people know various features about the game Final Fantasy.',
     githubLink: 'https://github.com/ghbarreto/ffxiv-info',
     live: 'https://ffxiv-info.herokuapp.com/',
-    date: 'Jan, 2022',
+    date: 'June, 2021',
     images: [
       '/assets/images/ffxiv-info/server-list.png',
       '/assets/images/ffxiv-info/character-search.png',
@@ -55,7 +55,7 @@ export const projects = [
       'An app developed by me to help people track covid growth in countries around the world.',
     githubLink: 'https://github.com/ghbarreto/covid-api',
     live: 'https://covid-api-checker.herokuapp.com/',
-    date: 'Jan, 2021',
+    date: 'June, 2021',
     images: [
       '/assets/images/covid-api/graphs.png',
       '/assets/images/covid-api/start.png',
@@ -67,9 +67,9 @@ export const projects = [
     name: 'Company App (Gas)',
     description:
       'An app for a company that sells gas in Brazil, it helps automating stock management.',
-    githubLink: 'https://github.com/',
+    githubLink: 'https://github.com/ghbarreto/gas-project',
     live: null,
-    date: 'Jan, 2022',
+    date: 'Aug, 2021',
     images: [
       '/assets/images/gas-company/pedidos.png',
       '/assets/images/gas-company/product.png',
@@ -82,7 +82,7 @@ export const projects = [
       'Used to be my potfolio. Developed using Node.JS, MongoDB, and EJS for the front-end.',
     githubLink: 'https://github.com/ghbarreto/my-portfolio',
     live: 'https://ghbarreto-old.herokuapp.com/',
-    date: 'March, 2020',
+    date: 'January, 2019',
     images: [
       '/assets/images/old-portfolio/header.png',
       '/assets/images/old-portfolio/body.png',
@@ -91,7 +91,7 @@ export const projects = [
       '/assets/images/old-portfolio/project3.png',
       '/assets/images/old-portfolio/github.png',
       '/assets/images/old-portfolio/form.png',
-      '/assets/images/old-portfolio/footer.png'
+      '/assets/images/old-portfolio/footer.png',
     ],
     text: 'This was the first portfolio I ever designed, I am not a designer at all but it was a great experience trying to put things together on my own, fresh out of college I did not really know any big frameworks such as React or Vue, so I just gave a shot writting it on nodejs using a handlebar as the front-end, really great experience overall.',
   },
@@ -99,9 +99,9 @@ export const projects = [
     name: 'Multiple App',
     description:
       'An app that I developed that has a lot of small features like weather-app, fizzbuzz, to-do list.',
-    githubLink: 'https://github.com/',
+    githubLink: 'https://github.com/ghbarreto/web-apps',
     live: null,
-    date: 'Jan, 2022',
+    date: 'September, 2021',
     images: [],
     text: 'This project is still under development, but the idea is that I will have multiple small features developed within a website, in other words, I will develop a todo-list, a weather app, fizzbuzz, a few algorithms, and much more.',
   },
@@ -117,7 +117,7 @@ export const jobExperience = {
     title: 'Full Stack Developer',
     date: 'Current',
     experience:
-      'Worked with the NextJS create webpages and landing pages for the NFT Game Mouse Haunt.',
+      'Worked with NextJS and Typescript to create webpages and landing pages for the NFT Game Mouse Haunt.',
   },
 };
 export const skills = [

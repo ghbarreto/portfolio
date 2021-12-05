@@ -52,6 +52,9 @@ input.field {
   @include tablet {
     text-align: center;
   }
+  @include small-height{
+    margin-top: -20px;
+  }
   .field {
     border: 0px;
     border-radius: 20px;
@@ -75,6 +78,10 @@ input.field {
     height: 100px;
     padding: 8px;
     font-size: 19px;
+    @include small-height{
+      height: 80px;
+      width: 65%;
+    }
   }
   ::content {
     color: blue;

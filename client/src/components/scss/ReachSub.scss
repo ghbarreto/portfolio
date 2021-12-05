@@ -94,6 +94,9 @@
   }
   .projects-title-main {
     margin-top: -5% !important;
+    @include small-height {
+      margin-top: 1% !important;
+    }
   }
   .form-container-sub {
     display: block;
@@ -114,6 +117,9 @@
         }
         svg {
           margin-top: -20px;
+        }
+        @include small-height{
+          margin-top: -15px;
         }
       }
     }

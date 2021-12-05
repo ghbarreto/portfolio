@@ -64,6 +64,10 @@
       @include small-phone {
         font-size: 14px !important;
       }
+
+      @include small-height{
+        font-size: 11px !important;
+      }
     }
   }
   .experience-job {
@@ -84,6 +88,14 @@
     }
     @include small-phone {
       margin-top: 5px;
+    }
+    @include small-height {
+      font-size: 11px !important;
+      width: 96%;
+      margin-top: -5px;
+      margin-left: 6px;
+      margin-bottom: -10px;
+
     }
   }
   .image-about-section {
@@ -107,6 +119,9 @@
       @include small-phone {
         padding-top: 5%;
         max-width: 70%;
+      }
+      @include small-height{
+        max-width: 60%
       }
     }
   }
@@ -136,6 +151,9 @@
     }
     @include small-phone {
       padding-top: 15%;
+    }
+    @include small-height{
+      padding-top: 10%;
     }
   }
   .desktop-view {
