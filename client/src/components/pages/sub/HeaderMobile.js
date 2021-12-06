@@ -67,7 +67,7 @@ const HeaderMobile = props => {
         <div className="mobile-header-fixed">
           <div className="navigation">
             <div>
-              <img src={logo} alt="logo" />
+              <img src={logo} alt="logo" onClick={() => props.handlePageChange(0)}/>
             </div>
 
             <div className="navigation-mobile-name">

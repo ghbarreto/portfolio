@@ -106,7 +106,7 @@ const Header = ({ details, ...props }) => {
         <div className="fixed-nav-bar">
           <div className="nav-bar">
             <div className="nav-menu-logo">
-              <img className="logo" src={logo} alt="logo" />
+              <img className="logo" src={logo} alt="logo" onClick={() => props.handlePageChange(0)} />
             </div>
             {renderName()}
             <ul className="nav-menu-buttons">{renderButtons()}</ul>

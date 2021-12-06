@@ -26,6 +26,9 @@
           height: 50px !important;
           width: 50px !important;
           margin-top: -10px;
+          &:hover{
+            cursor: pointer;
+          }
         }
       }
     }
