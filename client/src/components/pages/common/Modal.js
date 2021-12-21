@@ -16,7 +16,6 @@ const ReactModal = ({
   carouselValues,
   ...props
 }) => {
-  
   const modalStyle = useSpring({
     from: { marginBottom: -400 },
     to: { marginBottom: 0 },
@@ -100,7 +99,19 @@ const ReactModal = ({
           <span className="bracket-carousel">//</span>
           {carouselValues.name}
         </h2>
-        <div className="modal-header-paragraph">{carouselValues.text}</div>
+        <div className="modal-header-paragraph">
+          {carouselValues.text}
+          <br />
+          <span style={{
+            color: '#fd3a8c',
+            fontSize: '12px',
+            fontWeight: 'bold',
+          
+          }}>
+            * Please note, these web apps are hosted on Heroku, so they might take a
+            few seconds to initialize once you open them.
+          </span>
+        </div>
 
         {displayLightBox && setLightBox(image)}
         <div className="modal-header-buttons">
