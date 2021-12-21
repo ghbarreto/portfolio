@@ -39,7 +39,7 @@ export const projects = [
       'An app developed by me to help people know various features about the game Final Fantasy.',
     githubLink: 'https://github.com/ghbarreto/ffxiv-info',
     live: 'https://ffxiv-info.herokuapp.com/',
-    date: 'June, 2021',
+    date: 'July, 2021',
     images: [
       '/assets/images/ffxiv-info/server-list.png',
       '/assets/images/ffxiv-info/character-search.png',
@@ -82,7 +82,7 @@ export const projects = [
       'Used to be my potfolio. Developed using Node.JS, MongoDB, and EJS for the front-end.',
     githubLink: 'https://github.com/ghbarreto/my-portfolio',
     live: 'https://ghbarreto-old.herokuapp.com/',
-    date: 'January, 2019',
+    date: 'Jan, 2019',
     images: [
       '/assets/images/old-portfolio/header.png',
       '/assets/images/old-portfolio/body.png',
@@ -101,7 +101,7 @@ export const projects = [
       'An app that I developed that has a lot of small features like weather-app, fizzbuzz, to-do list.',
     githubLink: 'https://github.com/ghbarreto/web-apps',
     live: null,
-    date: 'September, 2021',
+    date: 'Sept, 2021',
     images: [],
     text: 'This project is still under development, but the idea is that I will have multiple small features developed within a website, in other words, I will develop a todo-list, a weather app, fizzbuzz, a few algorithms, and much more.',
   },
