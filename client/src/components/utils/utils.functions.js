@@ -163,7 +163,7 @@ export const knowledgeField = {
   },
 };
 export const viewResume = {
-  resume: '/assets/pdf/CV.pdf',
+  resume: '/assets/pdf/gabriel_barreto_resume.pdf',
   value: 'View Resume',
 };
 export const informations = {
