@@ -8,11 +8,9 @@ module.exports = app => {
     const email = req.body.email;
     const message = req.body.message;
 
-    console.log(name, email, message);
-
     assert(name, email, message);
-
     response(name, email, message);
+
     try {
       const insertValues = await email_sender({
         name,
