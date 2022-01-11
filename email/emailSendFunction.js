@@ -39,7 +39,6 @@ const msg_template = (to, from, subject, html) => {
 const send_email = msg => {
   sgMail.setApiKey(sgApi.sendGridApi);
   try {
-    console.log('enviado!');
     sgMail.send(msg);
   } catch (err) {
     console.log(err);

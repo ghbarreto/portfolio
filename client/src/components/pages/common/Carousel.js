@@ -30,21 +30,6 @@ const CarouselContainer = props => {
       beforeChange={props.beforeChange}
       afterChange={props.afterChange}
       containerClass={props.containerClass}
-      // customRightArrow={
-      //   <Icons
-      //     icon={'rightArrow'}
-      //     styles={{ position: 'absolute', left: '86%' }}
-      //     sizes={40}
-      //   />
-      // }
-      // customLeftArrow={
-      //   <Icons
-      //     icon={'leftArrow'}
-      //     onClick={() => }
-      //     styles={{ position: 'absolute', left: '2%' }}
-      //     sizes={40}
-      //   />
-      // }
     >
       {props.children}
     </Carousel>

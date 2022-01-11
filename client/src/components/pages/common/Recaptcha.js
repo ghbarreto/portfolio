@@ -3,10 +3,9 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { connect, useDispatch } from 'react-redux';
 
 import { checkCaptcha } from '../../../actions';
-
 const CLIENT_KEY = '6LeWr7IcAAAAAOtW0Gc5Zu_nlspO8uHAcRYm1Esu';
 
-const Recaptcha = ({ setCaptchaChecking, checked_captcha, ...props }) => {
+const Recaptcha = ({ setCaptchaChecking, checked_captcha }) => {
   const dispatch = useDispatch();
   const [captcha, setCaptcha] = useState();
 

@@ -61,7 +61,6 @@ const Animation = ({ className, anim, key, animTimer, ...props }) => {
   return (
     <>
       <InView tag="div" onChange={setAnimation} />
-
       {displayAnimationOnViewPort()}
     </>
   );

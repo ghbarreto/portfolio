@@ -1,6 +1,6 @@
 import '../../scss/DisplayArrow.scss';
 import { connect } from 'react-redux';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 const DisplayArrow = ({ details, handlePageChange, ...props }) => {
   const changeUlPosition = details.details

@@ -7,8 +7,6 @@
     justify-content: center;
   }
 }
-input.field {
-}
 
 .alert-message {
   color: $white;
@@ -52,7 +50,7 @@ input.field {
   @include tablet {
     text-align: center;
   }
-  @include small-height{
+  @include small-height {
     margin-top: -20px;
   }
   .field {
@@ -78,7 +76,7 @@ input.field {
     height: 100px;
     padding: 8px;
     font-size: 19px;
-    @include small-height{
+    @include small-height {
       height: 80px;
       width: 65%;
     }

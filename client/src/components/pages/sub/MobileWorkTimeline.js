@@ -1,5 +1,5 @@
 import React from 'react';
-import { logo, timelineHorizontal, tags } from '../../utils/utils.functions';
+import { timelineHorizontal, tags } from '../../utils/utils.functions';
 import _ from 'lodash';
 import '../../scss/MobileWorkTimeline.scss';
 
