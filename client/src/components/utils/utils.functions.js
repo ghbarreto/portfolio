@@ -264,10 +264,10 @@ export const reachMeInfoContact = [
     icon: 'email',
     val: 'henriqve.dev@gmail.com',
   },
-  {
-    icon: 'phone',
-    val: '[Please, use the form to contact me.]',
-  },
+  // {
+  //   icon: 'phone',
+  //   val: '[Please, use the form to contact me.]',
+  // },
   {
     icon: 'location',
     val: 'Vancouver, BC',
