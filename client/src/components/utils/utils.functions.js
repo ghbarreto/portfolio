@@ -2,7 +2,6 @@ export const logo = '/assets/images/logo.png';
 export const aboutBanner = '/assets/images/about-banner.png';
 export const projectTitle = ['Open Source Projects', 'Job History', 'Reach Me'];
 export const kyteLogo = '/assets/images/kyte.png';
-export const emilLogo = '/assets/images/emil.jpeg';
 export const MH = '/assets/images/mousehaunt.png';
 export const lugaroLogo = '/assets/images/lugaro.jpeg';
 
@@ -264,10 +263,6 @@ export const reachMeInfoContact = [
     icon: 'email',
     val: 'henriqve.dev@gmail.com',
   },
-  // {
-  //   icon: 'phone',
-  //   val: '[Please, use the form to contact me.]',
-  // },
   {
     icon: 'location',
     val: 'Vancouver, BC',
