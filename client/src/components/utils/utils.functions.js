@@ -144,10 +144,10 @@ export const reachMeParagraph = {
     'If you are interested in hiring me for your project please use the form to get in touch or contact me in the channels below.',
 };
 export const knowledgeField = {
-  full_stack: {
-    title: 'Full Stack Development',
-    qualifications: 'MERN developer, but also know Python/Flask.',
-  },
+  // full_stack: {
+  //   title: 'Full Stack Development',
+  //   qualifications: 'MERN developer, focused on Front-end.',
+  // },
   database: {
     title: 'Databases',
     qualifications: 'Mainly NOSQL, but also SQL.',
