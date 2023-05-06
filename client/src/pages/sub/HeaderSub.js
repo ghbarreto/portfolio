@@ -1,7 +1,7 @@
 import React from 'react';
-import { Typewriter } from 'react-simple-typewriter';
+import Typewriter from 'typewriter-effect';
 
-import { tags, hireMeButton } from '../../utils/utils.functions';
+import { tags } from '../../utils/utils.functions';
 import SocialMediaButtons from '../../components/SocialMediaButtons';
 import Button from '../../components/Button';
 import '../../scss/HeaderSub.scss';
@@ -20,31 +20,8 @@ const HeaderSub = ({ title, name, sub, job_title, header, name2, ...props }) => 
         ));
     };
 
-    const displayHireButton = () => {
-        return Object.values(hireMeButton).map((e, i) => {
-            const icon = <Icons icon={'hire-me'} size={25} />;
-            return (
-                <Button
-                    key={i}
-                    value={e.title}
-                    styles={{
-                        backgroundColor: '#00c2cb',
-                        color: 'white',
-                    }}
-                    onClick={() => props.handlePageChange(5)}
-                    src={e.src}
-                    icon={icon}
-                />
-            );
-        });
-    };
-
-    const displayTypeWriter = () => {
-        return <Typewriter words={sub} loop={4} cursor cursorStyle={'|'} typeSpeed={350} deleteSpeed={80} />;
-    };
-
     return (
-        <>
+        <div style={{ height: '100vh' }}>
             <div className="center">
                 <div className="center-text">
                     <Animate anim={'TopToBottom'} animTimer={1000}>
@@ -70,19 +47,37 @@ const HeaderSub = ({ title, name, sub, job_title, header, name2, ...props }) => 
                     </div>
 
                     <Animate anim={'Opacity'}>
-                        <div className="center-text-sub">{displayTypeWriter()}</div>
+                        <div className="center-text-sub">
+                            <Typewriter
+                                options={{
+                                    strings: sub,
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+                        </div>
                     </Animate>
 
                     <Animate anim={'Opacity'}>
-                        <div className="center-text-button margin-top-mobile">{displayHireButton()}</div>
+                        <div className="center-text-button margin-top-mobile">
+                            <Button
+                                value={'Hire Me'}
+                                styles={{
+                                    backgroundColor: '#00c2cb',
+                                    color: 'white',
+                                }}
+                                onClick={() => props.handlePageChange(5)}
+                                src={'TODO'}
+                                icon={<Icons icon={'hire-me'} size={25} />}
+                            />
+                        </div>
                     </Animate>
                     <Animate anim={'Opacity'}>
                         <div className="center-text-social-media">{SocialMediaButtons()}</div>
                     </Animate>
                 </div>
             </div>
-            {props.children}
-        </>
+        </div>
     );
 };
 

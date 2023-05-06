@@ -22,44 +22,44 @@ const App = () => {
     };
 
     const handlePageScroller = bool => {
-        return setStopPageScroller(bool);
+        setStopPageScroller(bool);
     };
 
     return (
         <>
             <Header handlePageChange={handlePageChange} />
             <DisplayArrow handlePageChange={handlePageChange} currentPage={currentPage} />
-            <ReactPageScroller
+            {/* <ReactPageScroller
                 pageOnChange={handlePageChange}
                 customPageNumber={currentPage}
                 containerHeight={'100vh'}
                 blockScrollUp={stopPageScroller}
                 blockScrollDown={stopPageScroller}
-                animationTimer={1500}
                 renderAllPagesOnFirstRender={false}
+                animationTimer={800}
+            > */}
+            <HeaderSub
+                title={'Hello!'}
+                name={"I'm Gabriel"}
+                sub={['Web Developer', 'Full-stack Dev', 'App Developer']}
+                header={"I'm"}
+                name2={'Gabriel'}
+                handlePageChange={handlePageChange}
             >
-                <HeaderSub
-                    title={'Hello!'}
-                    name={"I'm Gabriel"}
-                    sub={['Web Developer', 'Full-stack Dev', 'App Developer']}
-                    header={"I'm"}
-                    name2={'Gabriel'}
-                    handlePageChange={handlePageChange}
-                >
-                    <Home />
-                </HeaderSub>
+                <Home />
+            </HeaderSub>
 
-                <About />
-                <AboutSub />
+            <About />
+            <AboutSub />
 
-                <WorkSub stopPageScroller={stopPageScroller} handlePageScroller={handlePageScroller}>
-                    <Work />
-                </WorkSub>
+            <WorkSub stopPageScroller={stopPageScroller} handlePageScroller={handlePageScroller}>
+                <Work />
+            </WorkSub>
 
-                <WorkTimeline />
+            <WorkTimeline />
 
-                <Reach />
-            </ReactPageScroller>
+            <Reach />
+            {/* </ReactPageScroller> */}
         </>
     );
 };

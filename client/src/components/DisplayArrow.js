@@ -1,6 +1,6 @@
 import '../scss/DisplayArrow.scss';
 import { connect } from 'react-redux';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 const DisplayArrow = ({ details, handlePageChange, ...props }) => {
     const changeUlPosition = details.details
@@ -23,9 +23,9 @@ const DisplayArrow = ({ details, handlePageChange, ...props }) => {
         }
     };
 
-    useEffect(() => {
-        navigatePages();
-    }, [props.currentPage]);
+    // useEffect(() => {
+    //     navigatePages();
+    // }, [props.currentPage]);
 
     return (
         <ul className={changeUlPosition}>
